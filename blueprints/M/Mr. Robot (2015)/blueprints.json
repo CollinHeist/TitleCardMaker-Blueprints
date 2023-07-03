@@ -3,7 +3,7 @@
     "description": [
       "Standard card type with custom show font and thematic season titles"
     ],
-    "example": "preview.jpg",
+    "preview": "preview.jpg",
     "creator": "CollinHeist",
     "series": {
       "font_id": 0,
