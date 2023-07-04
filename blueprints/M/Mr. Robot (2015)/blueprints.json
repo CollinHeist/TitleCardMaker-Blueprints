@@ -36,5 +36,25 @@
         "delete_missing": true
       }
     ]
+  }, {
+    "description": [
+      "Olivier card type with thematic episode text."
+    ],
+    "preview": "preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "card_type": "olivier",
+      "episode_text_format": "EP_{episode_number_cardinal}",
+      "template_ids": [],
+      "extra_keys": [
+        "episode_text_color"
+      ],
+      "extra_values": [
+        "rgb(202,34,34)"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": []
   }
 ]
