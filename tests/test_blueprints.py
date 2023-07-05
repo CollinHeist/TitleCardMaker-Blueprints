@@ -3,7 +3,7 @@ from pathlib import Path
 
 from re import compile as re_compile
 
-BLUEPRINT_FOLDER = Path('./blueprints/')
+BLUEPRINT_FOLDER = Path(__file__).parent.parent / 'blueprints'
 
 # Non-tests
 
