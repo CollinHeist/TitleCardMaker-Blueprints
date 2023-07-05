@@ -26,10 +26,14 @@ class TestFolderOrganization:
         for folder in BLUEPRINT_FOLDER.glob('*'):
             assert folder.name.upper() == folder.name, 'Folder Names Must Be Uppercase'
 
+    def test_series_in_correct_subfolder(self):
+        for series_folder in BLUEPRINT_FOLDER.glob('*/*'):
+            assert series_folder.parent.name == series_folder.name[0].upper(), 'Series must be placed in the correct letter subfolder'
+
     def test_series_folder_names(self):
         NAME_REGEX = re_compile(r'^.+\(\d{4}\)$')
-        for folder in BLUEPRINT_FOLDER.glob('*/*'):
-            assert NAME_REGEX.match(folder.name), 'Series Folder Names Must be Formatted as "Name (Year)"'
+        for series_folder in BLUEPRINT_FOLDER.glob('*/*'):
+            assert NAME_REGEX.match(series_folder.name), 'Series Folder Names Must be Formatted as "Name (Year)"'
 
     def test_series_blueprint_folder_names(self):
         for folder in BLUEPRINT_FOLDER.glob('*/*/*'):
@@ -37,6 +41,7 @@ class TestFolderOrganization:
                 continue
 
             assert folder.name.isdigit(), 'Series Blueprint subfolders must be named their blueprint ID'
+            assert str(int(folder.name)) == folder.name, 'Series Blueprint subfolders must not be zero-padded'
 
     def test_series_subfolder_files(self):
         for file in BLUEPRINT_FOLDER.glob('*/*/*'):
