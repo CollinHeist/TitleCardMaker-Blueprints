@@ -43,8 +43,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-      #   run: |
-      #     git add .
-      #     git commit -m [AUTO] Updating Master Blueprint
-      #     git fetch origin master
-      #     git push origin HEAD:master
