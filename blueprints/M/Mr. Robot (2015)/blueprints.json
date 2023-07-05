@@ -8,6 +8,7 @@
     "series": {
       "font_id": 0,
       "card_type": "standard",
+      "episode_text_format": "episode_{episode_number}.0",
       "template_ids": [],
       "season_title_ranges": [
         "0",
