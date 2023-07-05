@@ -13,7 +13,8 @@ jobs:
         python-version: ["3.11"]
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
@@ -32,17 +33,13 @@ jobs:
 
       - name: Commit Updated Master Blueprint
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add "master_blueprints.json"
           git commit -a -m "Updating Master Blueprint"
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
-      #   run: |
-      #     git add .
-      #     git commit -m [AUTO] Updating Master Blueprint
-      #     git fetch origin master
-      #     git push origin HEAD:master
