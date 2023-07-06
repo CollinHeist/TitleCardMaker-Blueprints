@@ -2,7 +2,7 @@ name: Build Master Blueprint File
 
 on:
   pull_request:
-    types: [ opened ]
+    types: [ closed ]
     branches: [ master ]
 
 jobs:
