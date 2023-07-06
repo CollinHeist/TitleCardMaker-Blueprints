@@ -286,6 +286,35 @@
   },
   {
     "description": [
+      "Tinted Frame card with the Series logo font and color, using 'Chapter' formatted episode text."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Over the Garden Wall (2014)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted frame",
+      "hide_season_text": true,
+      "episode_text_format": "Chapter {episode_number}",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Over the Garden Wall",
+        "file": "TomeOfTheUnknown.ttf",
+        "color": "rgb(216,190,142)",
+        "title_case": "source",
+        "size": 1.15,
+        "vertical_shift": -20,
+        "delete_missing": true
+      }
+    ],
+    "series_full_name": "Over the Garden Wall (2014)",
+    "id": 0
+  },
+  {
+    "description": [
       "Anime title cards with absolute episode numbering, arc season titles, and a smaller font size to account for the long titles."
     ],
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/One Piece (1999)/0/preview.jpg",
@@ -583,6 +612,125 @@
     "templates": [],
     "fonts": [],
     "series_full_name": "One Piece (1999)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Frame card type with the series font and coloring for the title and episode text."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Only Murders in the Building (2021)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "frame",
+      "template_ids": [],
+      "extra_keys": [
+        "episode_text_color",
+        "interword_spacing"
+      ],
+      "extra_values": [
+        "rgb(156,40,36)",
+        "40"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Only Murders in the Building",
+        "file": "Cygnet Regular.ttf",
+        "color": "rgb(76, 149, 119)",
+        "title_case": "source",
+        "kerning": -0.7,
+        "interline_spacing": 30,
+        "delete_missing": true
+      }
+    ],
+    "series_full_name": "Only Murders in the Building (2021)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Olivier card type with the series font and coloring for the title text."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Only Murders in the Building (2021)/1/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": [],
+      "extra_keys": [
+        "interword_spacing"
+      ],
+      "extra_values": [
+        "60"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Only Murders in the Building",
+        "file": "Cygnet Regular.ttf",
+        "color": "rgb(76, 149, 119)",
+        "title_case": "source",
+        "kerning": 12.0,
+        "delete_missing": true,
+        "vertical_shift": 10
+      }
+    ],
+    "series_full_name": "Only Murders in the Building (2021)",
+    "id": 1
+  },
+  {
+    "description": [
+      "Comic Book card with randomized banner angles for the title and index text.",
+      "The banners are colored to match the comic panel interstitials used in the show.",
+      "Using a grayscale style modifier is recommended."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/I/iZombie (2015)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "card_type": "comic book",
+      "template_ids": [],
+      "extra_keys": [
+        "title_text_rotation_angle",
+        "index_text_rotation_angle"
+      ],
+      "extra_values": [
+        "random[-4, 4]",
+        "random[-4, -3]"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "series_full_name": "iZombie (2015)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Tinted Frame card using the Series font and no season titles."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Foundation (2021)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted frame",
+      "hide_season_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Foundation",
+        "file": "FoundationTitlesHand-SemiBold.ttf",
+        "vertical_shift": -10,
+        "delete_missing": true
+      }
+    ],
+    "series_full_name": "Foundation (2021)",
     "id": 0
   },
   {
