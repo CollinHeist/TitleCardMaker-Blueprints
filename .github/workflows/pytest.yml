@@ -5,8 +5,7 @@ on:
     branches: [ master, staging ]
 
 jobs:
-  build:
-
+  pytest:
     runs-on: ubuntu-latest
     strategy:
       matrix:
