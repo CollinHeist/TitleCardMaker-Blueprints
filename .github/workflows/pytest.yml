@@ -1,4 +1,4 @@
-name: Python Pytest
+name: Pytest and Build Master Blueprint
 
 on:
   push:
@@ -30,3 +30,43 @@ jobs:
       - name: Echo Success
         id: success
         run: echo "passed=true" >> $GITHUB_OUTPUT
+
+  build_master_blueprint:
+    runs-on: ubuntu-latest
+    needs: [pytest]
+    if: needs.pytest.outputs.passed == 'true'
+    strategy:
+      matrix:
+        python-version: ["3.11"]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pipenv
+          pipenv install
+
+      - name: Run Python Blueprint Builder
+        run: |
+          pipenv run python ./build/build_master_blueprint.py
+
+      - name: Commit Updated Master Blueprint
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add "master_blueprints.json"
+          git commit -a -m "Update Master Blueprint"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
