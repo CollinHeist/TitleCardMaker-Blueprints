@@ -1,12 +1,16 @@
 name: Build Master Blueprint File
 
 on:
-  push:
+  
+  pull_request:
+    types: [ closed ]
     branches: [ master ]
+  # push:
+  #   branches: [ master ]
 
 jobs:
-  build:
-
+  if_merged:
+    if: github.event.pull_request.merged
     runs-on: ubuntu-latest
     strategy:
       matrix:
