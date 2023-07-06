@@ -85,6 +85,7 @@ class TestBlueprintSubfolders:
 
             assert not (series_subfolder / str(blueprint_id)).exists(), 'Deleted blueprints must have no subfolder'
 
+
 class TestBlueprintFiles:
     def test_blueprint_identifies_all_files(self):
         for series_subfolder, blueprint_id, blueprint in read_blueprints():

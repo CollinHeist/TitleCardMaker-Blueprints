@@ -1,8 +1,9 @@
 name: Build Master Blueprint File
 
 on:
-  push:
-    branches: [ staging ]
+  pull_request:
+    types: [ opened ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -36,7 +37,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add "master_blueprints.json"
-          git commit -a -m "Updating Master Blueprint"
+          git commit -a -m "Update Master Blueprint"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
