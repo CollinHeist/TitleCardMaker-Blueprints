@@ -3,10 +3,8 @@ name: Build Master Blueprint File
 on:
   
   pull_request:
-    types: [ closed ]
+    types: [ open ]
     branches: [ master ]
-  # push:
-  #   branches: [ master ]
 
 jobs:
   if_merged:
