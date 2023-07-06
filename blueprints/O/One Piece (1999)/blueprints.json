@@ -7,7 +7,7 @@
     "creator": "CollinHeist",
     "series": {
       "card_type": "anime",
-      "episode_text_format": "EPISODE {absolute_number}",
+      "episode_text_format": "Episode {absolute_number}",
       "template_ids": [],
       "translations": [
         {
