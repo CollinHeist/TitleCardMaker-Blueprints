@@ -7,8 +7,6 @@ on:
 jobs:
   pytest:
     runs-on: ubuntu-latest
-    outputs:
-      passed: ${{ steps.success.passed }}
     strategy:
       matrix:
         python-version: ["3.11"]
@@ -27,14 +25,9 @@ jobs:
       - name: Run pytest
         run: |
           pipenv run pytest
-      - name: Echo Success
-        id: success
-        run: echo "passed=true" >> $GITHUB_OUTPUT
 
   build_master_blueprint:
     runs-on: ubuntu-latest
-    needs: [pytest]
-    if: needs.pytest.outputs.passed == 'true'
     strategy:
       matrix:
         python-version: ["3.11"]
