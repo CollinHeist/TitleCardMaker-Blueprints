@@ -28,6 +28,7 @@ jobs:
 
   build_master_blueprint:
     runs-on: ubuntu-latest
+    if: ${{ github.ref }} == 'staging'
     strategy:
       matrix:
         python-version: ["3.11"]
