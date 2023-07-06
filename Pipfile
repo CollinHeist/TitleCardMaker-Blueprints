@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 pytest = "*"
 regex = "*"
+imagesize = "*"
+pillow = "*"
 
 [dev-packages]
 
