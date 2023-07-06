@@ -3,10 +3,6 @@ name: Build Master Blueprint File
 on:
   pull_request:
     types: [ 'opened', 'edited', 'reopened', 'synchronize' ]
-  workflow_run:
-    workflows: ["pytest"]
-      types:
-        - completed
 
 jobs:
   build_master_blueprint:
