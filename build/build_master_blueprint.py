@@ -44,7 +44,6 @@ for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/blueprints.json'):
             blueprint['id'] = blueprint_id
 
             # Update preview to be fully resolved link
-            print(f'{blueprint["preview"]=}')
             blueprint['preview'] = (
                 f'{REPO_URL}/{letter_subfolder.name}/{series_subfolder.name}/'
                 f'{blueprint_id}/{blueprint["preview"]}'

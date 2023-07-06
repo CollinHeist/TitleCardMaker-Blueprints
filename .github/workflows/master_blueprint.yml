@@ -39,7 +39,7 @@ jobs:
           git config --local user.name "GitHub Action"
           git pull
           git add "master_blueprints.json"
-          git commit -a -m "Update Master Blueprint"
+          git diff-index --quiet HEAD || git commit -a -m "Update Master Blueprint"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
