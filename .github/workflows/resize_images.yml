@@ -1,11 +1,11 @@
-name: Build Master Blueprint File
+name: Resize Preview Images
 
 on:
   pull_request:
     types: [ 'opened', 'edited', 'reopened', 'synchronize' ]
 
 jobs:
-  build_master_blueprint:
+  resize_preview_images:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -23,23 +23,22 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      # - name: Install dependencies
-      #   run: |
-      #     python -m pip install --upgrade pip
-      #     pip install pytest pipenv
-      #     pipenv install
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install imagesize Pillow
 
       - name: Run Python Script
         run: |
-          python ./build/build_master_blueprint.py
+          python ./build/resize_images.py
 
-      - name: Commit Updated Blueprint
+      - name: Commit Resized Images
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
-          git add "master_blueprints.json"
-          git diff-index --quiet HEAD || git commit -a -m "Update Master Blueprint"
+          git add .
+          git diff-index --quiet HEAD || git commit -a -m "Resize Preview Images"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
