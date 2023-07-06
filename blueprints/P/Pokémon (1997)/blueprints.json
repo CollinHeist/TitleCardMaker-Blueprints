@@ -2,15 +2,17 @@
   {
     "description": [
       "Anime title cards with absolute episode numbering, arc season titles, and the show font.",
-      "There are also overrides of the season text on any banned or unaired Episodes."
+      "Any Episodes without an absolute episode number use the normal episode number",
+      "Custom season text is used on any banned or unaired Episodes."
     ],
     "preview": "preview.jpg",
     "creator": "CollinHeist",
     "series": {
       "font_id": 0,
       "card_type": "anime",
-      "episode_text_format": "Episode {absolute_number}",
-      "template_ids": [],
+      "template_ids": [
+        0
+      ],
       "season_title_ranges": [
         "s1e1-s1e82",
         "s2e1-s2e36",
@@ -100,7 +102,19 @@
         "season_text": "Unaired"
       }
     },
-    "templates": [],
+    "templates": [
+      {
+        "episode_text_format": "Episode {absolute_number}",
+        "name": "Absolute Episode Numbering",
+        "filters": [
+          {
+            "argument": "Absolute Number",
+            "operation": "is not null",
+            "reference": ""
+          }
+        ]
+      }
+    ],
     "fonts": [
       {
         "name": "Pokémon",
@@ -116,15 +130,17 @@
   }, {
     "description": [
       "Standard title cards with absolute episode numbering, arc season titles, and the show font.",
-      "There are also overrides of the season text on any banned or unaired Episodes."
+      "Any Episodes without an absolute episode number use the normal episode number",
+      "Custom season text is used on any banned or unaired Episodes."
     ],
     "preview": "preview.jpg",
     "creator": "CollinHeist",
     "series": {
       "font_id": 0,
       "card_type": "anime",
-      "episode_text_format": "Episode {absolute_number}",
-      "template_ids": [],
+      "template_ids": [
+        0
+      ],
       "season_title_ranges": [
         "s1e1-s1e82",
         "s2e1-s2e36",
@@ -214,7 +230,19 @@
         "season_text": "Unaired"
       }
     },
-    "templates": [],
+    "templates": [
+      {
+        "episode_text_format": "Episode {absolute_number}",
+        "name": "Absolute Episode Numbering",
+        "filters": [
+          {
+            "argument": "Absolute Number",
+            "operation": "is not null",
+            "reference": ""
+          }
+        ]
+      }
+    ],
     "fonts": [
       {
         "name": "Pokémon",
