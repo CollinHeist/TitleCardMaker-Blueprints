@@ -40,7 +40,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
-          git add "master_blueprints.json"
+          git add .
           git diff-index --quiet HEAD || git commit -a -m "Update Master and Series Blueprint"
 
       - name: Push changes
