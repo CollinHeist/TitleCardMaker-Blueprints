@@ -31,7 +31,8 @@
         "delete_missing": true
       }
     ]
-  }, {
+  },
+  {
     "description": [
       "Olivier card type with the series font and coloring for the title text."
     ],

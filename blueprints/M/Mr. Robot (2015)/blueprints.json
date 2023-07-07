@@ -37,7 +37,8 @@
         "delete_missing": true
       }
     ]
-  }, {
+  },
+  {
     "description": [
       "Olivier card type with thematic episode text."
     ],
@@ -57,7 +58,8 @@
     "episodes": {},
     "templates": [],
     "fonts": []
-  }, {
+  },
+  {
     "description": [
       "Tinted Glass card with custom show font, using the show colors for title and episode text."
     ],

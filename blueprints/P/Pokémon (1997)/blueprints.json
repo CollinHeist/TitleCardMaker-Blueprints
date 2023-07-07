@@ -117,7 +117,7 @@
     ],
     "fonts": [
       {
-        "name": "Pokémon",
+        "name": "Pok\u00e9mon",
         "color": "rgb(247,205,70)",
         "file": "Pokemon Solid.ttf",
         "title_case": "source",
@@ -127,7 +127,8 @@
         "delete_missing": true
       }
     ]
-  }, {
+  },
+  {
     "description": [
       "Standard title cards with absolute episode numbering, arc season titles, and the show font.",
       "Any Episodes without an absolute episode number use the normal episode number",
@@ -245,7 +246,7 @@
     ],
     "fonts": [
       {
-        "name": "Pokémon",
+        "name": "Pok\u00e9mon",
         "color": "rgb(247,205,70)",
         "file": "Pokemon Solid.ttf",
         "title_case": "source",
