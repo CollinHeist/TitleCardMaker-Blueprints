@@ -5,8 +5,20 @@ from re import sub as re_sub, IGNORECASE
 
 BLUEPRINT_FOLDER = Path(__file__).parent / 'blueprints'
 
+PATH_SAFE_TRANSLATION = str.maketrans({
+    '?': '!',
+    '<': '',
+    '>': '',
+    ':':' -',
+    '"': '',
+    '|': '',
+    '*': '-',
+    '/': '+',
+    '\\': '+',
+})
 
-def get_path_name(series_name: str) -> str:
+
+def get_blueprint_folders(series_name: str) -> tuple[str, str]:
     """
     Get the path-safe name for the given Series name.
 
@@ -18,24 +30,10 @@ def get_path_name(series_name: str) -> str:
         (e.g. '?', '|', '/', etc.) removed.
     """
 
-    return re_sub(
-        r'^(a|an|the)(\s)',
-        '',
-        str(series_name).translate(
-            str.maketrans({
-                '?': '!',
-                '<': '',
-                '>': '',
-                ':':' -',
-                '"': '',
-                '|': '',
-                '*': '-',
-                '/': '+',
-                '\\': '+',
-            })
-        ),
-        flags=IGNORECASE
-    )
+    clean_name = str(series_name).translate(PATH_SAFE_TRANSLATION)
+    sort_name = re_sub(r'^(a|an|the)(\s)', '', clean_name, flags=IGNORECASE)
+
+    return sort_name[0].upper(), clean_name
 
 
 # File is entrypoint
@@ -46,12 +44,10 @@ if __name__ == '__main__':
     args = ap.parse_args()
 
     # Create all subfolder
-    series_name = get_path_name(args.series)
-    folder = BLUEPRINT_FOLDER / series_name[0].upper() / series_name
+    letter, path_name = get_blueprint_folders(args.series)
+    folder = BLUEPRINT_FOLDER / letter / path_name
     folder.mkdir(exist_ok=True, parents=True)
-
-    # Log
-    print(f'Created "blueprints/{series_name[0].upper()}/{series_name}"')
+    print(f'Created "blueprints/{letter}/{path_name}"')
 
     # Create blueprints.json if DNE
     file = folder / 'blueprints.json'
