@@ -830,5 +830,39 @@
     ],
     "series_full_name": "Mr. Robot (2015)",
     "id": 2
+  },
+  {
+    "description": [
+      "Anime card type with arc season titles and Japanese Kanji."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/D/Demon Slayer - Kimetsu no Yaiba (2019)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "card_type": "tinted frame",
+      "template_ids": [],
+      "translations": [
+        {
+          "language_code": "ja",
+          "data_key": "kanji"
+        }
+      ],
+      "season_title_ranges": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "season_title_values": [
+        "Finding My Life's Purpose",
+        "Mugen Train",
+        "Entertainment District",
+        "Swordsmith Village"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "series_full_name": "Demon Slayer - Kimetsu no Yaiba (2019)",
+    "id": 0
   }
 ]
