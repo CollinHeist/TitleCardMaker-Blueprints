@@ -1,4 +1,4 @@
-name: Build Master Blueprint File
+name: Build Master and Series Blueprint Files
 
 on:
   pull_request:
@@ -23,23 +23,25 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      # - name: Install dependencies
-      #   run: |
-      #     python -m pip install --upgrade pip
-      #     pip install pytest pipenv
-      #     pipenv install
+      - name: (Python) Lint Blueprint Files
+        run: |
+          python ./build/lint_blueprints.py
 
-      - name: Run Python Script
+      - name: (Python) Build Series Blueprint Files
+        run: |
+          python ./build/build_series_blueprints.py
+
+      - name: (Python) Build Master Blueprint File
         run: |
           python ./build/build_master_blueprint.py
 
-      - name: Commit Updated Blueprint
+      - name: Commit Updated Blueprints
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
           git add "master_blueprints.json"
-          git diff-index --quiet HEAD || git commit -a -m "Update Master Blueprint"
+          git diff-index --quiet HEAD || git commit -a -m "Update Master and Series Blueprint"
 
       - name: Push changes
         uses: ad-m/github-push-action@master

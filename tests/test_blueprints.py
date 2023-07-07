@@ -7,15 +7,13 @@ BLUEPRINT_FOLDER = Path(__file__).parent.parent / 'blueprints'
 
 # Non-tests
 
-def read_blueprints(skip_null: bool = True):
-    for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/blueprints.json'):
-        series_subfolder = blueprint_file.parent
+def read_blueprints():
+    for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/*/blueprints.json'):
+        blueprint_id = blueprint_file.parent
+        series_subfolder = blueprint_file.parent.parent
         with blueprint_file.open('r') as file_handle:
-            for blueprint_id, blueprint in enumerate(json_load(file_handle)):
-                if skip_null and blueprint is None:
-                    continue
-
-                yield series_subfolder, blueprint_id, blueprint
+            blueprint = json_load(file_handle)
+            yield series_subfolder, blueprint_id, blueprint
 
     return None
 
@@ -68,6 +66,7 @@ class TestFolderOrganization:
 
     def test_series_blueprint_folder_names(self):
         for folder in BLUEPRINT_FOLDER.glob('*/*/*'):
+            # Skip Series blueprints.json
             if folder.is_file():
                 continue
 
@@ -76,6 +75,7 @@ class TestFolderOrganization:
 
     def test_series_subfolder_files(self):
         for file in BLUEPRINT_FOLDER.glob('*/*/*'):
+            # Skip blueprint subfolder
             if file.is_dir():
                 continue
 
@@ -84,7 +84,7 @@ class TestFolderOrganization:
 
 class TestBlueprintJSON:
     def test_blueprint_valid_json(self):
-        for file in BLUEPRINT_FOLDER.glob('*/*/blueprints.json'):
+        for file in BLUEPRINT_FOLDER.glob('*/*/*/blueprint.json'):
             content = None
             with file.open('r') as file_handle:
                 try:
@@ -92,36 +92,28 @@ class TestBlueprintJSON:
                 except JSONDecodeError:
                     pass
 
-            assert content is not None, 'All blueprints.json files must be valid JSON and cannot be empty'
-            assert isinstance(content, list), 'All blueprint files must have a top-level list'
+            assert content is not None, 'All Series must have an associated blueprint.json file'
+            assert isinstance(content, dict), 'All blueprint files must have be a single Blueprint'
 
     def test_blueprint_json_has_required_data(self):
         for _, _, blueprint in read_blueprints():
             assert isinstance(blueprint, dict), 'Invalid blueprint JSON'
             assert 'description' in blueprint.keys(), 'All blueprints must have a "description" field'
             assert isinstance(blueprint['description'], list) and len(blueprint['description']) > 0, 'All blueprint descriptions must be a list'
+            assert all(len(str(desc).strip()) > 0 for desc in blueprint['description']), 'Blueprint description sentences cannot be blank'
             assert 'preview' in blueprint.keys(), 'All blueprints must have a "preview" field'
             assert 'creator' in blueprint.keys(), 'All blueprints must have a "creator" field'
-
-
-class TestBlueprintSubfolders:
-    def test_blueprint_has_subfolder(self):
-        for series_subfolder, blueprint_id, _ in read_blueprints():
-            assert (series_subfolder / str(blueprint_id)).exists(), 'Every blueprint must have a subfolder'
-
-    def test_deleted_blueprints_has_no_subfolder(self):
-        for series_subfolder, blueprint_id, blueprint in read_blueprints(skip_null=False):
-            if blueprint is not None:
-                continue
-
-            assert not (series_subfolder / str(blueprint_id)).exists(), 'Deleted blueprints must have no subfolder'
 
 
 class TestBlueprintFiles:
     def test_blueprint_identifies_all_files(self):
         for series_subfolder, blueprint_id, blueprint in read_blueprints():
             # Get list of files in the blueprint subfolder
-            given_files = {file.name for file in (series_subfolder / str(blueprint_id)).glob('*')}
+            given_files = {
+                file.name
+                for file in (series_subfolder / str(blueprint_id)).glob('*')
+                if file.name != 'blueprint.json'
+            }
             # Get all files listed in any Fonts
             font_files = {
                 font['file']

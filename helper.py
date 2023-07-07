@@ -43,14 +43,8 @@ if __name__ == '__main__':
     ap.add_argument('series', type=str)
     args = ap.parse_args()
 
-    # Create all subfolder
+    # Create all subfolders
     letter, path_name = get_blueprint_folders(args.series)
     folder = BLUEPRINT_FOLDER / letter / path_name
     folder.mkdir(exist_ok=True, parents=True)
     print(f'Created "blueprints/{letter}/{path_name}"')
-
-    # Create blueprints.json if DNE
-    file = folder / 'blueprints.json'
-    if not file.exists():
-        file.write_text('[\n]')
-        print(f'Created blank "blueprints.json"')
