@@ -1,7 +1,7 @@
 from json import load as json_load, JSONDecodeError
 from pathlib import Path
 
-from re import compile as re_compile
+from re import compile as re_compile, sub as re_sub, IGNORECASE
 
 BLUEPRINT_FOLDER = Path(__file__).parent.parent / 'blueprints'
 
@@ -19,6 +19,36 @@ def read_blueprints(skip_null: bool = True):
 
     return None
 
+PATH_SAFE_TRANSLATION = str.maketrans({
+    '?': '!',
+    '<': '',
+    '>': '',
+    ':':' -',
+    '"': '',
+    '|': '',
+    '*': '-',
+    '/': '+',
+    '\\': '+',
+})
+
+
+def get_blueprint_folders(series_name: str) -> tuple[str, str]:
+    """
+    Get the path-safe name for the given Series name.
+
+    Args:
+        series_name: Name of the Series.
+
+    Returns:
+        Path-safe name with prefix a/an/the and any illegal characters
+        (e.g. '?', '|', '/', etc.) removed.
+    """
+
+    clean_name = str(series_name).translate(PATH_SAFE_TRANSLATION)
+    sort_name = re_sub(r'^(a|an|the)(\s)', '', clean_name, flags=IGNORECASE)
+
+    return sort_name[0].upper(), clean_name
+
 # Tests
 
 class TestFolderOrganization:
@@ -28,7 +58,8 @@ class TestFolderOrganization:
 
     def test_series_in_correct_subfolder(self):
         for series_folder in BLUEPRINT_FOLDER.glob('*/*'):
-            assert series_folder.parent.name == series_folder.name[0].upper(), 'Series must be placed in the correct letter subfolder'
+            letter, _ = get_blueprint_folders(series_folder)
+            assert series_folder.parent.name == letter, 'Series must be placed in the correct letter subfolder'
 
     def test_series_folder_names(self):
         NAME_REGEX = re_compile(r'^.+\(\d{4}\)$')
