@@ -58,7 +58,7 @@ class TestFolderOrganization:
 
     def test_series_in_correct_subfolder(self):
         for series_folder in BLUEPRINT_FOLDER.glob('*/*'):
-            letter, _ = get_blueprint_folders(series_folder)
+            letter, _ = get_blueprint_folders(series_folder.name)
             assert series_folder.parent.name == letter, 'Series must be placed in the correct letter subfolder'
 
     def test_series_folder_names(self):
