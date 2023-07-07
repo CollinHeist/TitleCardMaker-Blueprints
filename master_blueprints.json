@@ -60,6 +60,33 @@
     "id": 0
   },
   {
+    "series": {
+      "card_type": "standard",
+      "episode_text_format": "Chapter {episode_number}",
+      "template_ids": [],
+      "season_title_ranges": [
+        "1",
+        "2",
+        "3"
+      ],
+      "season_title_values": [
+        "Book One: Water",
+        "Book Two: Earth",
+        "Book Three: Fire"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "description": [
+      "Standard card type with the book names (Water/Earth/Fire) as the season titles, and chapter numbers for episode text."
+    ],
+    "creator": "CollinHeist",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Avatar - The Last Airbender (2005)/0/preview.jpg",
+    "series_full_name": "Avatar - The Last Airbender (2005)",
+    "id": 0
+  },
+  {
     "description": [
       "Standard card type using the series font."
     ],
@@ -393,7 +420,7 @@
   },
   {
     "description": [
-      "Standard card type with the in-Series Font, and season titles based on the most relevant adapted book."
+      "Standard card type with the in-universe Font, and season titles based on the most relevant book adaptation."
     ],
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/E/The Expanse (2015)/0/preview.jpg",
     "creator": "CollinHeist",

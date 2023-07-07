@@ -116,7 +116,7 @@
   ],
   "fonts": [
     {
-      "name": "Pokémon",
+      "name": "Pok\u00e9mon",
       "color": "rgb(247,205,70)",
       "file": "Pokemon Solid.ttf",
       "title_case": "source",
