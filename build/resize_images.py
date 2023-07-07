@@ -20,29 +20,22 @@ REPO_URL = (
 )
 
 
-for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/blueprints.json'):
+for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/*/blueprint.json'):
     # Read this blueprint file
-    series_subfolder = blueprint_file.parent
     with blueprint_file.open('r') as file_handle:
         # Parse JSON, skip if unable to parse
         try:
-            blueprint_json = json_load(file_handle)
+            blueprint = json_load(file_handle)
         except JSONDecodeError:
             continue
 
-        # Go through all Blueprints in this file
-        for blueprint_id, blueprint in enumerate(blueprint_json):
-            # Skip null Blueprints
-            if blueprint is None:
-                continue
+        # Get this Blueprint's preview
+        preview = blueprint_file.parent / blueprint['preview']
 
-            # Get this Blueprint's preview
-            preview = series_subfolder / str(blueprint_id) /blueprint['preview']
-
-            # Verify image is 1920x1080
-            width, height = get_image_size(preview)
-            if (width not in range(IMAGE_SIZE[0]-5, IMAGE_SIZE[0]+5)
-                or height not in range(IMAGE_SIZE[1]-5, IMAGE_SIZE[1]+5)):
-                image = Image.open(preview).resize(IMAGE_SIZE)
-                image.save(preview)
-                print(f'Resized "{preview}" to 1920x1080')
+        # Verify image is 1920x1080
+        width, height = get_image_size(preview)
+        if (width not in range(IMAGE_SIZE[0]-5, IMAGE_SIZE[0]+5)
+            or height not in range(IMAGE_SIZE[1]-5, IMAGE_SIZE[1]+5)):
+            image = Image.open(preview).resize(IMAGE_SIZE)
+            image.save(preview)
+            print(f'Resized "{preview}" to 1920x1080')

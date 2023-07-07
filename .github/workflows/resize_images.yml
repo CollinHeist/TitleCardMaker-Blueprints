@@ -28,7 +28,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install imagesize Pillow
 
-      - name: Run Python Script
+      - name: (Python) Resize Images
         run: |
           python ./build/resize_images.py
 
