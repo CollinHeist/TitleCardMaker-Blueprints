@@ -1,0 +1,94 @@
+[
+  {
+    "description": [
+      "Standard card type with custom show font and thematic season titles"
+    ],
+    "preview": "preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "episode_text_format": "episode_{episode_number}.0",
+      "template_ids": [],
+      "season_title_ranges": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "season_title_values": [
+        "specials_0.0",
+        "season_1.0",
+        "season_2.0",
+        "season_3.0",
+        "season_4.0"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Mr. Robot",
+        "color": "rgb(202,34,34)",
+        "file": "mr_robot.ttf",
+        "title_case": "upper",
+        "interline_spacing": 20,
+        "delete_missing": true
+      }
+    ]
+  },
+  {
+    "description": [
+      "Olivier card type with thematic episode text."
+    ],
+    "preview": "preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "card_type": "olivier",
+      "episode_text_format": "EP_{episode_number_cardinal}",
+      "template_ids": [],
+      "extra_keys": [
+        "episode_text_color"
+      ],
+      "extra_values": [
+        "rgb(202,34,34)"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": []
+  },
+  {
+    "description": [
+      "Tinted Glass card with custom show font, using the show colors for title and episode text."
+    ],
+    "preview": "preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "episode_text_format": "MR. ROBOT | S{season_number}.0_E{episode_number}.0",
+      "template_ids": [],
+      "extra_keys": [
+        "episode_text_color",
+        "box_adjustments"
+      ],
+      "extra_values": [
+        "rgb(202,34,34)",
+        "40 -10 0 0"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Mr. Robot (Tinted Glass)",
+        "color": "rgb(202,34,34)",
+        "file": "mr_robot.ttf",
+        "size": 0.9,
+        "delete_missing": true
+      }
+    ]
+  }
+]
