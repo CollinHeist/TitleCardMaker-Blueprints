@@ -1,25 +1,109 @@
 [
   {
     "description": [
-      "Tinted Glass card with the series blue used as the episode text color"
+      "Anime card type with arc season titles and Japanese Kanji."
     ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/White Collar (2009)/0/preview.jpg",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/D/Demon Slayer - Kimetsu no Yaiba (2019)/0/preview.jpg",
     "creator": "CollinHeist",
     "series": {
-      "card_type": "tinted glass",
+      "card_type": "tinted frame",
       "template_ids": [],
-      "extra_keys": [
-        "episode_text_color"
+      "translations": [
+        {
+          "language_code": "ja",
+          "data_key": "kanji"
+        }
       ],
-      "extra_values": [
-        "#53B6E2"
+      "season_title_ranges": [
+        "1",
+        "2",
+        "3",
+        "4"
       ],
-      "font_color": "white"
+      "season_title_values": [
+        "Finding My Life's Purpose",
+        "Mugen Train",
+        "Entertainment District",
+        "Swordsmith Village"
+      ]
     },
     "episodes": {},
     "templates": [],
     "fonts": [],
-    "series_full_name": "White Collar (2009)",
+    "series_full_name": "Demon Slayer - Kimetsu no Yaiba (2019)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Comic Book card with randomized banner angles for the title and index text.",
+      "The banners are colored to match the comic panel interstitials used in the show.",
+      "Using a grayscale style modifier is recommended."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/I/iZombie (2015)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "card_type": "comic book",
+      "template_ids": [],
+      "extra_keys": [
+        "title_text_rotation_angle",
+        "index_text_rotation_angle"
+      ],
+      "extra_values": [
+        "random[-4, 4]",
+        "random[-4, -3]"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "series_full_name": "iZombie (2015)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Standard card type using the series font."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Family Guy (1999)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Family Guy",
+        "file": "family-guy.TTF"
+      }
+    ],
+    "series_full_name": "Family Guy (1999)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Tinted Frame card using the Series font and no season titles."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Foundation (2021)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted frame",
+      "hide_season_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Foundation",
+        "file": "FoundationTitlesHand-SemiBold.ttf",
+        "vertical_shift": -10,
+        "delete_missing": true
+      }
+    ],
+    "series_full_name": "Foundation (2021)",
     "id": 0
   },
   {
@@ -283,6 +367,70 @@
     ],
     "series_full_name": "Pok\u00e9mon (1997)",
     "id": 1
+  },
+  {
+    "description": [
+      "Tinted Glass card with the series blue used as the episode text color"
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/White Collar (2009)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "card_type": "tinted glass",
+      "template_ids": [],
+      "extra_keys": [
+        "episode_text_color"
+      ],
+      "extra_values": [
+        "#53B6E2"
+      ],
+      "font_color": "white"
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "series_full_name": "White Collar (2009)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Standard card type with the in-Series Font, and season titles based on the most relevant adapted book."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/E/The Expanse (2015)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": [],
+      "season_title_ranges": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "season_title_values": [
+        "Leviathan Wakes",
+        "Caliban's War",
+        "Abaddon's Gate",
+        "Cibola Burn",
+        "Nemesis Games",
+        "Babylon's Ashes"
+      ],
+      "extra_keys": [],
+      "extra_values": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Expanse",
+        "file": "Protomolecule.ttf",
+        "title_case": "source"
+      }
+    ],
+    "series_full_name": "The Expanse (2015)",
+    "id": 0
   },
   {
     "description": [
@@ -684,57 +832,6 @@
   },
   {
     "description": [
-      "Comic Book card with randomized banner angles for the title and index text.",
-      "The banners are colored to match the comic panel interstitials used in the show.",
-      "Using a grayscale style modifier is recommended."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/I/iZombie (2015)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "card_type": "comic book",
-      "template_ids": [],
-      "extra_keys": [
-        "title_text_rotation_angle",
-        "index_text_rotation_angle"
-      ],
-      "extra_values": [
-        "random[-4, 4]",
-        "random[-4, -3]"
-      ]
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [],
-    "series_full_name": "iZombie (2015)",
-    "id": 0
-  },
-  {
-    "description": [
-      "Tinted Frame card using the Series font and no season titles."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Foundation (2021)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "font_id": 0,
-      "card_type": "tinted frame",
-      "hide_season_text": true,
-      "template_ids": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "Foundation",
-        "file": "FoundationTitlesHand-SemiBold.ttf",
-        "vertical_shift": -10,
-        "delete_missing": true
-      }
-    ],
-    "series_full_name": "Foundation (2021)",
-    "id": 0
-  },
-  {
-    "description": [
       "Standard card type with custom show font and thematic season titles"
     ],
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/M/Mr. Robot (2015)/0/preview.jpg",
@@ -830,39 +927,5 @@
     ],
     "series_full_name": "Mr. Robot (2015)",
     "id": 2
-  },
-  {
-    "description": [
-      "Anime card type with arc season titles and Japanese Kanji."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/D/Demon Slayer - Kimetsu no Yaiba (2019)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "card_type": "tinted frame",
-      "template_ids": [],
-      "translations": [
-        {
-          "language_code": "ja",
-          "data_key": "kanji"
-        }
-      ],
-      "season_title_ranges": [
-        "1",
-        "2",
-        "3",
-        "4"
-      ],
-      "season_title_values": [
-        "Finding My Life's Purpose",
-        "Mugen Train",
-        "Entertainment District",
-        "Swordsmith Village"
-      ]
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [],
-    "series_full_name": "Demon Slayer - Kimetsu no Yaiba (2019)",
-    "id": 0
   }
 ]
