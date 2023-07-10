@@ -2,7 +2,7 @@ name: pytest
 
 on:
   push:
-    branches: [ master, staging, validate-blueprint-models ]
+    branches: [ master, staging ]
 
 jobs:
   pytest:
