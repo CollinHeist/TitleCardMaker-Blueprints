@@ -8,6 +8,7 @@ pytest = "*"
 regex = "*"
 imagesize = "*"
 pillow = "*"
+pydantic = "==1.*"
 
 [dev-packages]
 

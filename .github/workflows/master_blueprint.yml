@@ -1,4 +1,4 @@
-name: Build Master and Series Blueprint Files
+name: Build Blueprint and README Files
 
 on:
   pull_request:
@@ -7,9 +7,6 @@ on:
 jobs:
   build_master_blueprint:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.11"]
 
     steps:
       - name: Checkout Repository
@@ -18,10 +15,10 @@ jobs:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.11"
 
       - name: (Python) Lint Blueprint Files
         run: |
@@ -35,13 +32,17 @@ jobs:
         run: |
           python ./build/build_master_blueprint.py
 
+      - name: (Python) Build Series README Files
+        run: |
+          python ./build/build_series_readme.py
+
       - name: Commit Updated Blueprints
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull
           git add .
-          git diff-index --quiet HEAD || git commit -a -m "Update Master and Series Blueprint"
+          git diff-index --quiet HEAD || git commit -a -m "Update Blueprint and README Files"
+          git pull
 
       - name: Push changes
         uses: ad-m/github-push-action@master

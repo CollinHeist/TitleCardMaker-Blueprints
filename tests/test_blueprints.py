@@ -3,6 +3,8 @@ from pathlib import Path
 
 from re import compile as re_compile, sub as re_sub, IGNORECASE
 
+from models import Blueprint
+
 BLUEPRINT_FOLDER = Path(__file__).parent.parent / 'blueprints'
 
 # Non-tests
@@ -66,7 +68,7 @@ class TestFolderOrganization:
 
     def test_series_blueprint_folder_names(self):
         for folder in BLUEPRINT_FOLDER.glob('*/*/*'):
-            # Skip Series blueprints.json
+            # Skip Series blueprints.json and README
             if folder.is_file():
                 continue
 
@@ -79,11 +81,11 @@ class TestFolderOrganization:
             if file.is_dir():
                 continue
 
-            assert file.name == 'blueprints.json', 'Only "blueprints.json" is allowed at root of Series Subfolder'
+            assert file.name in ('blueprints.json', 'README.md'), 'Only Series blueprints and README is allowed at root of the Series subfolder'
 
 
-class TestBlueprintJSON:
-    def test_blueprint_valid_json(self):
+class TestBlueprintModels:
+    def test_blueprint_is_valid_json(self):
         for file in BLUEPRINT_FOLDER.glob('*/*/*/blueprint.json'):
             content = None
             with file.open('r') as file_handle:
@@ -95,14 +97,9 @@ class TestBlueprintJSON:
             assert content is not None, 'All Series must have an associated blueprint.json file'
             assert isinstance(content, dict), 'All blueprint files must have be a single Blueprint'
 
-    def test_blueprint_json_has_required_data(self):
+    def test_blueprint_is_valid_model(self):
         for _, _, blueprint in read_blueprints():
-            assert isinstance(blueprint, dict), 'Invalid blueprint JSON'
-            assert 'description' in blueprint.keys(), 'All blueprints must have a "description" field'
-            assert isinstance(blueprint['description'], list) and len(blueprint['description']) > 0, 'All blueprint descriptions must be a list'
-            assert all(len(str(desc).strip()) > 0 for desc in blueprint['description']), 'Blueprint description sentences cannot be blank'
-            assert 'preview' in blueprint.keys(), 'All blueprints must have a "preview" field'
-            assert 'creator' in blueprint.keys(), 'All blueprints must have a "creator" field'
+            Blueprint(**blueprint)
 
 
 class TestBlueprintFiles:

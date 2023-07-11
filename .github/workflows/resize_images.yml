@@ -7,9 +7,6 @@ on:
 jobs:
   resize_preview_images:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.11"]
 
     steps:
       - name: Checkout Repository
@@ -18,10 +15,10 @@ jobs:
           ref: ${{ github.head_ref }}
           fetch-depth: 0
 
-      - name: Set up Python ${{ matrix.python-version }}
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          python-version: "3.11"
 
       - name: Install dependencies
         run: |
@@ -36,9 +33,9 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git pull
           git add .
           git diff-index --quiet HEAD || git commit -a -m "Resize Preview Images"
+          git pull
 
       - name: Push changes
         uses: ad-m/github-push-action@master
