@@ -68,7 +68,7 @@ class TestFolderOrganization:
 
     def test_series_blueprint_folder_names(self):
         for folder in BLUEPRINT_FOLDER.glob('*/*/*'):
-            # Skip Series blueprints.json
+            # Skip Series blueprints.json and README
             if folder.is_file():
                 continue
 
@@ -81,7 +81,7 @@ class TestFolderOrganization:
             if file.is_dir():
                 continue
 
-            assert file.name == 'blueprints.json', 'Only "blueprints.json" is allowed at root of Series Subfolder'
+            assert file.name in ('blueprints.json', 'README.md'), 'Only Series blueprints and README is allowed at root of the Series subfolder'
 
 
 class TestBlueprintModels:

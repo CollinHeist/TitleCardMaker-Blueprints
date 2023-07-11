@@ -1,4 +1,4 @@
-name: Build Master and Series Blueprint Files
+name: Build Blueprint and README Files
 
 on:
   pull_request:
@@ -32,13 +32,17 @@ jobs:
         run: |
           python ./build/build_master_blueprint.py
 
+      - name: (Python) Build Series README Files
+        run: |
+          python ./build/build_series_readme.py
+
       - name: Commit Updated Blueprints
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git pull
           git add .
-          git diff-index --quiet HEAD || git commit -a -m "Update Master and Series Blueprint"
+          git diff-index --quiet HEAD || git commit -a -m "Update Blueprint and README Files"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
