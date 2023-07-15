@@ -39,16 +39,16 @@ content = issue['body']
 
 from re import compile as re_compile
 issue_regex = re_compile(
-    r'^### Series Name\\n\\n(?P<series_name>[^\\]+).*\\n\\n### Series Year'
-    r'\\n\\n(?P<series_year>\d+)\\n\\n### Creator Username\\n\\n'
-    r'(?P<creator>[^\\]+)\\n\\n### Blueprint Description\\n\\n'
-    r'(?P<description>.+)\\n\\n### Blueprint File\\n\\n'
-    r'```json\\n(?P<blueprint>.+)```\\n\\n\\n'
-    r'### Zip of Files\\n\\n.*\[.*\]\((?P<file_zip>.+)\).*$'
+    r'^### Series Name\n+(?P<series_name>.+).*?\n+### Series Year\n+'
+    r'(?P<series_year>\d+)\n+### Creator Username\n+(?P<creator>.+)\n+'
+    r'### Blueprint Description\n+(?P<description>[^#]+)### Blueprint File\n+'
+    r'```json\n+(?P<blueprint>[^`]+)```\n+'
+    r'### Zip of Files\n+.*?\[.*\]\((?P<file_zip>.+)\).*$'
 )
 print(content)
 if (data_match := issue_regex.match(content)):
     data = data_match.groupdict()
-    print(data)
+    print(f'{data=!r}')
 else:
+    print(f'{content=!r}')
     sys_exit(1)
