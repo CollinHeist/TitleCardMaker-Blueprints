@@ -34,8 +34,8 @@ try:
 except JSONDecodeError:
     sys_exit(1)
 
-creator = context['event']['user']['login']
-content = context['event']['body']
+creator = context['event']['issue']['user']['login']
+content = context['event']['issue']['body']
 
 from re import compile as re_compile
 issue_regex = re_compile('^### Series Name\\n\\n(?P<series_name>[^\\]+).*\\n\\n### Series Year\\n\\n(?P<series_year>\d+)\\n\\n### Creator Username\\n\\n(?P<creator>[^\\]+)\\n\\n### Blueprint Description\\n\\n(?P<description>.+)\\n\\n### Blueprint File\\n\\n```json\\n(?P<blueprint>.+)```\\n\\n\\n### Zip of Files\\n\\n\[.*\]\((?P<file_zip>.+)\).*$')
