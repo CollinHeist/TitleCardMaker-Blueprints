@@ -28,6 +28,6 @@ jobs:
 
       - name: Run Python Script
         env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
+          GITHUB_CONTEXT: ${{ toJson(github.event.issue) }}
         run: |
-          python ./build/parse_submission.py new_blueprint.json
+          python ./build/parse_submission.py

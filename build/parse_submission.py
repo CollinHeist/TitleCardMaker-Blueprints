@@ -30,12 +30,12 @@ from sys import exit as sys_exit
 # if __name__ == '__main__':
 print(environ.get('GITHUB_CONTEXT'))
 try:
-    context = loads(environ.get('GITHUB_CONTEXT'))
+    issue = loads(environ.get('GITHUB_CONTEXT'))
 except JSONDecodeError:
     sys_exit(1)
 
-creator = context['event']['issue']['user']['login']
-content = context['event']['issue']['body']
+creator = issue['user']['login']
+content = issue['body']
 
 from re import compile as re_compile
 issue_regex = re_compile(
@@ -46,7 +46,7 @@ issue_regex = re_compile(
     r'```json\\n(?P<blueprint>.+)```\\n\\n\\n'
     r'### Zip of Files\\n\\n.*\[.*\]\((?P<file_zip>.+)\).*$'
 )
-
+print(content)
 if (data_match := issue_regex.match(content)):
     data = data_match.groupdict()
     print(data)
