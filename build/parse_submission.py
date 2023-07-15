@@ -4,7 +4,8 @@ Python script to be called by a GitHub action.
 TODO write
 """
 
-from json import dump as json_dump, load as json_load, JSONDecodeError
+from json import dump as json_dump, load as json_load, loads, JSONDecodeError
+from os import environ
 from pathlib import Path
 from sys import exit as sys_exit
 
@@ -27,16 +28,12 @@ from sys import exit as sys_exit
 
 
 if __name__ == '__main__':
-    from argparse import ArgumentParser
-    ap = ArgumentParser()
-    ap.add_argument('blueprint', required=True, type=Path)
-    args = ap.parse_args()
-
-    with args.blueprint.open('r') as file_handle:
-        try:
-            blueprint = json_load(file_handle)
-        except JSONDecodeError:
-            sys_exit(1)
+    print(environ.get('GITHUB_CONTEXT'))
+    try:
+        blueprint = loads(environ.get('GITHUB_CONTEXT'))
+    except JSONDecodeError:
+        sys_exit(1)
 
     from json import dumps
+    print(f'{"-"*20} JSON {"-"*20}')
     print(dumps(blueprint, indent=2))

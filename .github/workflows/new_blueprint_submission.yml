@@ -32,13 +32,15 @@ jobs:
       #   env:
       #     GITHUB_CONTEXT: ${{ toJson(github) }}
 
-      - name: Write Issue Context to file
-        env:
-          GITHUB_CONTEXT: ${{ toJson(github) }}
-        run: |
-          echo "$GITHUB_CONTEXT" >> "new_blueprint.json"
-          echo "$(pwd)"
+      # - name: Write Issue Context to file
+      #   env:
+      #     GITHUB_CONTEXT: ${{ toJson(github) }}
+      #   run: |
+      #     echo "$GITHUB_CONTEXT" >> "new_blueprint.json"
+      #     echo "$(pwd)"
         
       - name: Run Python Script
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
         run: |
           python ./build/parse_submission.py new_blueprint.json
