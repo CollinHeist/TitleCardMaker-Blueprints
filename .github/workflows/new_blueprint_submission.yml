@@ -1,0 +1,44 @@
+name: Label issues
+
+on:
+  issues:
+    types:
+      - reopened
+      - opened
+
+jobs:
+  read_issue:
+    # Only run on Blueprint issues
+    if: startsWith('${{ github.event.issue.title }}', '[Blueprint]')
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      # - name: View Github Context
+      #   run: |
+      #     echo "$GITHUB_CONTEXT"
+      #   env:
+      #     GITHUB_CONTEXT: ${{ toJson(github) }}
+
+      - name: Write Issue Context to file
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: |
+          echo "$GITHUB_CONTEXT" >> "new_blueprint.json"
+          echo "$(pwd)"
+        
+      - name: Run Python Script
+        run: |
+          python ./build/parse_submission.py new_blueprint.json

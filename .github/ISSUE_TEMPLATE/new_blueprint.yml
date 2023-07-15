@@ -54,18 +54,10 @@ body:
   - type: textarea
     id: preview
     attributes:
-      label: Title Card Preview
-      description: Upload a preview Title Card of this Blueprint.
+      label: Zip of Files
+      description: >
+        Upload a `.zip` file of the preview Title Card of this Blueprint, as well
+        as any Font Files used by this Blueprint. Please verify any Font Licenses
+        allow them to be shared.
     validations:
       required: true
-
-  - type: textarea
-    id: fonts
-    attributes:
-      label: Font Files
-      description: >
-        Upload any Font Files uses by this Blueprint.
-        Please verify the Licenses allow these Fonts to be shared.
-      render: json
-    validations:
-      required: false
