@@ -1,0 +1,71 @@
+name: New Blueprint
+description: Submit a new Blueprint
+title: '[Blueprint] '
+labels: ['blueprint']
+assignees: 'CollinHeist'
+
+body:
+  - type: input
+    id: series
+    attributes:
+      label: Series Name
+      description: What is the full name of the Series?
+      placeholder: ex. The Wire
+    validations:
+      required: true
+
+  - type: input
+    id: year
+    attributes:
+      label: Series Year
+      description: What year did this Series first air?
+      placeholder: ex. 2002
+    validations:
+      required: true
+
+  - type: input
+    id: creator
+    attributes:
+      label: Creator Username
+      description: Who would you like this Blueprint attributed to? If omitted, your GitHub username will be used.
+      placeholder: ex. CollinHeist
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Blueprint Description
+      description: A brief description of the Blueprint.
+    validations:
+      required: true
+  
+  - type: textarea
+    id: blueprint
+    attributes:
+      label: Blueprint File
+      description: >
+        Paste your blueprint.json file here.
+        This will be automatically formatted as JSON, so there is no need for backticks.
+      render: json
+    validations:
+      required: true
+      
+  - type: textarea
+    id: preview
+    attributes:
+      label: Title Card Preview
+      description: Upload a preview Title Card of this Blueprint.
+    validations:
+      required: true
+
+  - type: textarea
+    id: fonts
+    attributes:
+      label: Font Files
+      description: >
+        Upload any Font Files uses by this Blueprint.
+        Please verify the Licenses allow these Fonts to be shared.
+      render: json
+    validations:
+      required: false
