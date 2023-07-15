@@ -27,13 +27,21 @@ from sys import exit as sys_exit
 #         json_dump(blueprint, file_handle, indent=2)
 
 
-if __name__ == '__main__':
-    print(environ.get('GITHUB_CONTEXT'))
-    try:
-        blueprint = loads(environ.get('GITHUB_CONTEXT'))
-    except JSONDecodeError:
-        sys_exit(1)
+# if __name__ == '__main__':
+print(environ.get('GITHUB_CONTEXT'))
+try:
+    context = loads(environ.get('GITHUB_CONTEXT'))
+except JSONDecodeError:
+    sys_exit(1)
 
-    from json import dumps
-    print(f'{"-"*20} JSON {"-"*20}')
-    print(dumps(blueprint, indent=2))
+creator = context['event']['user']['login']
+content = context['event']['body']
+
+from re import compile as re_compile
+issue_regex = re_compile('^### Series Name\\n\\n(?P<series_name>[^\\]+).*\\n\\n### Series Year\\n\\n(?P<series_year>\d+)\\n\\n### Creator Username\\n\\n(?P<creator>[^\\]+)\\n\\n### Blueprint Description\\n\\n(?P<description>.+)\\n\\n### Blueprint File\\n\\n```json\\n(?P<blueprint>.+)```\\n\\n\\n### Zip of Files\\n\\n\[.*\]\((?P<file_zip>.+)\).*$')
+
+if (data_match := issue_regex.match(content)):
+    data = data_match.groupdict()
+    print(data)
+else:
+    sys_exit(1)
