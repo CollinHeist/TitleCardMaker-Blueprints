@@ -40,7 +40,7 @@ jobs:
 
       - name: Run pytest
         run: |
-          pytest --junitxml=junit-test-results.xml
+          pytest --junitxml=pytest.xml
 
       - name: Comment Pytest results
         uses: MishaKav/pytest-coverage-comment@main
@@ -52,6 +52,7 @@ jobs:
           default-branch: master
 
       - name: Add Passing Label
+        if: ${{ success() }}
         uses: actions/github-script@v6
         with:
           script: |
