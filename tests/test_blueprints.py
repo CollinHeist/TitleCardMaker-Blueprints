@@ -3,7 +3,8 @@ from pathlib import Path
 
 from re import compile as re_compile, sub as re_sub, IGNORECASE
 
-from models import Blueprint
+# from models import Blueprint
+from models.models import Blueprint
 
 BLUEPRINT_FOLDER = Path(__file__).parent.parent / 'blueprints'
 

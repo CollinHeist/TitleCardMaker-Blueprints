@@ -49,13 +49,6 @@ def get_blueprint_folders(series_name: str) -> tuple[str, str]:
     return sort_name[0].upper(), clean_name
 
 
-# Parse all Blueprints
-# for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/*/blueprint.json'):
-#     # Rewrite blueprint to format it
-#     with blueprint_file.open('w') as file_handle:
-#         json_dump(blueprint, file_handle, indent=2)
-
-
 # File is entrypoint
 if __name__ == '__main__':
     # Parse issue from environment variable
@@ -163,4 +156,8 @@ if __name__ == '__main__':
             copy_file(file, blueprint_subfolder / file.name)
             print(f'Copied [zip]/{file.name} into blueprints/{letter}/{folder_name}/{id_}/{file.name}')
 
-        
+    # Write Blueprint as JSON
+    blueprint_file = blueprint_subfolder / 'blueprint.json'
+    with blueprint_file.open('w') as file_handle:
+        json_dump(finalized_blueprint, file_handle, indent=2)
+    print(f'Wrote blueprint.json into blueprints/{letter}/{folder_name}/{id_}/blueprint.json')
