@@ -7,13 +7,13 @@ on:
   #     - opened
 
   issue_comment:                                     
-    types: [created, edited, deleted]
+    types: [created]
 
 jobs:
   read_issue:
     # Only run on Blueprint issues
     # if: startsWith('${{ github.event.issue.title }}', '[Blueprint]')
-    if: ${{ !github.event.issue.pull_request }} && startsWith(github.event.issue.title, '[Blueprint]') && contains(github.event.comment.body, '/create-blueprint') && ${{ github.event.comment.sender }} == 'CollinHeist')
+    if: ${{ !github.event.issue.pull_request && startsWith(github.event.issue.title, '[Blueprint]') && contains(github.event.comment.body, '/create-blueprint') && github.event.comment.sender == 'CollinHeist' }}
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -58,7 +58,9 @@ jobs:
           git pull
 
       - name: Push changes
-        uses: ad-m/github-push-action@master
+        # uses: ad-m/github-push-action@master
+        run: |
+          git push origin HEAD
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          # branch: ${{ github.ref }}
