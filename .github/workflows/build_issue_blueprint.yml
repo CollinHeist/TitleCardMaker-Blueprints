@@ -7,7 +7,7 @@ on:
 jobs:
   create_blueprint_from_issue:
     # Only run on Blueprint issues when I comment /create-blueprint
-    if: ${{ (!github.event.issue.pull_request) && (startsWith(github.event.issue.title, '[Blueprint]')) && (contains(github.event.comment.body, '/create-blueprint')) && (github.event.comment.user.login == 'CollinHeist') }}
+    if: ${{ (!github.event.issue.pull_request) && (startsWith(github.event.issue.title, '[Blueprint]')) && (contains(github.event.comment.body, '/create-blueprint')) && (github.event.comment.user.login == 'CollinHeist') && !contains(github.event.issue.labels.*.name, 'created') }}
     runs-on: ubuntu-latest
 
     steps:
@@ -54,3 +54,16 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: refs/heads/staging
+
+      # Add label that Blueprint has been built
+      - name: Add Label
+        if: ${{ success() }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["created"]
+            })
