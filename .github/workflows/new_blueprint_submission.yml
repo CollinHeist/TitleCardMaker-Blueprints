@@ -45,7 +45,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add ./blueprints
-          git diff-index --quiet HEAD || git commit -a -m "Create ${{ gitub.event.issue.user.login }}'s Blueprint"
+          git diff-index --quiet HEAD || git commit -a -m "Create ${{ github.event.issue.user.login }}'s Blueprint"
           git pull
 
       - name: Push changes
