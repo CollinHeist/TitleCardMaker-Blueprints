@@ -7,6 +7,7 @@ TODO write
 from json import dump as json_dump, loads, JSONDecodeError
 from os import environ
 from pathlib import Path
+from re import sub as re_sub, IGNORECASE
 from shutil import copy as copy_file
 from sys import exit as sys_exit
 
@@ -15,6 +16,38 @@ TCM_ROOT = Path(__file__).parent.parent
 BLUEPRINT_FOLDER = TCM_ROOT / 'blueprints'
 TEMP_FILE = TCM_ROOT / 'tmp'
 TEMP_DIRECTORY = TCM_ROOT / 'unzipped'
+
+
+PATH_SAFE_TRANSLATION = str.maketrans({
+    '?': '!',
+    '<': '',
+    '>': '',
+    ':':' -',
+    '"': '',
+    '|': '',
+    '*': '-',
+    '/': '+',
+    '\\': '+',
+})
+
+
+def get_blueprint_folders(series_name: str) -> tuple[str, str]:
+    """
+    Get the path-safe name for the given Series name.
+
+    Args:
+        series_name: Name of the Series.
+
+    Returns:
+        Path-safe name with prefix a/an/the and any illegal characters
+        (e.g. '?', '|', '/', etc.) removed.
+    """
+
+    clean_name = str(series_name).translate(PATH_SAFE_TRANSLATION)
+    sort_name = re_sub(r'^(a|an|the)(\s)', '', clean_name, flags=IGNORECASE)
+
+    return sort_name[0].upper(), clean_name
+
 
 # Parse all Blueprints
 # for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/*/blueprint.json'):
@@ -51,8 +84,6 @@ if __name__ == '__main__':
         print(f'Unable to parse Blueprint from Issue')
         print(f'{content=!r}')
         sys_exit(1)
-
-    from ..helper import get_blueprint_folders
 
     # Get each variable from the issue
     data = data_match.groupdict()
