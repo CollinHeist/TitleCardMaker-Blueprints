@@ -1,4 +1,4 @@
-name: Label issues
+name: Parse Blueprint Submission
 
 on:
   issues:
@@ -15,12 +15,14 @@ jobs:
       issues: write
 
     steps:
+      # Check out repository
       - name: Checkout Repository
         uses: actions/checkout@v3
         with:
-          ref: ${{ github.head_ref }}
+          ref: refs/heads/staging
           fetch-depth: 0
 
+      # Run script to parse issue
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
@@ -36,3 +38,18 @@ jobs:
           GITHUB_CONTEXT: ${{ toJson(github.event.issue) }}
         run: |
           python ./build/parse_submission.py
+
+      # Commit changes
+      - name: Commit New Blueprint
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ./blueprints
+          git diff-index --quiet HEAD || git commit -a -m "Create ${{ gitub.event.issue.user.login }}'s Blueprint"
+          git pull
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: refs/heads/staging
