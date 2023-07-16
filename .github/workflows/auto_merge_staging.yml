@@ -39,12 +39,6 @@ jobs:
               base: 'master',
               body: "This is an automated pull request created every 12 hours.\n${{ join(steps.get_issues.outputs.data.*.html_url, '\n') }}"
             });
-            github.rest.issues.addLabels({
-              owner,
-              repo,
-              issue_number: result.data.number,
-              labels: ['feature', 'automated pr']
-            });
 
       # - name: Create Pull Request
       #   id: create_pr
