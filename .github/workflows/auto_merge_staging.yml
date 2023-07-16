@@ -1,0 +1,50 @@
+name: Auto Merge Staging to Master
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  issue_comment:
+    types: [ created ]
+
+jobs:
+  auto_merge:
+    runs-on: ubuntu-latest
+    if: ${{ (startsWith(github.event.issue.title, '[Blueprint]') && contains(github.event.comment.body, '/merge-staging')) }}
+
+    steps:
+      # Check out the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Get list of open issues that are labeled as "created"
+      - name: Get Open Issues
+        id: get_issues
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/${{ github.repository }}/issues
+          query: labels=created&state=open
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Create a Pull Request to merge staging -> master
+      - name: Create Pull Request
+        id: create_pr
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: staging
+          base: master
+          title: "Auto Merge staging to master - $(date +"%Y-%m-%d %H:%M:%S")"
+          body: |
+            This is an automated pull request created every 12 hours.
+
+            <!-- List of open issues with the "created" label -->
+            ${{ join(steps.get_issues.outputs.data.*.html_url, '\n') }}
+            <!-- End of open issues list -->
+
+      # Merge the PR if created
+      # - name: Merge Pull Request
+      #   if: steps.create_pr.outputs.pull-request-number != 'null'
+      #   uses: octokit/request-action@v2.x
+      #   with:
+      #     route: PUT /repos/${{ github.repository }}/pulls/${{ steps.create_pr.outputs.pull-request-number }}/merge
+      #     token: ${{ secrets.GITHUB_TOKEN }}
