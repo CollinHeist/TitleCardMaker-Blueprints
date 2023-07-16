@@ -41,7 +41,7 @@ jobs:
       - name: Parse Issue into Blueprint
         env:
           GITHUB_CONTEXT: ${{ toJson(github.event.issue) }}
-          commenter: ${{ github.event.comment }}
+          commenter: ${{ toJson(github.event.comment) }}
         run: |
           python ./build/parse_submission.py
 
