@@ -42,14 +42,22 @@ jobs:
         run: |
           pytest --junitxml=pytest.xml
 
-      - name: Comment Pytest results
+      - name: Get Pytest Output
+        id: pytestResults
         uses: MishaKav/pytest-coverage-comment@main
         with:
-          title: Blueprint Validation Results
           junitxml-path: ./pytest.xml
-          hide-report: true
-          create-new-comment: true
-          default-branch: master
+          hide-comment: true
+
+      - name: Comment Pytest results
+        uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            # Blueprint Validation Results
+            | Tests | Failures | Errors | Skipped | Time |
+            | :---: | :---: | :---: | :---: | :---: |
+            | ${{ steps.pytestResults.outputs.tests }} | ${{ steps.pytestResults.outputs.failures }} | ${{ steps.pytestResults.outputs.errors }} | ${{ steps.pytestResults.outputs.skipped }} | ${{ steps.pytestResults.outputs.time }} |
 
       - name: Add Passing Label
         if: ${{ success() }}
