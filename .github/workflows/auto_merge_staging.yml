@@ -31,13 +31,14 @@ jobs:
         with:
           script: |
             const { repo, owner } = context.repo;
+            const issuesList = ${{ toJSON(steps.get_issues.outputs.data) }}.map(issue => `- Closes #${issue.number}`).join("\n");
             const result = await github.rest.pulls.create({
-              title: 'Auto Merge staging to master - $(date +'%Y-%m-%d %H:%M:%S')',
+              title: "Auto Merge Staging to Master - " + (new Date()).toISOString(),
               owner,
               repo,
-              head: '${{ github.ref_name }}',
+              head: staging,
               base: 'master',
-              body: "This is an automated pull request created every 12 hours.\n${{ join(steps.get_issues.outputs.data.*.html_url, '\n') }}"
+              body: `This is an automated pull request.\n\nList of issues to be closed:\n${issuesList}`,
             });
 
       # - name: Create Pull Request
