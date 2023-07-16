@@ -160,4 +160,4 @@ if __name__ == '__main__':
     blueprint_file = blueprint_subfolder / 'blueprint.json'
     with blueprint_file.open('w') as file_handle:
         json_dump(finalized_blueprint, file_handle, indent=2)
-    print(f'Wrote blueprint.json into blueprints/{letter}/{folder_name}/{id_}/blueprint.json')
+    print(f'Wrote Blueprint at blueprints/{letter}/{folder_name}/{id_}/blueprint.json')

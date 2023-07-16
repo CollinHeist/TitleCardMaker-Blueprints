@@ -1,0 +1,89 @@
+name: Test Blueprint Submission
+
+on:
+  issues:
+    types: [ reopened, opened ]
+  issue_comment:
+    types: [ created ]
+
+jobs:
+  read_issue:
+    # Run on issue creation and if I comment /test-blueprint
+    if: |
+      (github.event_name == 'issues') ||
+      (github.event_name == 'issue_comment'
+        && startsWith(github.event.issue.title, '[Blueprint]')
+        && contains(github.event.comment.body, '/test-blueprint')
+        && github.event.comment.user.login == 'CollinHeist'
+      )
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          ref: refs/heads/staging
+          persist-credentials: false
+          fetch-depth: 0
+
+      # Run script to parse issue
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests "pydantic==1.*" pytest regex
+
+      - name: Parse Issue into Blueprint
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github.event.issue) }}
+        run: |
+          python ./build/parse_submission.py
+
+      - name: Run pytest
+        run: |
+          pytest --junitxml=junit-test-results.xml
+
+      - name: Comment pytest results
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const resultsPath = 'junit-test-results.xml';
+            const results = fs.readFileSync(resultsPath, 'utf8');
+            const issueNumber = context.payload.pull_request.number;
+            const body = `**Test Results:**
+            \`\`\`
+            ${results}
+            \`\`\``;
+            github.issues.createComment({
+              issue_number: issueNumber,
+              body: body
+            });
+
+      - name: Add pass/fail label
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const fs = require('fs');
+            const resultsPath = 'junit-test-results.xml';
+            const results = fs.readFileSync(resultsPath, 'utf8');
+            const issueNumber = context.payload.pull_request.number;
+            const passing = results.includes('failures="0"') && results.includes('errors="0"');
+            const labels = passing ? ['passed-tests'] : ['failed-tests'];
+            github.issues.addLabels({
+              issue_number: issueNumber,
+              labels: labels
+            });
+
+      # - name: Pytest coverage comment
+      #   uses: MishaKav/pytest-coverage-comment@main
+      #   with:
+      #     pytest-coverage-path: ./pytest-coverage.txt
+      #     junitxml-path: ./pytest.xml
