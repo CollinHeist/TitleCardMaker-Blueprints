@@ -39,7 +39,7 @@ jobs:
       - name: Commit Updated Blueprints
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.name "TitleCardMakerBot"
           git add .
           git diff-index --quiet HEAD || git commit -a -m "Update Blueprint and README Files"
           git pull

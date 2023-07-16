@@ -63,6 +63,7 @@ jobs:
 
             > Note: Validated Blueprints can be merged with `/create-blueprint`.
 
+      # Add labels for pass/failure
       - name: Add Passing Label
         if: ${{ success() }}
         uses: actions/github-script@v6
@@ -73,12 +74,6 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               labels: ["passed-tests"]
-            })
-            github.rest.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ["failed-tests"]
             })
 
       - name: Add Failure Label
@@ -92,9 +87,28 @@ jobs:
               repo: context.repo.repo,
               labels: ["failed-tests"]
             })
+
+      # Remove old pass/failure labels
+      - name: Remove Success Label
+        if: ${{ failure() && contains(github.event.issue.labels.*.name, 'passed-tests') }}
+        uses: actions/github-script@v6
+        with:
+          script: |
             github.rest.issues.removeLabel({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               name: ["passed-tests"]
+            })
+
+      - name: Remove Failure Label
+        if: ${{ success() && contains(github.event.issue.labels.*.name, 'failed-tests') }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["failed-tests"]
             })

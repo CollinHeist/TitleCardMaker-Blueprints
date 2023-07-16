@@ -32,7 +32,7 @@ jobs:
       - name: Commit Resized Images
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.name "TitleCardMakerBot"
           git add .
           git diff-index --quiet HEAD || git commit -a -m "Resize Preview Images"
           git pull
