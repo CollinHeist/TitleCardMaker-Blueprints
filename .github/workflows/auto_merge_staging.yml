@@ -42,10 +42,12 @@ jobs:
             });
 
   call-resize-images-workflow:
+    needs: auto_merge
     uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/resize_images.yml@master
     secrets: inherit
 
   call-master-blueprint-workflow:
+    needs: [auto_merge, call-resize-images-workflow]
     uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/master_blueprint.yml@master
     secrets: inherit
 
