@@ -1,8 +1,10 @@
 name: Build Blueprint and README Files
 
 on:
-  pull_request:
-    types: [ 'opened', 'edited', 'reopened', 'synchronize' ]
+  # pull_request:
+  #   types: [ 'opened', 'edited', 'reopened', 'synchronize' ]
+  push:
+    branches: [ master, staging ]
 
 jobs:
   build_master_blueprint:
