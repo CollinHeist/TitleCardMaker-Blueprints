@@ -36,7 +36,7 @@ jobs:
               title: "Auto Merge Staging to Master - " + (new Date()).toISOString(),
               owner,
               repo,
-              head: staging,
+              head: 'staging',
               base: 'master',
               body: `This is an automated pull request.\n\nList of issues to be closed:\n${issuesList}`,
             });
