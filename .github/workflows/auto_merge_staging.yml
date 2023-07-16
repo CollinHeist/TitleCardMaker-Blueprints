@@ -41,6 +41,14 @@ jobs:
               body: `This is an automated pull request.\n\nList of issues to be closed:\n${issuesList}`,
             });
 
+  call-resize-images-workflow:
+    uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/resize_images.yml@master
+    secrets: inherit
+
+  call-master-blueprint-workflow:
+    uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/master_blueprint.yml@master
+    secrets: inherit
+
       # Merge the PR if created
       # - name: Merge Pull Request
       #   if: steps.create_pr.outputs.pull-request-number != 'null'
