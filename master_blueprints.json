@@ -937,46 +937,6 @@
     "id": 0
   },
   {
-    "series": {
-      "font_id": 0,
-      "card_type": "standard",
-      "template_ids": [],
-      "season_title_ranges": [
-        "5",
-        "8",
-        "9",
-        "10"
-      ],
-      "season_title_values": [
-        "Vice",
-        "Dreamland",
-        "Danger Island",
-        "1999"
-      ],
-      "extra_keys": [],
-      "extra_values": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "Archer",
-        "delete_missing": true,
-        "file": "baveuse.ttf",
-        "size": 1.05,
-        "title_case": "lower"
-      }
-    ],
-    "description": [
-      "A Brief description.",
-      "With multiple lines."
-    ],
-    "creator": "CollinHeist",
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/The Wire (2002)/0/preview.jpg",
-    "series_full_name": "The Wire (2002)",
-    "id": 0
-  },
-  {
     "description": [
       "Standard card type with the in-universe Font, and season titles based on the most relevant book adaptation."
     ],
