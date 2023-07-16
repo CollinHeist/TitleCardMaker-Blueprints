@@ -4,7 +4,7 @@ on:
   # pull_request:
   #   types: [ 'opened', 'edited', 'reopened', 'synchronize' ]
   push:
-    branches: [ master, staging ]
+    branches: [ staging ]
 
 jobs:
   resize_preview_images:
@@ -43,4 +43,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.head_ref }}
+          branch: refs/heads/staging
