@@ -7,7 +7,7 @@ on:
     types: [ created ]
 
 jobs:
-  read_issue:
+  test_issue_blueprint:
     # Run on issue creation and if I comment /test-blueprint
     if: |
       (github.event_name == 'issues') ||
