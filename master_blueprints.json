@@ -209,6 +209,32 @@
     "series": {
       "font_id": 0,
       "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "It's Always Sunny in Philadelphia",
+        "color": "rgb(248,213,85)",
+        "delete_missing": true,
+        "file": "Ciabatta-Medium.ttf",
+        "size": 1.25,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/I/It's Always Sunny in Philadelphia (2005)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type using the font found in the opening title cards, using the yellow color from the IASIP logo."
+    ],
+    "series_full_name": "It's Always Sunny in Philadelphia (2005)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
       "template_ids": [],
       "season_title_ranges": [
         "5",
