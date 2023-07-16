@@ -1,23 +1,24 @@
 """
 Python script to be called by a GitHub action.
 
-TODO write
+This script parses the Github Issue JSON contained in the GITHUB_CONTEXT
+environment variable. It parses this content and creates the necessary
+Blueprint, and all the associated files.
 """
 
 from json import dump as json_dump, loads, JSONDecodeError
 from os import environ
 from pathlib import Path
-from re import sub as re_sub, IGNORECASE
-from shutil import copy as copy_file
+from re import compile as re_compile, sub as re_sub, IGNORECASE
+from shutil import copy as copy_file, unpack_archive, ReadError
 from sys import exit as sys_exit
 
+from requests import get
 
 ROOT = Path(__file__).parent.parent
 BLUEPRINT_FOLDER = ROOT / 'blueprints'
 TEMP_FILE = ROOT / 'tmp'
 TEMP_DIRECTORY = ROOT / 'unzipped'
-
-
 PATH_SAFE_TRANSLATION = str.maketrans({
     '?': '!',
     '<': '',
@@ -63,7 +64,7 @@ if __name__ == '__main__':
     content = issue['body']
 
     # Extract the data from the issue text
-    from re import compile as re_compile
+    
     issue_regex = re_compile(
         r'^### Series Name\n+(?P<series_name>.+).*?\n+### Series Year\n+'
         r'(?P<series_year>\d+)\n+### Creator Username\n+(?P<creator>.+)\n+'
@@ -118,7 +119,6 @@ if __name__ == '__main__':
     }
 
     # Download files
-    from requests import get
     response = get(file_url, timeout=30)
     if not response.ok:
         print(f'Unable to download indicated files from "{file_url}"')
@@ -139,7 +139,6 @@ if __name__ == '__main__':
         print(f'Copied "{file_url}" into blueprints/{letter}/{folder_name}/{id_}/{uploaded_filename}')
     # Zip of files
     else:
-        from shutil import unpack_archive, ReadError
         try:
             unpack_archive(downloaded_file, TEMP_DIRECTORY)
         except (ValueError, ReadError):

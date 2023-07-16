@@ -38,6 +38,7 @@ jobs:
         run: |
           python ./build/parse_submission.py
 
+      # Test created Blueprint
       - name: Run pytest
         run: |
           pytest --junitxml=pytest.xml
@@ -49,7 +50,8 @@ jobs:
           junitxml-path: ./pytest.xml
           hide-comment: true
 
-      - name: Comment Pytest results
+      # Update Issue with results
+      - name: Comment Pytest Results
         uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
         with:
           issue-number: ${{ github.event.issue.number }}
@@ -58,6 +60,8 @@ jobs:
             | Tests | Failures | Errors | Skipped | Time |
             | :---: | :---: | :---: | :---: | :---: |
             | ${{ steps.pytestResults.outputs.tests }} | ${{ steps.pytestResults.outputs.failures }} | ${{ steps.pytestResults.outputs.errors }} | ${{ steps.pytestResults.outputs.skipped }} | ${{ steps.pytestResults.outputs.time }} |
+
+            > Note: Validated Blueprints can be merged with `/create-blueprint`.
 
       - name: Add Passing Label
         if: ${{ success() }}
@@ -68,7 +72,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              labels: ["passed-tests"]
+              name: ["passed-tests"]
             })
             github.rest.issues.removeLabel({
               issue_number: context.issue.number,
