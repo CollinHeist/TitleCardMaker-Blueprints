@@ -43,6 +43,7 @@ jobs:
 
       - name: Commit Updated Blueprints
         run: |
+          git config pull.rebase false
           git config --local user.email "action@github.com"
           git config --local user.name "TitleCardMakerBot"
           git add .
