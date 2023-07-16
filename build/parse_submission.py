@@ -153,7 +153,13 @@ if __name__ == '__main__':
             print(f'Unable to unzip provided files from "{file_url}"')
             sys_exit(1)
 
+        print(f'Unzipped {[file.name for file in TEMP_DIRECTORY.glob("*")]}')
+
         for file in TEMP_DIRECTORY.glob('*'):
+            if file.is_dir():
+                print(f'Skipping directory [zip]/{file.name}')
+                continue
+
             copy_file(file, blueprint_subfolder / file.name)
             print(f'Copied [zip]/{file.name} into blueprints/{letter}/{folder_name}/{id_}/{file.name}')
 
