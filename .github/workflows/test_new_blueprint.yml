@@ -42,42 +42,46 @@ jobs:
         run: |
           pytest --junitxml=junit-test-results.xml
 
-      - name: Comment pytest results
-        uses: actions/github-script@v5
+      - name: Comment Pytest results
+        uses: MishaKav/pytest-coverage-comment@main
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const fs = require('fs');
-            const resultsPath = 'junit-test-results.xml';
-            const results = fs.readFileSync(resultsPath, 'utf8');
-            const issueNumber = context.payload.pull_request.number;
-            const body = `**Test Results:**
-            \`\`\`
-            ${results}
-            \`\`\``;
-            github.issues.createComment({
-              issue_number: issueNumber,
-              body: body
-            });
+          title: Blueprint Validation Results
+          junitxml-path: ./pytest.xml
+          hide-report: true
+          create-new-comment: true
+          default-branch: master
 
-      - name: Add pass/fail label
-        uses: actions/github-script@v5
+      - name: Add Passing Label
+        uses: actions/github-script@v6
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const fs = require('fs');
-            const resultsPath = 'junit-test-results.xml';
-            const results = fs.readFileSync(resultsPath, 'utf8');
-            const issueNumber = context.payload.pull_request.number;
-            const passing = results.includes('failures="0"') && results.includes('errors="0"');
-            const labels = passing ? ['passed-tests'] : ['failed-tests'];
-            github.issues.addLabels({
-              issue_number: issueNumber,
-              labels: labels
-            });
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["passed-tests"]
+            })
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["failed-tests"]
+            })
 
-      # - name: Pytest coverage comment
-      #   uses: MishaKav/pytest-coverage-comment@main
-      #   with:
-      #     pytest-coverage-path: ./pytest-coverage.txt
-      #     junitxml-path: ./pytest.xml
+      - name: Add Failure Label
+        if: ${{ failure() }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["failed-tests"]
+            })
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["passed-tests"]
+            })
