@@ -1,15 +1,23 @@
 name: Parse Blueprint Submission
 
 on:
-  issues:
-    types:
-      - reopened
-      - opened
+  # issues:
+  #   types:
+  #     - reopened
+  #     - opened
+
+  issue_comment:                                     
+    types: [created, edited, deleted]
 
 jobs:
   read_issue:
     # Only run on Blueprint issues
-    if: startsWith('${{ github.event.issue.title }}', '[Blueprint]')
+    # if: startsWith('${{ github.event.issue.title }}', '[Blueprint]')
+    if: |
+      ${{ !github.event.issue.pull_request }}
+      && startsWith(github.event.issue.title, '[Blueprint]')
+      && contains(github.event.comment.body, '/create-blueprint')
+      && ${{ github.event.comment.sender }} == 'CollinHeist')
     runs-on: ubuntu-latest
     permissions:
       issues: write
@@ -57,4 +65,4 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: refs/heads/staging
+          branch: ${{ github.ref }}
