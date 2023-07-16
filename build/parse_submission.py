@@ -94,6 +94,14 @@ if __name__ == '__main__':
     blueprint = data['blueprint']
     file_url = data['file_url']
 
+    # Parse blueprint as JSON
+    try:
+        blueprint = loads(blueprint)
+    except JSONDecodeError:
+        print(f'Unable to parse blueprint as JSON')
+        print(f'{blueprint=!r}')
+        sys_exit(1)
+
     # Get the associated folder for this Series
     letter, folder_name = get_blueprint_folders(f'{series_name} ({series_year})')
 
