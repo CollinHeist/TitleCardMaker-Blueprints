@@ -31,7 +31,7 @@ jobs:
         with:
           script: |
             const { repo, owner } = context.repo;
-            const issuesList = ${{ toJSON(steps.get_issues.outputs.data) }}.map(issue => `- Closes #${issue.number}`).join("\n");
+            const issuesList = JSON.parse(${{ toJSON(steps.get_issues.outputs.data) }}).map(issue => `- Closes #${issue.number}`).join("\n");
             const result = await github.rest.pulls.create({
               title: "Auto Merge Staging to Master - " + (new Date()).toISOString(),
               owner,
