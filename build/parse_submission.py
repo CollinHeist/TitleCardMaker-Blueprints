@@ -12,10 +12,10 @@ from shutil import copy as copy_file
 from sys import exit as sys_exit
 
 
-TCM_ROOT = Path(__file__).parent.parent
-BLUEPRINT_FOLDER = TCM_ROOT / 'blueprints'
-TEMP_FILE = TCM_ROOT / 'tmp'
-TEMP_DIRECTORY = TCM_ROOT / 'unzipped'
+ROOT = Path(__file__).parent.parent
+BLUEPRINT_FOLDER = ROOT / 'blueprints'
+TEMP_FILE = ROOT / 'tmp'
+TEMP_DIRECTORY = ROOT / 'unzipped'
 
 
 PATH_SAFE_TRANSLATION = str.maketrans({
@@ -135,20 +135,21 @@ if __name__ == '__main__':
     file_content = response.content
 
     # Write content to file
-    TEMP_FILE.write_bytes(file_content)
+    uploaded_filename = file_url.rsplit('/', maxsplit=1)[-1]
+    downloaded_file = ROOT / uploaded_filename
+    downloaded_file.write_bytes(file_content)
 
     # Just an image
-    if file_url.lower().endswith(('.jpg', '.png', '.jpeg', '.tiff', '.webp', '.gif')):
+    if uploaded_filename.lower().endswith(('.jpg', '.png', '.jpeg', '.tiff', '.webp', '.gif')):
         # Copy image into blueprint folder
-        filename = file_url.rsplit('/', maxsplit=1)[-1]
-        copy_file(TEMP_FILE, blueprint_subfolder / filename)
-        print(f'Copied "{file_url}" into blueprints/{letter}/{folder_name}/{id_}/{filename}')
+        copy_file(downloaded_file, blueprint_subfolder / uploaded_filename)
+        print(f'Copied "{file_url}" into blueprints/{letter}/{folder_name}/{id_}/{uploaded_filename}')
     # Zip of files
     else:
-        from shutil import unpack_archive
+        from shutil import unpack_archive, ReadError
         try:
-            unpack_archive(TEMP_FILE, TEMP_DIRECTORY)
-        except ValueError:
+            unpack_archive(downloaded_file, TEMP_DIRECTORY)
+        except (ValueError, ReadError):
             print(f'Unable to unzip provided files from "{file_url}"')
             sys_exit(1)
 
