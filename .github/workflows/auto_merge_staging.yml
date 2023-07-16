@@ -27,19 +27,33 @@ jobs:
 
       # Create a Pull Request to merge staging -> master
       - name: Create Pull Request
-        id: create_pr
-        uses: peter-evans/create-pull-request@v3
+        uses: actions/github-script@v6
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: staging
-          base: master
-          title: "Auto Merge staging to master - $(date +'%Y-%m-%d %H:%M:%S')"
-          body: |
-            This is an automated pull request created every 12 hours.
+          script: |
+            const { repo, owner } = context.repo;
+            const result = await github.rest.pulls.create({
+              title: 'Auto Merge staging to master - $(date +'%Y-%m-%d %H:%M:%S')',
+              owner,
+              repo,
+              head: '${{ github.ref_name }}',
+              base: 'master',
+              body: "This is an automated pull request created every 12 hours.\n${{ join(steps.get_issues.outputs.data.*.html_url, '\n') }}"
+            });
 
-            <!-- List of open issues with the "created" label -->
-            ${{ join(steps.get_issues.outputs.data.*.html_url, '\n') }}
-            <!-- End of open issues list -->
+      # - name: Create Pull Request
+      #   id: create_pr
+      #   uses: peter-evans/create-pull-request@v3
+      #   with:
+      #     token: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: staging
+      #     base: master
+      #     title: "Auto Merge staging to master - $(date +'%Y-%m-%d %H:%M:%S')"
+      #     body: |
+            # This is an automated pull request created every 12 hours.
+
+            # <!-- List of open issues with the "created" label -->
+            # ${{ join(steps.get_issues.outputs.data.*.html_url, '\n') }}
+            # <!-- End of open issues list -->
 
       # Merge the PR if created
       # - name: Merge Pull Request
