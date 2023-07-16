@@ -90,7 +90,7 @@ jobs:
 
       # Remove old pass/failure labels
       - name: Remove Success Label
-        if: ${{ failure() && contains(context.issue.labels.*.name, 'passed-tests') }}
+        if: ${{ failure() && contains(github.event.issue.labels.*.name, 'passed-tests') }}
         uses: actions/github-script@v6
         with:
           script: |
@@ -102,7 +102,7 @@ jobs:
             })
 
       - name: Remove Failure Label
-        if: ${{ success() && contains(context.issue.labels.*.name, 'failed-tests') }}
+        if: ${{ success() && contains(github.event.issue.labels.*.name, 'failed-tests') }}
         uses: actions/github-script@v6
         with:
           script: |
