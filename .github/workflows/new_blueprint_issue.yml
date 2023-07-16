@@ -1,18 +1,14 @@
 name: Parse Blueprint Submission
 
 on:
-  issues:
-    types:
-      - reopened
-      - opened
+  issue_comment:
+    types: [ created ]
 
 jobs:
-  read_issue:
-    # Only run on Blueprint issues
-    if: startsWith('${{ github.event.issue.title }}', '[Blueprint]')
+  create_blueprint_from_issue:
+    # Only run on Blueprint issues when I comment /create-blueprint
+    if: ${{ (!github.event.issue.pull_request) && (startsWith(github.event.issue.title, '[Blueprint]')) && (contains(github.event.comment.body, '/create-blueprint')) && (github.event.comment.user.login == 'CollinHeist') }}
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
 
     steps:
       # Check out repository
@@ -47,8 +43,6 @@ jobs:
       # Commit changes
       - name: Commit New Blueprint
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
           git add ./blueprints
           git diff-index --quiet HEAD || git commit -a -m "Create ${{ github.event.issue.user.login }}'s Blueprint #${{ github.event.issue.number }}"
           git pull

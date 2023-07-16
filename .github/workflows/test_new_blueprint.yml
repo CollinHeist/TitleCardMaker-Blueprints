@@ -1,0 +1,100 @@
+name: Test Blueprint Submission
+
+on:
+  issues:
+    types: [ reopened, opened ]
+  issue_comment:
+    types: [ created ]
+
+jobs:
+  test_issue_blueprint:
+    # Run on issue creation and if /test-blueprint is commented
+    if: ${{ github.event_name == 'issues' || (startsWith(github.event.issue.title, '[Blueprint]') && contains(github.event.comment.body, '/test-blueprint')) }}
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          ref: refs/heads/staging
+          persist-credentials: false
+          fetch-depth: 0
+
+      # Run script to parse issue
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests "pydantic==1.*" pytest regex
+
+      - name: Parse Issue into Blueprint
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github.event.issue) }}
+        run: |
+          python ./build/parse_submission.py
+
+      # Test created Blueprint
+      - name: Run pytest
+        run: |
+          pytest --junitxml=pytest.xml
+
+      - name: Get Pytest Output
+        id: pytestResults
+        uses: MishaKav/pytest-coverage-comment@main
+        with:
+          junitxml-path: ./pytest.xml
+          hide-comment: true
+
+      # Update Issue with results
+      - name: Comment Pytest Results
+        uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            # Blueprint Validation Results
+            | Tests | Failures | Errors | Skipped | Time |
+            | :---: | :---: | :---: | :---: | :---: |
+            | ${{ steps.pytestResults.outputs.tests }} | ${{ steps.pytestResults.outputs.failures }} | ${{ steps.pytestResults.outputs.errors }} | ${{ steps.pytestResults.outputs.skipped }} | ${{ steps.pytestResults.outputs.time }} |
+
+            > Note: Validated Blueprints can be merged with `/create-blueprint`.
+
+      - name: Add Passing Label
+        if: ${{ success() }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["passed-tests"]
+            })
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["failed-tests"]
+            })
+
+      - name: Add Failure Label
+        if: ${{ failure() }}
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: ["failed-tests"]
+            })
+            github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: ["passed-tests"]
+            })
