@@ -58,9 +58,7 @@ jobs:
           git pull
 
       - name: Push changes
-        # uses: ad-m/github-push-action@master
-        run: |
-          git push origin HEAD
-        # with:
-        #   github_token: ${{ secrets.GITHUB_TOKEN }}
-          # branch: ${{ github.ref }}
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
