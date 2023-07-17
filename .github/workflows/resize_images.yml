@@ -3,10 +3,6 @@ name: Resize Preview Images
 on:
   pull_request:
     types: [ 'opened', 'edited', 'reopened', 'synchronize' ]
-  # workflow_run:
-  #   workflows: ["Auto Merge Staging to Master"]
-  #   types:
-  #     - completed
   workflow_call:
 
 jobs:
@@ -43,8 +39,9 @@ jobs:
           git diff-index --quiet HEAD || git commit -a -m "Resize Preview Images"
           git pull
 
+      - run: git pull
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: refs/heads/staging # ${{ github.head_ref }}
+          branch: ${{ github.head_ref }}
