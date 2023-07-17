@@ -62,6 +62,11 @@ if __name__ == '__main__':
         print(exc)
         sys_exit(1)
 
+    try:
+        print(loads(environ.get('ISSUE_JSON')))
+    except Exception as exc:
+        print(exc)
+
     # Get the issue's author and the body (the issue text itself)
     creator = environ.get('ISSUE_CREATOR', 'CollinHeist')
 
