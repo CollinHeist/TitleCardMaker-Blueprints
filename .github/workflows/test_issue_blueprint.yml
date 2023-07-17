@@ -21,14 +21,6 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      # Parse issue into JSON
-      - name: Parse issue
-        id: issue_to_json
-        uses: edumserrano/github-issue-forms-parser@v1.3.3
-        with:
-          template-filepath: '.github/ISSUE_TEMPLATE/new_blueprint.yml'
-          issue-form-body: '${{ github.event.issue.body }}'
-
       # Run script to parse issue
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -40,16 +32,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests "pydantic==1.*" pytest regex
 
-      # - name: Parse Issue into Blueprint
-      #   env:
-      #     GITHUB_CONTEXT: ${{ toJson(github.event.issue) }}
-      #   run: |
-      #     python ./build/parse_submission.py
       - name: Parse Issue into Blueprint
         env:
-          # GITHUB_CONTEXT: ${{ toJson(github.event.issue) }}
+          ISSUE_BODY: ${{ toJson(github.event.issue.body) }}
           ISSUE_CREATOR: '${{ github.event.issue.user.login }}'
-          ISSUE_JSON: '${{ steps.issue_to_json.outputs.parsed-issue }}'
         run: |
           python ./build/parse_submission.py
 
