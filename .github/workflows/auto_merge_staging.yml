@@ -10,6 +10,8 @@ jobs:
   auto_merge:
     runs-on: ubuntu-latest
     if: ${{ (startsWith(github.event.issue.title, '[Blueprint]') && contains(github.event.comment.body, '/merge-staging')) }}
+    outputs:
+      pr_number: ${{ steps.create_pr.outputs.pr_number }}
 
     steps:
       # Check out the repository
@@ -27,6 +29,7 @@ jobs:
 
       # Create a Pull Request to merge staging -> master
       - name: Create Pull Request
+        id: create_pr
         uses: actions/github-script@v6
         with:
           script: |
@@ -41,6 +44,9 @@ jobs:
               body: `This is an automated pull request.\n\nList of issues to be closed:\n${issuesList}`,
             });
 
+            // Store the pull request number in the 'pr_number' output variable
+            console.log(`::set-output name=pr_number::${result.data.number}`);
+
   call-resize-images-workflow:
     needs: auto_merge
     uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/resize_images.yml@master
@@ -51,10 +57,13 @@ jobs:
     uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/master_blueprint.yml@master
     secrets: inherit
 
+  merge-pull-request:
+    needs: [auto_merge, call-resize-images-workflow, call-master-blueprint-workflow]
+    runs-on: ubuntu-latest
+    steps:
       # Merge the PR if created
-      # - name: Merge Pull Request
-      #   if: steps.create_pr.outputs.pull-request-number != 'null'
-      #   uses: octokit/request-action@v2.x
-      #   with:
-      #     route: PUT /repos/${{ github.repository }}/pulls/${{ steps.create_pr.outputs.pull-request-number }}/merge
-      #     token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Merge Pull Request
+        uses: octokit/request-action@v2.x
+        with:
+          route: PUT /repos/${{ github.repository }}/pulls/${{ needs.auto_merge.outputs.pr_number }}/merge
+          token: ${{ secrets.GITHUB_TOKEN }}
