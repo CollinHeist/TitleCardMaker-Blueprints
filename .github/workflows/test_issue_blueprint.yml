@@ -24,9 +24,9 @@ jobs:
       # Parse issue into JSON
       - name: Parse issue
         id: issue_to_json
-        uses: edumserrano/github-issue-forms-parser@v1
+        uses: edumserrano/github-issue-forms-parser@v1.3.3
         with:
-          template-filepath: .github/ISSUE_TEMPLATE/new_blueprint.yml
+          template-filepath: '.github/ISSUE_TEMPLATE/new_blueprint.yml'
           issue-form-body: '${{ github.event.issue.body }}'
 
       # Run script to parse issue
