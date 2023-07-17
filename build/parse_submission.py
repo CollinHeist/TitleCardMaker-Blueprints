@@ -73,7 +73,7 @@ if __name__ == '__main__':
         r'### Blueprint Description\s+(?P<description>[\s\S]*)\s+'
         r'### Blueprint\s+```json\s+(?P<blueprint>[\s\S]*?)```\s+'
         r'### Preview Title Card\s+.*?\[.*\]\((?P<preview_url>.+)\)\s+'
-        r'### Zip of Font Files\s+(?P<font_zip>_No response_|\[.*\]\((.+)\))$'
+        r'### Zip of Font Files\s+(?P<font_zip>_No response_|\[.*\]\((.+)\))\s*$'
     )
 
     # If data cannot be extracted, exit
