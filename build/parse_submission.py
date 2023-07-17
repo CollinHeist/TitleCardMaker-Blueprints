@@ -66,11 +66,12 @@ if __name__ == '__main__':
     # Extract the data from the issue text
     
     issue_regex = re_compile(
-        r'^### Series Name\n+(?P<series_name>.+).*?\n+### Series Year\n+'
-        r'(?P<series_year>\d+)\n+### Creator Username\n+(?P<creator>.+)\n+'
-        r'### Blueprint Description\n+(?P<description>[^#]+)### Blueprint File\n+'
-        r'```json\n+(?P<blueprint>[^`]+)```\n+'
-        r'### Zip of Files\n+.*?\[.*\]\((?P<file_url>.+)\).*$'
+        r'^### Series Name\s+(?P<series_name>.+)\s+'
+        r'### Series Year\s+(?P<series_year>\d+)\s+'
+        r'### Creator Username\s+(?P<creator>.+)\s+'
+        r'### Blueprint Description\s+(?P<description>[\s\S]*)\s+'
+        r'### Blueprint File\s+```json\s+(?P<blueprint>[\s\S]*?)```\s+'
+        r'### Zip of Files\s+.*?\[.*\]\((?P<file_url>.+)\).*$'
     )
 
     # If data cannot be extracted, exit
