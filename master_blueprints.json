@@ -1,5 +1,267 @@
 [
   {
+    "description": [
+      "Anime title cards with absolute episode numbering, arc season titles, and the show font.",
+      "Any Episodes without an absolute episode number use the normal episode number",
+      "Custom season text is used on any banned or unaired Episodes."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/P/Pok\u00e9mon (1997)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "anime",
+      "template_ids": [
+        0
+      ],
+      "season_title_ranges": [
+        "s1e1-s1e82",
+        "s2e1-s2e36",
+        "s3e1-s3e41",
+        "s4e1-s4e52",
+        "s5e1-s5e65",
+        "s6e1-s6e40",
+        "s7e1-s7e52",
+        "s8e1-s8e52",
+        "s9e1-s9e47",
+        "s10e1-s10e51",
+        "s11e1-s11e52",
+        "s12e1-s12e52",
+        "s13e1-s13e34",
+        "s14e1-s14e48",
+        "s14e49-s14e84",
+        "s15e1-s15e13",
+        "s15e14-s15e58",
+        "s16e1-s16e48",
+        "s16e49-s16e93",
+        "s17e1-s17e47",
+        "s18e1-s18e43",
+        "s18e44-s18e92",
+        "s18e93-s18e146",
+        "s19e1-s19e48",
+        "s19e49-s19e90",
+        "s19e91-s19e136",
+        "s20e1-s20e50"
+      ],
+      "season_title_values": [
+        "Indigo League",
+        "Orange Islands",
+        "The Johto Journeys",
+        "Johto League Champions",
+        "Master Quest",
+        "Advanced",
+        "Advanced Challenge",
+        "Advanced Battle",
+        "Battle Frontier",
+        "Diamond and Pearl",
+        "Diamond and Pearl: Battle Dimension",
+        "Diamond and Pearl: Galactic Battles",
+        "Diamond and Pearl: Sinnoh League Victors",
+        "Black & White",
+        "Black & White: Rival Destinies",
+        "Black & White: Rival Destinies",
+        "Black & White: Adventures in Unova",
+        "XY",
+        "XY: Kalos Quest",
+        "XYZ",
+        "Sun & Moon",
+        "Sun & Moon: Ultra Adventures",
+        "Sun & Moon: Ultra Legends",
+        "Journeys",
+        "Master Journeys",
+        "Ultimate Journeys",
+        "Horizons"
+      ],
+      "extra_keys": [
+        "stroke_color"
+      ],
+      "extra_values": [
+        "rgb(64,107,175)"
+      ],
+      "font_title_case": "source"
+    },
+    "episodes": {
+      "s5e41": {
+        "season_text": "Banned"
+      },
+      "s0e75": {
+        "season_text": "Unaired"
+      },
+      "s0e73": {
+        "season_text": "Unaired"
+      },
+      "s0e62": {
+        "season_text": "XYZ"
+      },
+      "s0e77": {
+        "season_text": "Unaired"
+      },
+      "s16e17": {
+        "episode_text": "Episode 820.5"
+      },
+      "s19e119": {
+        "season_text": "Unaired"
+      }
+    },
+    "templates": [
+      {
+        "episode_text_format": "Episode {absolute_number}",
+        "name": "Absolute Episode Numbering",
+        "filters": [
+          {
+            "argument": "Absolute Number",
+            "operation": "is not null",
+            "reference": ""
+          }
+        ]
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Pok\u00e9mon",
+        "color": "rgb(247,205,70)",
+        "file": "Pokemon Solid.ttf",
+        "title_case": "source",
+        "size": 1.1,
+        "kerning": 0.5,
+        "stroke_width": 5,
+        "delete_missing": true
+      }
+    ],
+    "series_full_name": "Pok\u00e9mon (1997)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Standard title cards with absolute episode numbering, arc season titles, and the show font.",
+      "Any Episodes without an absolute episode number use the normal episode number",
+      "Custom season text is used on any banned or unaired Episodes."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/P/Pok\u00e9mon (1997)/1/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "anime",
+      "template_ids": [
+        0
+      ],
+      "season_title_ranges": [
+        "s1e1-s1e82",
+        "s2e1-s2e36",
+        "s3e1-s3e41",
+        "s4e1-s4e52",
+        "s5e1-s5e65",
+        "s6e1-s6e40",
+        "s7e1-s7e52",
+        "s8e1-s8e52",
+        "s9e1-s9e47",
+        "s10e1-s10e51",
+        "s11e1-s11e52",
+        "s12e1-s12e52",
+        "s13e1-s13e34",
+        "s14e1-s14e48",
+        "s14e49-s14e84",
+        "s15e1-s15e13",
+        "s15e14-s15e58",
+        "s16e1-s16e48",
+        "s16e49-s16e93",
+        "s17e1-s17e47",
+        "s18e1-s18e43",
+        "s18e44-s18e92",
+        "s18e93-s18e146",
+        "s19e1-s19e48",
+        "s19e49-s19e90",
+        "s19e91-s19e136",
+        "s20e1-s20e50"
+      ],
+      "season_title_values": [
+        "Indigo League",
+        "Orange Islands",
+        "The Johto Journeys",
+        "Johto League Champions",
+        "Master Quest",
+        "Advanced",
+        "Advanced Challenge",
+        "Advanced Battle",
+        "Battle Frontier",
+        "Diamond and Pearl",
+        "Diamond and Pearl: Battle Dimension",
+        "Diamond and Pearl: Galactic Battles",
+        "Diamond and Pearl: Sinnoh League Victors",
+        "Black & White",
+        "Black & White: Rival Destinies",
+        "Black & White: Rival Destinies",
+        "Black & White: Adventures in Unova",
+        "XY",
+        "XY: Kalos Quest",
+        "XYZ",
+        "Sun & Moon",
+        "Sun & Moon: Ultra Adventures",
+        "Sun & Moon: Ultra Legends",
+        "Journeys",
+        "Master Journeys",
+        "Ultimate Journeys",
+        "Horizons"
+      ],
+      "extra_keys": [
+        "stroke_color"
+      ],
+      "extra_values": [
+        "rgb(64,107,175)"
+      ],
+      "font_title_case": "source"
+    },
+    "episodes": {
+      "s5e41": {
+        "season_text": "Banned"
+      },
+      "s0e75": {
+        "season_text": "Unaired"
+      },
+      "s0e73": {
+        "season_text": "Unaired"
+      },
+      "s0e62": {
+        "season_text": "XYZ"
+      },
+      "s0e77": {
+        "season_text": "Unaired"
+      },
+      "s16e17": {
+        "episode_text": "Episode 820.5"
+      },
+      "s19e119": {
+        "season_text": "Unaired"
+      }
+    },
+    "templates": [
+      {
+        "episode_text_format": "Episode {absolute_number}",
+        "name": "Absolute Episode Numbering",
+        "filters": [
+          {
+            "argument": "Absolute Number",
+            "operation": "is not null",
+            "reference": ""
+          }
+        ]
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Pok\u00e9mon",
+        "color": "rgb(247,205,70)",
+        "file": "Pokemon Solid.ttf",
+        "title_case": "source",
+        "size": 1.1,
+        "kerning": 0.5,
+        "stroke_width": 2.5,
+        "delete_missing": true
+      }
+    ],
+    "series_full_name": "Pok\u00e9mon (1997)",
+    "id": 1
+  },
+  {
     "series": {
       "card_type": "anime",
       "season_title_ranges": [
@@ -57,6 +319,445 @@
     "templates": [],
     "fonts": [],
     "series_full_name": "Demon Slayer - Kimetsu no Yaiba (2019)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Standard card type with the in-universe Font, and season titles based on the most relevant book adaptation."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/E/The Expanse (2015)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": [],
+      "season_title_ranges": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "season_title_values": [
+        "Leviathan Wakes",
+        "Caliban's War",
+        "Abaddon's Gate",
+        "Cibola Burn",
+        "Nemesis Games",
+        "Babylon's Ashes"
+      ],
+      "extra_keys": [],
+      "extra_values": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Expanse",
+        "file": "Protomolecule.ttf",
+        "title_case": "source"
+      }
+    ],
+    "series_full_name": "The Expanse (2015)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Frame card type with the series font and coloring for the title and episode text."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Only Murders in the Building (2021)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "frame",
+      "template_ids": [],
+      "extra_keys": [
+        "episode_text_color",
+        "interword_spacing"
+      ],
+      "extra_values": [
+        "rgb(156,40,36)",
+        "40"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Only Murders in the Building",
+        "file": "Cygnet Regular.ttf",
+        "color": "rgb(76, 149, 119)",
+        "title_case": "source",
+        "kerning": -0.7,
+        "interline_spacing": 30,
+        "delete_missing": true
+      }
+    ],
+    "series_full_name": "Only Murders in the Building (2021)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Olivier card type with the series font and coloring for the title text."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Only Murders in the Building (2021)/1/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": [],
+      "extra_keys": [
+        "interword_spacing"
+      ],
+      "extra_values": [
+        "60"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Only Murders in the Building",
+        "file": "Cygnet Regular.ttf",
+        "color": "rgb(76, 149, 119)",
+        "title_case": "source",
+        "kerning": 12.0,
+        "delete_missing": true,
+        "vertical_shift": 10
+      }
+    ],
+    "series_full_name": "Only Murders in the Building (2021)",
+    "id": 1
+  },
+  {
+    "description": [
+      "Anime title cards with absolute episode numbering, arc season titles, and a smaller font size to account for the long titles."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/One Piece (1999)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "card_type": "anime",
+      "episode_text_format": "Episode {absolute_number}",
+      "template_ids": [],
+      "translations": [
+        {
+          "language_code": "ja",
+          "data_key": "kanji"
+        }
+      ],
+      "season_title_ranges": [
+        "1-3",
+        "4-8",
+        "9-18",
+        "19-30",
+        "31-44",
+        "45-45",
+        "46-47",
+        "48-53",
+        "54-61",
+        "62-63",
+        "64-67",
+        "68-69",
+        "70-77",
+        "78-91",
+        "92-130",
+        "131-135",
+        "136-138",
+        "139-143",
+        "144-152",
+        "143-195",
+        "196-206",
+        "207-219",
+        "220-224",
+        "225-228",
+        "229-263",
+        "264-290",
+        "291-292",
+        "293-302",
+        "303-303",
+        "304-312",
+        "313-325",
+        "326-335",
+        "336-336",
+        "337-381",
+        "382-384",
+        "385-405",
+        "406-407",
+        "408-417",
+        "418-421",
+        "422-425",
+        "426-429",
+        "430-452",
+        "453-456",
+        "457-489",
+        "490-491",
+        "492-492",
+        "493-516",
+        "517-522",
+        "523-541",
+        "542-542",
+        "543-574",
+        "575-578",
+        "579-589",
+        "590-590",
+        "591-625",
+        "626-628",
+        "629-746",
+        "747-750",
+        "751-779",
+        "780-782",
+        "783-877",
+        "878-889",
+        "890-894",
+        "895-896",
+        "897-906",
+        "907-907",
+        "908-1028",
+        "1029-1030",
+        "1031-1100"
+      ],
+      "season_title_values": [
+        "Romance Dawn",
+        "Orange Town",
+        "Syrup Village",
+        "Baratie",
+        "Arlong Park",
+        "Loguetown",
+        "Buggy's Crew Adventure Chronicles",
+        "Loguetown",
+        "Warship Island",
+        "Reverse Mountain",
+        "Whisky Peak",
+        "Diary of Koby-Meppo",
+        "Little Garden",
+        "Drum Island",
+        "Arabasta",
+        "Post-Arabasta",
+        "Goat Island",
+        "Ruluka Island",
+        "Jaya",
+        "Skypiea",
+        "G-8",
+        "Long Ring Long Land",
+        "Ocean's Dream",
+        "Foxy's Return",
+        "Water 7",
+        "Enies Lobby",
+        "Boss Luffy Historical Special",
+        "Enies Lobby",
+        "Boss Luffy Historical Special",
+        "Enies Lobby",
+        "Post-Enies Lobby",
+        "Ice Hunter",
+        "Chopper Man Special",
+        "Thriller Bark",
+        "Spa Island",
+        "Sabaody Archipelago",
+        "Boss Luffy Historical Special",
+        "Amazon Lily",
+        "Straw Hat's Separation Serial",
+        "Impel Down",
+        "Little East Blue",
+        "Impel Down",
+        "Straw Hat's Separation Serial",
+        "Marineford",
+        "Post-War",
+        "Toriko Crossover",
+        "Post-War",
+        "Return to Sabaody",
+        "Fish-Man Island",
+        "Toriko Crossover",
+        "Fish-Man Island",
+        "Z's Ambition",
+        "Punk Hazard",
+        "Toriko & Dragon Ball Crossover",
+        "Punk Hazard",
+        "Caesar Retrieval",
+        "Dressrosa",
+        "Silver Mine",
+        "Zou",
+        "Marine Rookie",
+        "Whole Cake Island",
+        "Levely",
+        "Wano Country",
+        "Cidre Guild",
+        "Wano Country",
+        "20th Anniversary Special",
+        "Wano Country",
+        "Uta's Past",
+        "Wano Country"
+      ],
+      "extra_keys": [],
+      "extra_values": [],
+      "font_size": 0.8
+    },
+    "episodes": {
+      "s0e1": {
+        "episode_text": "Episode 1"
+      },
+      "s0e27": {
+        "episode_text": "Episode 27"
+      },
+      "s0e2": {
+        "episode_text": "Episode 2"
+      },
+      "s0e3": {
+        "episode_text": "Episode 3"
+      },
+      "s0e5": {
+        "episode_text": "Episode 5"
+      },
+      "s0e4": {
+        "episode_text": "Episode 4"
+      },
+      "s0e7": {
+        "episode_text": "Episode 7"
+      },
+      "s0e6": {
+        "episode_text": "Episode 6"
+      },
+      "s0e8": {
+        "episode_text": "Episode 8"
+      },
+      "s0e9": {
+        "episode_text": "Episode 9"
+      },
+      "s0e10": {
+        "episode_text": "Episode 10"
+      },
+      "s0e12": {
+        "episode_text": "Episode 12"
+      },
+      "s0e11": {
+        "episode_text": "Episode 11"
+      },
+      "s0e13": {
+        "episode_text": "Episode 13"
+      },
+      "s0e14": {
+        "episode_text": "Episode 14"
+      },
+      "s0e15": {
+        "episode_text": "Episode 15"
+      },
+      "s0e16": {
+        "episode_text": "Episode 16"
+      },
+      "s0e17": {
+        "episode_text": "Episode 17"
+      },
+      "s0e18": {
+        "episode_text": "Episode 18"
+      },
+      "s0e19": {
+        "episode_text": "Episode 19"
+      },
+      "s0e31": {
+        "episode_text": "Episode 31"
+      },
+      "s0e20": {
+        "episode_text": "Episode 20"
+      },
+      "s0e21": {
+        "episode_text": "Episode 21"
+      },
+      "s0e22": {
+        "episode_text": "Episode 22"
+      },
+      "s0e23": {
+        "episode_text": "Episode 23"
+      },
+      "s0e24": {
+        "episode_text": "Episode 24"
+      },
+      "s0e26": {
+        "episode_text": "Episode 26"
+      },
+      "s0e25": {
+        "episode_text": "Episode 25"
+      },
+      "s0e28": {
+        "episode_text": "Episode 28"
+      },
+      "s0e29": {
+        "episode_text": "Episode 29"
+      },
+      "s0e30": {
+        "episode_text": "Episode 30"
+      },
+      "s0e32": {
+        "episode_text": "Episode 32"
+      },
+      "s0e35": {
+        "episode_text": "Episode 35"
+      },
+      "s0e34": {
+        "episode_text": "Episode 34"
+      },
+      "s0e33": {
+        "episode_text": "Episode 33"
+      },
+      "s0e36": {
+        "episode_text": "Episode 36"
+      },
+      "s0e37": {
+        "episode_text": "Episode 37"
+      },
+      "s0e38": {
+        "episode_text": "Episode 38"
+      },
+      "s0e40": {
+        "episode_text": "Episode 40"
+      },
+      "s0e41": {
+        "episode_text": "Episode 41"
+      },
+      "s0e42": {
+        "episode_text": "Episode 42"
+      },
+      "s0e43": {
+        "episode_text": "Episode 43"
+      },
+      "s0e44": {
+        "episode_text": "Episode 44"
+      },
+      "s0e45": {
+        "episode_text": "Episode 45"
+      }
+    },
+    "templates": [],
+    "fonts": [],
+    "series_full_name": "One Piece (1999)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Tinted Frame card with the Series logo font and color, using 'Chapter' formatted episode text."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Over the Garden Wall (2014)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted frame",
+      "hide_season_text": true,
+      "episode_text_format": "Chapter {episode_number}",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Over the Garden Wall",
+        "file": "TomeOfTheUnknown.ttf",
+        "color": "rgb(216,190,142)",
+        "title_case": "source",
+        "size": 1.15,
+        "vertical_shift": -20,
+        "delete_missing": true
+      }
+    ],
+    "series_full_name": "Over the Garden Wall (2014)",
     "id": 0
   },
   {
@@ -125,110 +826,29 @@
   },
   {
     "series": {
-      "font_id": 0,
-      "card_type": "olivier",
-      "template_ids": [],
-      "translations": [],
-      "season_title_ranges": [],
-      "season_title_values": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "Better Call Saul",
-        "color": "rgb(255, 255, 97)",
-        "delete_missing": true,
-        "file": "script-casual-normal.ttf",
-        "title_case": "title"
-      }
-    ],
-    "description": [
-      "Olivier card type using the Series font from the 'Better Call' part of the series logo."
-    ],
-    "creator": "CollinHeist",
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Better Call Saul (2015)/0/preview.jpg",
-    "series_full_name": "Better Call Saul (2015)",
-    "id": 0
-  },
-  {
-    "series": {
-      "font_id": 0,
       "card_type": "standard",
+      "episode_text_format": "Chapter {episode_number}",
       "template_ids": [],
-      "translations": [],
-      "season_title_ranges": [],
-      "season_title_values": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "Better Call Saul",
-        "color": "rgb(255, 255, 97)",
-        "delete_missing": true,
-        "file": "script-casual-normal.ttf",
-        "title_case": "title"
-      }
-    ],
-    "description": [
-      "Standard card type using the Series font from the 'Better Call' part of the series logo."
-    ],
-    "creator": "CollinHeist",
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Better Call Saul (2015)/1/preview.jpg",
-    "series_full_name": "Better Call Saul (2015)",
-    "id": 1
-  },
-  {
-    "description": [
-      "Comic Book card with randomized banner angles for the title and index text.",
-      "The banners are colored to match the comic panel interstitials used in the show.",
-      "Using a grayscale style modifier is recommended."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/I/iZombie (2015)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "card_type": "comic book",
-      "template_ids": [],
-      "extra_keys": [
-        "title_text_rotation_angle",
-        "index_text_rotation_angle"
+      "season_title_ranges": [
+        "1",
+        "2",
+        "3"
       ],
-      "extra_values": [
-        "random[-4, 4]",
-        "random[-4, -3]"
+      "season_title_values": [
+        "Book One: Water",
+        "Book Two: Earth",
+        "Book Three: Fire"
       ]
     },
     "episodes": {},
     "templates": [],
     "fonts": [],
-    "series_full_name": "iZombie (2015)",
-    "id": 0
-  },
-  {
-    "series": {
-      "font_id": 0,
-      "card_type": "standard",
-      "template_ids": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "It's Always Sunny in Philadelphia",
-        "color": "rgb(248,213,85)",
-        "delete_missing": true,
-        "file": "Ciabatta-Medium.ttf",
-        "size": 1.25,
-        "title_case": "source"
-      }
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/I/It's Always Sunny in Philadelphia (2005)/0/preview.jpg",
-    "creator": "CollinHeist",
     "description": [
-      "Standard card type using the font found in the opening title cards, using the yellow color from the IASIP logo."
+      "Standard card type with the book names (Water/Earth/Fire) as the season titles, and chapter numbers for episode text."
     ],
-    "series_full_name": "It's Always Sunny in Philadelphia (2005)",
+    "creator": "CollinHeist",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Avatar - The Last Airbender (2005)/0/preview.jpg",
+    "series_full_name": "Avatar - The Last Airbender (2005)",
     "id": 0
   },
   {
@@ -268,61 +888,6 @@
     "creator": "CollinHeist",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Archer (2009)/0/preview.jpg",
     "series_full_name": "Archer (2009)",
-    "id": 0
-  },
-  {
-    "series": {
-      "card_type": "standard",
-      "episode_text_format": "Chapter {episode_number}",
-      "template_ids": [],
-      "season_title_ranges": [
-        "1",
-        "2",
-        "3"
-      ],
-      "season_title_values": [
-        "Book One: Water",
-        "Book Two: Earth",
-        "Book Three: Fire"
-      ]
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [],
-    "description": [
-      "Standard card type with the book names (Water/Earth/Fire) as the season titles, and chapter numbers for episode text."
-    ],
-    "creator": "CollinHeist",
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Avatar - The Last Airbender (2005)/0/preview.jpg",
-    "series_full_name": "Avatar - The Last Airbender (2005)",
-    "id": 0
-  },
-  {
-    "series": {
-      "font_id": 0,
-      "card_type": "standard",
-      "template_ids": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "American Dad",
-        "color": "rgb(215,77,64)",
-        "delete_missing": true,
-        "file": "American Dad.ttf",
-        "interline_spacing": -60,
-        "size": 1.55,
-        "title_case": "source",
-        "vertical_shift": -20
-      }
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/American Dad! (2005)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "description": [
-      "Standard card type using the Series font in the title-red color. The red can be hard to read on smaller screens, but white works well."
-    ],
-    "series_full_name": "American Dad! (2005)",
     "id": 0
   },
   {
@@ -640,37 +1205,6 @@
   {
     "series": {
       "font_id": 0,
-      "card_type": "olivier",
-      "template_ids": [],
-      "translations": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "Friends",
-        "color": "#FFFFFF",
-        "delete_missing": true,
-        "file": "GABRWFFR.TTF",
-        "title_case": "title"
-      }
-    ],
-    "description": [
-      "Olivier card type with the series Font."
-    ],
-    "creator": "flowcool",
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Friends (1994)/0/preview.jpg",
-    "series_full_name": "Friends (1994)",
-    "id": 0
-  },
-  {
-    "description": [
-      "Standard card type using the series font."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Family Guy (1999)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "font_id": 0,
       "card_type": "standard",
       "template_ids": []
     },
@@ -678,11 +1212,22 @@
     "templates": [],
     "fonts": [
       {
-        "name": "Family Guy",
-        "file": "family-guy.TTF"
+        "name": "American Dad",
+        "color": "rgb(215,77,64)",
+        "delete_missing": true,
+        "file": "American Dad.ttf",
+        "interline_spacing": -60,
+        "size": 1.55,
+        "title_case": "source",
+        "vertical_shift": -20
       }
     ],
-    "series_full_name": "Family Guy (1999)",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/American Dad! (2005)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type using the Series font in the title-red color. The red can be hard to read on smaller screens, but white works well."
+    ],
+    "series_full_name": "American Dad! (2005)",
     "id": 0
   },
   {
@@ -712,753 +1257,103 @@
   },
   {
     "description": [
-      "Anime title cards with absolute episode numbering, arc season titles, and the show font.",
-      "Any Episodes without an absolute episode number use the normal episode number",
-      "Custom season text is used on any banned or unaired Episodes."
+      "Standard card type using the series font."
     ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/P/Pok\u00e9mon (1997)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "font_id": 0,
-      "card_type": "anime",
-      "template_ids": [
-        0
-      ],
-      "season_title_ranges": [
-        "s1e1-s1e82",
-        "s2e1-s2e36",
-        "s3e1-s3e41",
-        "s4e1-s4e52",
-        "s5e1-s5e65",
-        "s6e1-s6e40",
-        "s7e1-s7e52",
-        "s8e1-s8e52",
-        "s9e1-s9e47",
-        "s10e1-s10e51",
-        "s11e1-s11e52",
-        "s12e1-s12e52",
-        "s13e1-s13e34",
-        "s14e1-s14e48",
-        "s14e49-s14e84",
-        "s15e1-s15e13",
-        "s15e14-s15e58",
-        "s16e1-s16e48",
-        "s16e49-s16e93",
-        "s17e1-s17e47",
-        "s18e1-s18e43",
-        "s18e44-s18e92",
-        "s18e93-s18e146",
-        "s19e1-s19e48",
-        "s19e49-s19e90",
-        "s19e91-s19e136",
-        "s20e1-s20e50"
-      ],
-      "season_title_values": [
-        "Indigo League",
-        "Orange Islands",
-        "The Johto Journeys",
-        "Johto League Champions",
-        "Master Quest",
-        "Advanced",
-        "Advanced Challenge",
-        "Advanced Battle",
-        "Battle Frontier",
-        "Diamond and Pearl",
-        "Diamond and Pearl: Battle Dimension",
-        "Diamond and Pearl: Galactic Battles",
-        "Diamond and Pearl: Sinnoh League Victors",
-        "Black & White",
-        "Black & White: Rival Destinies",
-        "Black & White: Rival Destinies",
-        "Black & White: Adventures in Unova",
-        "XY",
-        "XY: Kalos Quest",
-        "XYZ",
-        "Sun & Moon",
-        "Sun & Moon: Ultra Adventures",
-        "Sun & Moon: Ultra Legends",
-        "Journeys",
-        "Master Journeys",
-        "Ultimate Journeys",
-        "Horizons"
-      ],
-      "extra_keys": [
-        "stroke_color"
-      ],
-      "extra_values": [
-        "rgb(64,107,175)"
-      ],
-      "font_title_case": "source"
-    },
-    "episodes": {
-      "s5e41": {
-        "season_text": "Banned"
-      },
-      "s0e75": {
-        "season_text": "Unaired"
-      },
-      "s0e73": {
-        "season_text": "Unaired"
-      },
-      "s0e62": {
-        "season_text": "XYZ"
-      },
-      "s0e77": {
-        "season_text": "Unaired"
-      },
-      "s16e17": {
-        "episode_text": "Episode 820.5"
-      },
-      "s19e119": {
-        "season_text": "Unaired"
-      }
-    },
-    "templates": [
-      {
-        "episode_text_format": "Episode {absolute_number}",
-        "name": "Absolute Episode Numbering",
-        "filters": [
-          {
-            "argument": "Absolute Number",
-            "operation": "is not null",
-            "reference": ""
-          }
-        ]
-      }
-    ],
-    "fonts": [
-      {
-        "name": "Pok\u00e9mon",
-        "color": "rgb(247,205,70)",
-        "file": "Pokemon Solid.ttf",
-        "title_case": "source",
-        "size": 1.1,
-        "kerning": 0.5,
-        "stroke_width": 5,
-        "delete_missing": true
-      }
-    ],
-    "series_full_name": "Pok\u00e9mon (1997)",
-    "id": 0
-  },
-  {
-    "description": [
-      "Standard title cards with absolute episode numbering, arc season titles, and the show font.",
-      "Any Episodes without an absolute episode number use the normal episode number",
-      "Custom season text is used on any banned or unaired Episodes."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/P/Pok\u00e9mon (1997)/1/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "font_id": 0,
-      "card_type": "anime",
-      "template_ids": [
-        0
-      ],
-      "season_title_ranges": [
-        "s1e1-s1e82",
-        "s2e1-s2e36",
-        "s3e1-s3e41",
-        "s4e1-s4e52",
-        "s5e1-s5e65",
-        "s6e1-s6e40",
-        "s7e1-s7e52",
-        "s8e1-s8e52",
-        "s9e1-s9e47",
-        "s10e1-s10e51",
-        "s11e1-s11e52",
-        "s12e1-s12e52",
-        "s13e1-s13e34",
-        "s14e1-s14e48",
-        "s14e49-s14e84",
-        "s15e1-s15e13",
-        "s15e14-s15e58",
-        "s16e1-s16e48",
-        "s16e49-s16e93",
-        "s17e1-s17e47",
-        "s18e1-s18e43",
-        "s18e44-s18e92",
-        "s18e93-s18e146",
-        "s19e1-s19e48",
-        "s19e49-s19e90",
-        "s19e91-s19e136",
-        "s20e1-s20e50"
-      ],
-      "season_title_values": [
-        "Indigo League",
-        "Orange Islands",
-        "The Johto Journeys",
-        "Johto League Champions",
-        "Master Quest",
-        "Advanced",
-        "Advanced Challenge",
-        "Advanced Battle",
-        "Battle Frontier",
-        "Diamond and Pearl",
-        "Diamond and Pearl: Battle Dimension",
-        "Diamond and Pearl: Galactic Battles",
-        "Diamond and Pearl: Sinnoh League Victors",
-        "Black & White",
-        "Black & White: Rival Destinies",
-        "Black & White: Rival Destinies",
-        "Black & White: Adventures in Unova",
-        "XY",
-        "XY: Kalos Quest",
-        "XYZ",
-        "Sun & Moon",
-        "Sun & Moon: Ultra Adventures",
-        "Sun & Moon: Ultra Legends",
-        "Journeys",
-        "Master Journeys",
-        "Ultimate Journeys",
-        "Horizons"
-      ],
-      "extra_keys": [
-        "stroke_color"
-      ],
-      "extra_values": [
-        "rgb(64,107,175)"
-      ],
-      "font_title_case": "source"
-    },
-    "episodes": {
-      "s5e41": {
-        "season_text": "Banned"
-      },
-      "s0e75": {
-        "season_text": "Unaired"
-      },
-      "s0e73": {
-        "season_text": "Unaired"
-      },
-      "s0e62": {
-        "season_text": "XYZ"
-      },
-      "s0e77": {
-        "season_text": "Unaired"
-      },
-      "s16e17": {
-        "episode_text": "Episode 820.5"
-      },
-      "s19e119": {
-        "season_text": "Unaired"
-      }
-    },
-    "templates": [
-      {
-        "episode_text_format": "Episode {absolute_number}",
-        "name": "Absolute Episode Numbering",
-        "filters": [
-          {
-            "argument": "Absolute Number",
-            "operation": "is not null",
-            "reference": ""
-          }
-        ]
-      }
-    ],
-    "fonts": [
-      {
-        "name": "Pok\u00e9mon",
-        "color": "rgb(247,205,70)",
-        "file": "Pokemon Solid.ttf",
-        "title_case": "source",
-        "size": 1.1,
-        "kerning": 0.5,
-        "stroke_width": 2.5,
-        "delete_missing": true
-      }
-    ],
-    "series_full_name": "Pok\u00e9mon (1997)",
-    "id": 1
-  },
-  {
-    "description": [
-      "Tinted Glass card with the series blue used as the episode text color"
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/White Collar (2009)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "card_type": "tinted glass",
-      "template_ids": [],
-      "extra_keys": [
-        "episode_text_color"
-      ],
-      "extra_values": [
-        "#53B6E2"
-      ],
-      "font_color": "white"
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [],
-    "series_full_name": "White Collar (2009)",
-    "id": 0
-  },
-  {
-    "series": {
-      "font_id": 0,
-      "card_type": "tinted frame",
-      "template_ids": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "What We Do in the Shadows",
-        "color": "#6EEC47",
-        "delete_missing": true,
-        "file": "Halja Illuminated.ttf",
-        "size": 1.35,
-        "title_case": "lower"
-      }
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/What We Do in the Shadows (2019)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "description": [
-      "Tinted Frame card with the Series font in a thematic green color."
-    ],
-    "series_full_name": "What We Do in the Shadows (2019)",
-    "id": 0
-  },
-  {
-    "description": [
-      "Standard card type with the in-universe Font, and season titles based on the most relevant book adaptation."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/E/The Expanse (2015)/0/preview.jpg",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Family Guy (1999)/0/preview.jpg",
     "creator": "CollinHeist",
     "series": {
       "font_id": 0,
       "card_type": "standard",
-      "template_ids": [],
-      "season_title_ranges": [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6"
-      ],
-      "season_title_values": [
-        "Leviathan Wakes",
-        "Caliban's War",
-        "Abaddon's Gate",
-        "Cibola Burn",
-        "Nemesis Games",
-        "Babylon's Ashes"
-      ],
-      "extra_keys": [],
-      "extra_values": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "The Expanse",
-        "file": "Protomolecule.ttf",
-        "title_case": "source"
-      }
-    ],
-    "series_full_name": "The Expanse (2015)",
-    "id": 0
-  },
-  {
-    "description": [
-      "Tinted Frame card with the Series logo font and color, using 'Chapter' formatted episode text."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Over the Garden Wall (2014)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "font_id": 0,
-      "card_type": "tinted frame",
-      "hide_season_text": true,
-      "episode_text_format": "Chapter {episode_number}",
       "template_ids": []
     },
     "episodes": {},
     "templates": [],
     "fonts": [
       {
-        "name": "Over the Garden Wall",
-        "file": "TomeOfTheUnknown.ttf",
-        "color": "rgb(216,190,142)",
-        "title_case": "source",
-        "size": 1.15,
-        "vertical_shift": -20,
-        "delete_missing": true
+        "name": "Family Guy",
+        "file": "family-guy.TTF"
       }
     ],
-    "series_full_name": "Over the Garden Wall (2014)",
+    "series_full_name": "Family Guy (1999)",
     "id": 0
   },
   {
-    "description": [
-      "Anime title cards with absolute episode numbering, arc season titles, and a smaller font size to account for the long titles."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/One Piece (1999)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "card_type": "anime",
-      "episode_text_format": "Episode {absolute_number}",
-      "template_ids": [],
-      "translations": [
-        {
-          "language_code": "ja",
-          "data_key": "kanji"
-        }
-      ],
-      "season_title_ranges": [
-        "1-3",
-        "4-8",
-        "9-18",
-        "19-30",
-        "31-44",
-        "45-45",
-        "46-47",
-        "48-53",
-        "54-61",
-        "62-63",
-        "64-67",
-        "68-69",
-        "70-77",
-        "78-91",
-        "92-130",
-        "131-135",
-        "136-138",
-        "139-143",
-        "144-152",
-        "143-195",
-        "196-206",
-        "207-219",
-        "220-224",
-        "225-228",
-        "229-263",
-        "264-290",
-        "291-292",
-        "293-302",
-        "303-303",
-        "304-312",
-        "313-325",
-        "326-335",
-        "336-336",
-        "337-381",
-        "382-384",
-        "385-405",
-        "406-407",
-        "408-417",
-        "418-421",
-        "422-425",
-        "426-429",
-        "430-452",
-        "453-456",
-        "457-489",
-        "490-491",
-        "492-492",
-        "493-516",
-        "517-522",
-        "523-541",
-        "542-542",
-        "543-574",
-        "575-578",
-        "579-589",
-        "590-590",
-        "591-625",
-        "626-628",
-        "629-746",
-        "747-750",
-        "751-779",
-        "780-782",
-        "783-877",
-        "878-889",
-        "890-894",
-        "895-896",
-        "897-906",
-        "907-907",
-        "908-1028",
-        "1029-1030",
-        "1031-1100"
-      ],
-      "season_title_values": [
-        "Romance Dawn",
-        "Orange Town",
-        "Syrup Village",
-        "Baratie",
-        "Arlong Park",
-        "Loguetown",
-        "Buggy's Crew Adventure Chronicles",
-        "Loguetown",
-        "Warship Island",
-        "Reverse Mountain",
-        "Whisky Peak",
-        "Diary of Koby-Meppo",
-        "Little Garden",
-        "Drum Island",
-        "Arabasta",
-        "Post-Arabasta",
-        "Goat Island",
-        "Ruluka Island",
-        "Jaya",
-        "Skypiea",
-        "G-8",
-        "Long Ring Long Land",
-        "Ocean's Dream",
-        "Foxy's Return",
-        "Water 7",
-        "Enies Lobby",
-        "Boss Luffy Historical Special",
-        "Enies Lobby",
-        "Boss Luffy Historical Special",
-        "Enies Lobby",
-        "Post-Enies Lobby",
-        "Ice Hunter",
-        "Chopper Man Special",
-        "Thriller Bark",
-        "Spa Island",
-        "Sabaody Archipelago",
-        "Boss Luffy Historical Special",
-        "Amazon Lily",
-        "Straw Hat's Separation Serial",
-        "Impel Down",
-        "Little East Blue",
-        "Impel Down",
-        "Straw Hat's Separation Serial",
-        "Marineford",
-        "Post-War",
-        "Toriko Crossover",
-        "Post-War",
-        "Return to Sabaody",
-        "Fish-Man Island",
-        "Toriko Crossover",
-        "Fish-Man Island",
-        "Z's Ambition",
-        "Punk Hazard",
-        "Toriko & Dragon Ball Crossover",
-        "Punk Hazard",
-        "Caesar Retrieval",
-        "Dressrosa",
-        "Silver Mine",
-        "Zou",
-        "Marine Rookie",
-        "Whole Cake Island",
-        "Levely",
-        "Wano Country",
-        "Cidre Guild",
-        "Wano Country",
-        "20th Anniversary Special",
-        "Wano Country",
-        "Uta's Past",
-        "Wano Country"
-      ],
-      "extra_keys": [],
-      "extra_values": [],
-      "font_size": 0.8
-    },
-    "episodes": {
-      "s0e1": {
-        "episode_text": "Episode 1"
-      },
-      "s0e27": {
-        "episode_text": "Episode 27"
-      },
-      "s0e2": {
-        "episode_text": "Episode 2"
-      },
-      "s0e3": {
-        "episode_text": "Episode 3"
-      },
-      "s0e5": {
-        "episode_text": "Episode 5"
-      },
-      "s0e4": {
-        "episode_text": "Episode 4"
-      },
-      "s0e7": {
-        "episode_text": "Episode 7"
-      },
-      "s0e6": {
-        "episode_text": "Episode 6"
-      },
-      "s0e8": {
-        "episode_text": "Episode 8"
-      },
-      "s0e9": {
-        "episode_text": "Episode 9"
-      },
-      "s0e10": {
-        "episode_text": "Episode 10"
-      },
-      "s0e12": {
-        "episode_text": "Episode 12"
-      },
-      "s0e11": {
-        "episode_text": "Episode 11"
-      },
-      "s0e13": {
-        "episode_text": "Episode 13"
-      },
-      "s0e14": {
-        "episode_text": "Episode 14"
-      },
-      "s0e15": {
-        "episode_text": "Episode 15"
-      },
-      "s0e16": {
-        "episode_text": "Episode 16"
-      },
-      "s0e17": {
-        "episode_text": "Episode 17"
-      },
-      "s0e18": {
-        "episode_text": "Episode 18"
-      },
-      "s0e19": {
-        "episode_text": "Episode 19"
-      },
-      "s0e31": {
-        "episode_text": "Episode 31"
-      },
-      "s0e20": {
-        "episode_text": "Episode 20"
-      },
-      "s0e21": {
-        "episode_text": "Episode 21"
-      },
-      "s0e22": {
-        "episode_text": "Episode 22"
-      },
-      "s0e23": {
-        "episode_text": "Episode 23"
-      },
-      "s0e24": {
-        "episode_text": "Episode 24"
-      },
-      "s0e26": {
-        "episode_text": "Episode 26"
-      },
-      "s0e25": {
-        "episode_text": "Episode 25"
-      },
-      "s0e28": {
-        "episode_text": "Episode 28"
-      },
-      "s0e29": {
-        "episode_text": "Episode 29"
-      },
-      "s0e30": {
-        "episode_text": "Episode 30"
-      },
-      "s0e32": {
-        "episode_text": "Episode 32"
-      },
-      "s0e35": {
-        "episode_text": "Episode 35"
-      },
-      "s0e34": {
-        "episode_text": "Episode 34"
-      },
-      "s0e33": {
-        "episode_text": "Episode 33"
-      },
-      "s0e36": {
-        "episode_text": "Episode 36"
-      },
-      "s0e37": {
-        "episode_text": "Episode 37"
-      },
-      "s0e38": {
-        "episode_text": "Episode 38"
-      },
-      "s0e40": {
-        "episode_text": "Episode 40"
-      },
-      "s0e41": {
-        "episode_text": "Episode 41"
-      },
-      "s0e42": {
-        "episode_text": "Episode 42"
-      },
-      "s0e43": {
-        "episode_text": "Episode 43"
-      },
-      "s0e44": {
-        "episode_text": "Episode 44"
-      },
-      "s0e45": {
-        "episode_text": "Episode 45"
-      }
-    },
-    "templates": [],
-    "fonts": [],
-    "series_full_name": "One Piece (1999)",
-    "id": 0
-  },
-  {
-    "description": [
-      "Frame card type with the series font and coloring for the title and episode text."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Only Murders in the Building (2021)/0/preview.jpg",
-    "creator": "CollinHeist",
-    "series": {
-      "font_id": 0,
-      "card_type": "frame",
-      "template_ids": [],
-      "extra_keys": [
-        "episode_text_color",
-        "interword_spacing"
-      ],
-      "extra_values": [
-        "rgb(156,40,36)",
-        "40"
-      ]
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "Only Murders in the Building",
-        "file": "Cygnet Regular.ttf",
-        "color": "rgb(76, 149, 119)",
-        "title_case": "source",
-        "kerning": -0.7,
-        "interline_spacing": 30,
-        "delete_missing": true
-      }
-    ],
-    "series_full_name": "Only Murders in the Building (2021)",
-    "id": 0
-  },
-  {
-    "description": [
-      "Olivier card type with the series font and coloring for the title text."
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Only Murders in the Building (2021)/1/preview.jpg",
-    "creator": "CollinHeist",
     "series": {
       "font_id": 0,
       "card_type": "olivier",
       "template_ids": [],
-      "extra_keys": [
-        "interword_spacing"
-      ],
-      "extra_values": [
-        "60"
-      ]
+      "translations": []
     },
     "episodes": {},
     "templates": [],
     "fonts": [
       {
-        "name": "Only Murders in the Building",
-        "file": "Cygnet Regular.ttf",
-        "color": "rgb(76, 149, 119)",
-        "title_case": "source",
-        "kerning": 12.0,
+        "name": "Friends",
+        "color": "#FFFFFF",
         "delete_missing": true,
-        "vertical_shift": 10
+        "file": "GABRWFFR.TTF",
+        "title_case": "title"
       }
     ],
-    "series_full_name": "Only Murders in the Building (2021)",
-    "id": 1
+    "description": [
+      "Olivier card type with the series Font."
+    ],
+    "creator": "flowcool",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Friends (1994)/0/preview.jpg",
+    "series_full_name": "Friends (1994)",
+    "id": 0
+  },
+  {
+    "description": [
+      "Comic Book card with randomized banner angles for the title and index text.",
+      "The banners are colored to match the comic panel interstitials used in the show.",
+      "Using a grayscale style modifier is recommended."
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/I/iZombie (2015)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "card_type": "comic book",
+      "template_ids": [],
+      "extra_keys": [
+        "title_text_rotation_angle",
+        "index_text_rotation_angle"
+      ],
+      "extra_values": [
+        "random[-4, 4]",
+        "random[-4, -3]"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "series_full_name": "iZombie (2015)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "It's Always Sunny in Philadelphia",
+        "color": "rgb(248,213,85)",
+        "delete_missing": true,
+        "file": "Ciabatta-Medium.ttf",
+        "size": 1.25,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/I/It's Always Sunny in Philadelphia (2005)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type using the font found in the opening title cards, using the yellow color from the IASIP logo."
+    ],
+    "series_full_name": "It's Always Sunny in Philadelphia (2005)",
+    "id": 0
   },
   {
     "description": [
@@ -1557,5 +1452,110 @@
     ],
     "series_full_name": "Mr. Robot (2015)",
     "id": 2
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": [],
+      "translations": [],
+      "season_title_ranges": [],
+      "season_title_values": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Better Call Saul",
+        "color": "rgb(255, 255, 97)",
+        "delete_missing": true,
+        "file": "script-casual-normal.ttf",
+        "title_case": "title"
+      }
+    ],
+    "description": [
+      "Olivier card type using the Series font from the 'Better Call' part of the series logo."
+    ],
+    "creator": "CollinHeist",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Better Call Saul (2015)/0/preview.jpg",
+    "series_full_name": "Better Call Saul (2015)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": [],
+      "translations": [],
+      "season_title_ranges": [],
+      "season_title_values": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Better Call Saul",
+        "color": "rgb(255, 255, 97)",
+        "delete_missing": true,
+        "file": "script-casual-normal.ttf",
+        "title_case": "title"
+      }
+    ],
+    "description": [
+      "Standard card type using the Series font from the 'Better Call' part of the series logo."
+    ],
+    "creator": "CollinHeist",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Better Call Saul (2015)/1/preview.jpg",
+    "series_full_name": "Better Call Saul (2015)",
+    "id": 1
+  },
+  {
+    "description": [
+      "Tinted Glass card with the series blue used as the episode text color"
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/White Collar (2009)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "series": {
+      "card_type": "tinted glass",
+      "template_ids": [],
+      "extra_keys": [
+        "episode_text_color"
+      ],
+      "extra_values": [
+        "#53B6E2"
+      ],
+      "font_color": "white"
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "series_full_name": "White Collar (2009)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted frame",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "What We Do in the Shadows",
+        "color": "#6EEC47",
+        "delete_missing": true,
+        "file": "Halja Illuminated.ttf",
+        "size": 1.35,
+        "title_case": "lower"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/What We Do in the Shadows (2019)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Tinted Frame card with the Series font in a thematic green color."
+    ],
+    "series_full_name": "What We Do in the Shadows (2019)",
+    "id": 0
   }
 ]
