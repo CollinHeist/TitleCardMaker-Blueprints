@@ -43,21 +43,26 @@ body:
   - type: textarea
     id: blueprint
     attributes:
-      label: Blueprint File
+      label: Blueprint
       description: >
-        Paste your blueprint.json file here.
+        Paste your `blueprint.json` file here.
         This will be automatically formatted as JSON, so there is no need for backticks.
       render: json
     validations:
       required: true
-      
+
   - type: textarea
-    id: files
+    id: preview_file
     attributes:
-      label: Zip of Files
-      description: >
-        Upload a `.zip` file of the preview Title Card of this Blueprint, as well
-        as any Font Files used by this Blueprint. Please verify any Font Licenses
-        allow them to be shared.
+      label: Preview Title Card
+      description: Upload your preview Title Card here.
     validations:
       required: true
+      
+  - type: textarea
+    id: font_zip
+    attributes:
+      label: Zip of Font Files
+      description: >
+        Upload a `.zip` file of any Font Files used by this Blueprint. Please
+        verify any Font Licenses allow them to be shared before uploading.
