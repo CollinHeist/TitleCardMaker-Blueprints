@@ -54,41 +54,52 @@ def get_blueprint_folders(series_name: str) -> tuple[str, str]:
 if __name__ == '__main__':
     # Parse issue from environment variable
     try:
-        issue = loads(environ.get('GITHUB_CONTEXT'))
+        issue_json = loads(environ.get('ISSUE_JSON'))
+        print(f'Parsed issue JSON as:\n{issue_json}')
     except JSONDecodeError:
         print(f'Unable to parse Context as JSON')
         sys_exit(1)
 
     # Get the issue's author and the body (the issue text itself)
-    creator = issue['user']['login']
-    content = issue['body']
+    creator = environ.get('ISSUE_CREATOR')
+    # content = issue['body']
 
     # Extract the data from the issue text
-    
-    issue_regex = re_compile(
-        r'^### Series Name\s+(?P<series_name>.+)\s+'
-        r'### Series Year\s+(?P<series_year>\d+)\s+'
-        r'### Creator Username\s+(?P<creator>.+)\s+'
-        r'### Blueprint Description\s+(?P<description>[\s\S]*)\s+'
-        r'### Blueprint File\s+```json\s+(?P<blueprint>[\s\S]*?)```\s+'
-        r'### Zip of Files\s+.*?\[.*\]\((?P<file_url>.+)\).*$'
-    )
+    # issue_regex = re_compile(
+    #     r'^### Series Name\s+(?P<series_name>.+)\s+'
+    #     r'### Series Year\s+(?P<series_year>\d+)\s+'
+    #     r'### Creator Username\s+(?P<creator>.+)\s+'
+    #     r'### Blueprint Description\s+(?P<description>[\s\S]*)\s+'
+    #     r'### Blueprint File\s+```json\s+(?P<blueprint>[\s\S]*?)```\s+'
+    #     r'### Zip of Files\s+.*?\[.*\]\((?P<file_url>.+)\).*$'
+    # )
 
-    # If data cannot be extracted, exit
-    if not (data_match := issue_regex.match(content)):
-        print(f'Unable to parse Blueprint from Issue')
-        print(f'{content=!r}')
-        sys_exit(1)
+    # # If data cannot be extracted, exit
+    # if not (data_match := issue_regex.match(content)):
+    #     print(f'Unable to parse Blueprint from Issue')
+    #     print(f'{content=!r}')
+    #     sys_exit(1)
 
     # Get each variable from the issue
-    data = data_match.groupdict()
-    print(f'Regex data extracted: {data=!r}')
-    series_name = data['series_name']
-    series_year = data['series_year']
-    creator = creator if '_No response_' in data['creator'] else data['creator']
-    description = data['description']
-    blueprint = data['blueprint']
-    file_url = data['file_url']
+    # data = data_match.groupdict()
+    # print(f'Regex data extracted: {data=!r}')
+    # series_name = data['series_name']
+    # series_year = data['series_year']
+    # creator = creator if '_No response_' in data['creator'] else data['creator']
+    # description = data['description']
+    # blueprint = data['blueprint']
+    # file_url = data['file_url']
+
+    series_name = issue_json['series_name']
+    series_year = issue_json['series_year']
+    creator = issue_json['creator'] if issue_json['creator'] else environ.get('ISSUE_CREATOR')
+    description = issue_json['description']
+    blueprint = issue_json['blueprint']
+    try:
+        file_url = re_compile(r'\[.+\]\((.+)\)').match(issue_json['files']).group(1)
+    except:
+        print(f'Cannot parse uploaded file URL from {issue_json["files"]}')
+        sys_exit(1)
 
     # Parse blueprint as JSON
     try:

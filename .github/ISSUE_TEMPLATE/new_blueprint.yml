@@ -6,7 +6,7 @@ assignees: 'CollinHeist'
 
 body:
   - type: input
-    id: series
+    id: series_name
     attributes:
       label: Series Name
       description: What is the full name of the Series?
@@ -15,7 +15,7 @@ body:
       required: true
 
   - type: input
-    id: year
+    id: series_year
     attributes:
       label: Series Year
       description: What year did this Series first air?
@@ -52,7 +52,7 @@ body:
       required: true
       
   - type: textarea
-    id: preview
+    id: files
     attributes:
       label: Zip of Files
       description: >
