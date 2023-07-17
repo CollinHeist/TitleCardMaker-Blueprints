@@ -82,9 +82,9 @@ if __name__ == '__main__':
     # Get each variable from the issue
     data = data_match.groupdict()
     print(f'Regex data extracted: {data=!r}')
-    series_name = data['series_name']
+    series_name = data['series_name'].strip()
     series_year = data['series_year']
-    creator = creator if '_No response_' in data['creator'] else data['creator']
+    creator = (creator if 'No response_' in data['creator'] else data['creator']).strip()
     description = data['description']
     blueprint = data['blueprint']
     file_url = data['file_url']
