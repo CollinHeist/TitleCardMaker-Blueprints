@@ -2,7 +2,7 @@ name: Auto Merge Staging to Master
 
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 */6 * * *"
   issue_comment:
     types: [ created ]
 
@@ -61,7 +61,6 @@ jobs:
     needs: [auto_merge, call-resize-images-workflow, call-master-blueprint-workflow]
     runs-on: ubuntu-latest
     steps:
-      # Merge the PR if created
       - name: Merge Pull Request
         uses: octokit/request-action@v2.x
         with:

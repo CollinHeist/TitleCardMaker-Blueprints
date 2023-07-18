@@ -21,12 +21,12 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
 
-      - name: Run GitHub issue forms parser
-        id: parse_issue
-        uses: edumserrano/github-issue-forms-parser@v1.3.5
-        with:
-          template-filepath: '.github/ISSUE_TEMPLATE/new_blueprint.yml'
-          issue-form-body: '${{ github.event.issue.body }}'
+      # - name: Run GitHub issue forms parser
+      #   id: parse_issue
+      #   uses: edumserrano/github-issue-forms-parser@v1.3.5
+      #   with:
+      #     template-filepath: '.github/ISSUE_TEMPLATE/new_blueprint.yml'
+      #     issue-form-body: '${{ github.event.issue.body }}'
 
       # Run script to parse issue
       - name: Set up Python
@@ -43,7 +43,7 @@ jobs:
         env:
           ISSUE_BODY: ${{ toJson(github.event.issue.body) }}
           ISSUE_CREATOR: '${{ github.event.issue.user.login }}'
-          ISSUE_JSON: '${{ steps.parse_issue.outputs.parsed-issue }}'
+          # ISSUE_JSON: '${{ steps.parse_issue.outputs.parsed-issue }}'
         run: |
           python ./build/parse_submission.py
 

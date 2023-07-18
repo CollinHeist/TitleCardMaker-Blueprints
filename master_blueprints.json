@@ -63,6 +63,33 @@
     "series": {
       "font_id": 0,
       "card_type": "standard",
+      "hide_season_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Lord of the Rings",
+        "color": "#D1C6AA",
+        "delete_missing": true,
+        "file": "ringbearer.ttf",
+        "stroke_width": 0.8,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/L/The Lord of the Rings - The Rings of Power (2022)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with the font originally used in the logo for Peter Jackson's trilogy, and the golden/yellow color from this series logo."
+    ],
+    "series_full_name": "The Lord of the Rings - The Rings of Power (2022)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
       "translations": [],
       "season_title_ranges": [],
       "season_title_values": [],
@@ -1557,5 +1584,36 @@
     ],
     "series_full_name": "Mr. Robot (2015)",
     "id": 2
+  },
+  {
+    "series": {
+      "card_type": "anime",
+      "episode_text_format": "Episode {absolute_number}",
+      "template_ids": [],
+      "translations": [
+        {
+          "language_code": "ja",
+          "data_key": "kanji"
+        }
+      ]
+    },
+    "episodes": {
+      "s0e1": {
+        "episode_text": "Episode 16.5"
+      },
+      "s0e2": {
+        "episode_text": "Episode 23.5"
+      }
+    },
+    "templates": [],
+    "fonts": [],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/M/Mushoku Tensei - Jobless Reincarnation (2021)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Anime card type with Japanese translations, and absolute episode numbering.",
+      "The \"Eris the Goblin Slayer\" and \"Guardian Fitz\" OVAs/Specials are numbered where they take place chronologically."
+    ],
+    "series_full_name": "Mushoku Tensei - Jobless Reincarnation (2021)",
+    "id": 0
   }
 ]
