@@ -713,6 +713,42 @@
     "id": 0
   },
   {
+    "series": {
+      "font_id": 0,
+      "card_type": "comic book",
+      "extra_keys": [
+        "title_text_rotation_angle",
+        "index_text_rotation_angle",
+        "banner_fill_color",
+        "text_box_edge_color"
+      ],
+      "extra_values": [
+        "random[-4, 4]",
+        "random[-4, -3]",
+        "rgba(235,74,44,0.6)",
+        "rgb(223,175,74)"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Flash",
+        "delete_missing": true,
+        "file": "the-flash.ttf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/The Flash (2014)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Comic Book card with randomized banner angles for the title and index text.",
+      "The text uses the Series font, the banners are colored red, and the box edges are golden."
+    ],
+    "series_full_name": "The Flash (2014)",
+    "id": 0
+  },
+  {
     "description": [
       "Tinted Frame card using the Series font and no season titles."
     ],
