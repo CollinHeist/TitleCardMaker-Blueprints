@@ -78,7 +78,7 @@ if __name__ == '__main__':
         r'### Blueprint Description\s+(?P<description>[\s\S]*)\s+'
         r'### Blueprint\s+```json\s+(?P<blueprint>[\s\S]*?)```\s+'
         r'### Preview Title Card\s+.*?\[.*\]\((?P<preview_url>.+)\)\s+'
-        r'### Zip of Font Files\s+(?P<font_zip>_No response_|\[.*\]\((.+)\))\s*$'
+        r'### Zip of Font Files\s+(_No Response_|\[.+?\]\((?P<font_zip>http[^\s\)]+)\))\s*$'
     )
 
     # If data cannot be extracted, exit
@@ -88,7 +88,7 @@ if __name__ == '__main__':
         sys_exit(1)
 
     # Get each variable from the issue
-    data = data_match.groupdict()
+    data = {'font_zip': '_No response_'} | data_match.groupdict()
     print(f'{data=}')
     series_name = data['series_name'].strip()
     series_year = data['series_year']
