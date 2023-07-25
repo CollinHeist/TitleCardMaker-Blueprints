@@ -3,13 +3,13 @@ name: Auto Merge Staging to Master
 on:
   schedule:
     - cron: "0 */6 * * *"
-  issue_comment:
-    types: [ created ]
+  # issue_comment:
+  #   types: [ created ]
 
 jobs:
   auto_merge:
     runs-on: ubuntu-latest
-    if: ${{ (startsWith(github.event.issue.title, '[Blueprint]') && contains(github.event.comment.body, '/merge-staging')) }}
+    # if: ${{ (startsWith(github.event.issue.title, '[Blueprint]') && contains(github.event.comment.body, '/merge-staging')) }}
     outputs:
       pr_number: ${{ steps.create_pr.outputs.pr_number }}
 
@@ -23,9 +23,9 @@ jobs:
         id: get_issues
         uses: octokit/request-action@v2.x
         with:
-          route: GET /repos/${{ github.repository }}/issues
-          query: labels=created&state=open
-          token: ${{ secrets.GITHUB_TOKEN }}
+          route: GET /repos/${{ github.repository }}/issues?labels=created,passed-tests&state=open
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       # Create a Pull Request to merge staging -> master
       - name: Create Pull Request
