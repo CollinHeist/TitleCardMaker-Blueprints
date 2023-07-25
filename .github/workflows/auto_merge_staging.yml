@@ -3,8 +3,8 @@ name: Auto Merge Staging to Master
 on:
   schedule:
     - cron: "0 */6 * * *"
-  issue_comment:
-    types: [ created ]
+  # issue_comment:
+  #   types: [ created ]
 
 jobs:
   auto_merge:
