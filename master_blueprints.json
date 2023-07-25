@@ -299,6 +299,30 @@
   },
   {
     "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Arrested Development",
+        "color": "#FA5601",
+        "delete_missing": true,
+        "file": "BlurWeb-Medium W03 Regular.ttf"
+      }
+    ],
+    "description": [
+      "Standard card format using FF Blur font"
+    ],
+    "creator": "rtgurley",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Arrested Development (2003)/0/preview.jpg",
+    "series_full_name": "Arrested Development (2003)",
+    "id": 0
+  },
+  {
+    "series": {
       "card_type": "standard",
       "episode_text_format": "Chapter {episode_number}",
       "template_ids": [],
