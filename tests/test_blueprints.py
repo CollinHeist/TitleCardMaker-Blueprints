@@ -2,7 +2,7 @@ from json import load as json_load, JSONDecodeError
 from pathlib import Path
 
 from re import compile as re_compile, sub as re_sub, IGNORECASE
-from typing import Generator
+from typing import Iterator
 
 from models.models import Blueprint
 
@@ -10,7 +10,7 @@ BLUEPRINT_FOLDER = Path(__file__).parent.parent / 'blueprints'
 
 # Non-tests
 
-def read_blueprints() -> Generator[tuple[Path, str, dict]]:
+def read_blueprints() -> Iterator[tuple[Path, str, dict]]:
     for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/*/blueprint.json'):
         blueprint_id = blueprint_file.parent
         series_subfolder = blueprint_file.parent.parent
