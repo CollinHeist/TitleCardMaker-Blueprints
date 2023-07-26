@@ -2,16 +2,16 @@ from json import load as json_load, JSONDecodeError
 from pathlib import Path
 
 from re import compile as re_compile, sub as re_sub, IGNORECASE
+from typing import Generator
 
-# from models import Blueprint
 from models.models import Blueprint
 
 BLUEPRINT_FOLDER = Path(__file__).parent.parent / 'blueprints'
 
 # Non-tests
 
-def read_blueprints():
-    for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/*/blueprints.json'):
+def read_blueprints() -> Generator[tuple[Path, str, dict]]:
+    for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/*/blueprint.json'):
         blueprint_id = blueprint_file.parent
         series_subfolder = blueprint_file.parent.parent
         with blueprint_file.open('r') as file_handle:
