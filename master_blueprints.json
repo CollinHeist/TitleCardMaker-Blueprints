@@ -1,6 +1,29 @@
 [
   {
     "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Gemstones",
+        "delete_missing": true,
+        "file": "FestivalBudayaXXXI.otf"
+      }
+    ],
+    "description": [
+      "Standard format using the Festival BudayaXXXI font"
+    ],
+    "creator": "rtgurley",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/R/The Righteous Gemstones (2019)/0/preview.jpg",
+    "series_full_name": "The Righteous Gemstones (2019)",
+    "id": 0
+  },
+  {
+    "series": {
       "card_type": "anime",
       "season_title_ranges": [
         "2",
@@ -90,6 +113,29 @@
     "series": {
       "font_id": 0,
       "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Schmigadoon",
+        "delete_missing": true,
+        "file": "Rumble Brave.otf"
+      }
+    ],
+    "description": [
+      "Standard card format with Rumble Brave font"
+    ],
+    "creator": "rtgurley",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Schmigadoon! (2021)/0/preview.jpg",
+    "series_full_name": "Schmigadoon! (2021)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
       "translations": [],
       "season_title_ranges": [],
       "season_title_values": [],
@@ -112,7 +158,7 @@
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Superstore (2015)/0/preview.jpg",
     "creator": "CollinHeist",
     "description": [
-      "Standard card type with the series font."
+      "Standard card type with the Series font."
     ],
     "series_full_name": "Superstore (2015)",
     "id": 0
@@ -795,6 +841,31 @@
       }
     ],
     "series_full_name": "Foundation (2021)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Goldbergs",
+        "color": "#E7141D",
+        "delete_missing": true,
+        "file": "Windsor-Bold.ttf",
+        "title_case": "source"
+      }
+    ],
+    "description": [
+      "Standard Card format with Windsor Bold font"
+    ],
+    "creator": "rtgurley",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/G/The Goldbergs (2013)/0/preview.jpg",
+    "series_full_name": "The Goldbergs (2013)",
     "id": 0
   },
   {
@@ -1546,6 +1617,30 @@
     ],
     "series_full_name": "Only Murders in the Building (2021)",
     "id": 1
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "1923",
+        "delete_missing": true,
+        "file": "Boul Mich Regular.ttf",
+        "stroke_width": 0.25
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/1/1923 (2022)/0/preview.jpg",
+    "creator": "rtgurley",
+    "description": [
+      "Standard format card using the Boul Mich Regular font"
+    ],
+    "series_full_name": "1923 (2022)",
+    "id": 0
   },
   {
     "description": [
