@@ -100,7 +100,7 @@ class TestBlueprintModels:
 
     def test_blueprint_is_valid_model(self):
         for _, _, blueprint in read_blueprints():
-            Blueprint(**blueprint)
+            assert Blueprint(**blueprint), blueprint
 
 
 class TestBlueprintFiles:

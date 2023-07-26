@@ -17,13 +17,14 @@ class Translation(BaseModel):
     data_key: constr(regex=r'^[a-zA-Z]+[^ -]*$', min_length=1)
 
 class BlueprintBase(BaseModel):
-    @root_validator(skip_on_failure=True)
-    def delete_null_args(cls, values):
-        delete_keys = [key for key, value in values.items() if value is None]
-        for key in delete_keys:
-            del values[key]
+    ...
+    # @root_validator(skip_on_failure=True)
+    # def delete_null_args(cls, values):
+    #     delete_keys = [key for key, value in values.items() if value is None]
+    #     for key in delete_keys:
+    #         del values[key]
 
-        return values
+    #     return values
 
 class SeriesBase(BlueprintBase):
     font_id: Optional[int] = None
@@ -83,7 +84,6 @@ class BlueprintFont(BlueprintBase):
 
     @root_validator(skip_on_failure=True)
     def validate_both_not_provided(cls, values):
-        print(values)
         if (values.get('file', None) is not None
             and values.get('file_download_url', None) is not None):
             raise ValueError(f'Cannot provide both a Font file and download URL')
@@ -108,28 +108,30 @@ class Blueprint(BaseModel):
         # Get all unique Template IDs
         template_ids = set(values['series'].template_ids)
         for episode in values['episodes'].values():
-            if hasattr(episode, 'template_ids'):
+            if hasattr(episode, 'template_ids') and episode.template_ids:
                 template_ids.update(id_ for id_ in episode.template_ids)
 
         # Verify Template specification
-        assert not (max(template_ids)+1 > len(values['templates'])), 'Not all Templates are defined'
-        assert not (max(template_ids)+1 < len(values['templates'])), 'Not all Templates are utilized'
+        templates_used = max(template_ids)+1 if template_ids else 0
+        assert not (templates_used > len(values['templates'])), f'Not all Templates are defined in {values}'
+        assert not (templates_used < len(values['templates'])), f'Not all Templates are utilized in {values}'
 
         return values
     
     @root_validator(skip_on_failure=True)
     def validate_font_specifications(cls, values):
         # Get all unique Font IDs
-        font_ids = set([values['series'].font_id])
+        font_ids = set() if values['series'].font_id is None else set([values['series'].font_id])
         for episode in values['episodes'].values():
-            if hasattr(episode, 'font_id'):
+            if hasattr(episode, 'font_id') and episode.font_id:
                 font_ids.add(episode.font_id)
         for template in values['templates']:
-            if hasattr(template, 'font_id'):
+            if hasattr(template, 'font_id') and template.font_id:
                 font_ids.add(template.font_id)
 
         # Verify Font specification
-        assert not (max(font_ids)+1 > len(values['fonts'])), 'Not all Fonts are defined'
-        assert not (max(font_ids)+1 < len(values['fonts'])), 'Not all Fonts are utilized'
+        fonts_used = max(font_ids)+1 if font_ids else 0
+        assert not (fonts_used > len(values['fonts'])), f'Not all Fonts are defined in {values}'
+        assert not (fonts_used < len(values['fonts'])), f'Not all Fonts are utilized in {values}'
 
         return values
