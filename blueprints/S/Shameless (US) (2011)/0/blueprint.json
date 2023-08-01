@@ -2,18 +2,10 @@
   "series": {
     "font_id": 0,
     "card_type": "tinted frame",
-    "template_ids": [
-      0
-    ]
+    "template_ids": []
   },
   "episodes": {},
-  "templates": [
-    {
-      "card_type": "frame",
-      "name": "my template",
-      "filters": []
-    }
-  ],
+  "templates": [],
   "fonts": [
     {
       "name": "Shameless US",
