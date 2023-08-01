@@ -1,0 +1,38 @@
+{
+  "series": {
+    "font_id": 0,
+    "card_type": "standard",
+    "template_ids": [
+      0
+    ]
+  },
+  "episodes": {},
+  "templates": [
+    {
+      "card_type": "frame",
+      "translations": [
+        {
+          "language_code": "fr",
+          "data_key": "preferred_title"
+        }
+      ],
+      "name": "my template",
+      "filters": []
+    }
+  ],
+  "fonts": [
+    {
+      "name": "Young Sheldon",
+      "color": "#BC2E4F",
+      "delete_missing": true,
+      "file": "FontsFree-Net-american-typewriter-1.ttf",
+      "size": 1.2,
+      "title_case": "title"
+    }
+  ],
+  "preview": "preview.jpg",
+  "creator": "flowcool",
+  "description": [
+    "Font based card"
+  ]
+}
