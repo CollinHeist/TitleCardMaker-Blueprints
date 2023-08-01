@@ -1,25 +1,11 @@
 {
   "series": {
     "font_id": 0,
-    "card_type": "standard",
-    "template_ids": [
-      0
-    ]
+    "card_type": "frame",
+    "template_ids": []
   },
   "episodes": {},
-  "templates": [
-    {
-      "card_type": "frame",
-      "translations": [
-        {
-          "language_code": "fr",
-          "data_key": "preferred_title"
-        }
-      ],
-      "name": "my template",
-      "filters": []
-    }
-  ],
+  "templates": [],
   "fonts": [
     {
       "name": "Young Sheldon",
