@@ -59,9 +59,24 @@ jobs:
           junitxml-path: ./pytest.xml
           hide-comment: true
 
-      # Update Issue with results
-      - name: Comment Pytest Results
+      - name: Surface failing tests
         if: always()
+        uses: pmeier/pytest-results-action@main
+        with:
+          path: ./pytest.xml
+          summary: true
+          display-options: fEX
+          fail-on-empty: true
+
+      # - name: Create test summary
+      #   if: always()
+      #   uses: test-summary/action@dist
+      #   with:
+      #     paths: results/**/*.xml
+
+      # Comment on Issue with results if all passed
+      - name: Comment Successful Pytest Results
+        if: success()
         uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
         with:
           issue-number: ${{ github.event.issue.number }}
@@ -73,9 +88,19 @@ jobs:
 
             > Note: Validated Blueprints can be merged with `/create-blueprint`.
 
+      # Comment on Issue if failed
+      - name: Comment Failing Pytest Results
+        if: failure()
+        uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
+        with:
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            # Blueprint Validation Results
+            Blueprint validation has __failed__. See the workflow summary for details.
+
       # Add labels for pass/failure
       - name: Add Passing Label
-        if: ${{ success() }}
+        if: success()
         uses: actions/github-script@v6
         with:
           script: |
@@ -87,7 +112,7 @@ jobs:
             })
 
       - name: Add Failure Label
-        if: ${{ failure() }}
+        if: failure()
         uses: actions/github-script@v6
         with:
           script: |
