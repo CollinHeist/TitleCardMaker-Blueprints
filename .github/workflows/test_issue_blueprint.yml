@@ -73,6 +73,13 @@ jobs:
       #   uses: test-summary/action@dist
       #   with:
       #     paths: results/**/*.xml
+      
+      - name: Run tests
+        uses: dariocurr/pytest-summary@main
+        with:
+          paths: tests
+          options: --quiet 
+          show: all
 
       # Comment on Issue with results if all passed
       - name: Comment Successful Pytest Results
