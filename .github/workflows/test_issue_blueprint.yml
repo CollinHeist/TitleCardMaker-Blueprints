@@ -65,7 +65,6 @@ jobs:
             # Blueprint Validation Results
             All tests passed succesfully. Blueprints can be created with the `/create-blueprint` command.
 
-      - run: env
       - name: Comment Failing Pytest Results
         if: failure()
         uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
@@ -73,7 +72,7 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             # Blueprint Validation Results
-            Validation has __failed__. See the [workflow summary](${{env.GITHUB_SERVER_URL}}/${{env.GITHUB_REPOSITORY}}/actions/runs/${{env.GITHUB_RUN_ID}}) for details.
+            Validation has __failed__. See the [workflow summary](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details.
 
       # Add labels for pass/failure
       - name: Add Passing Label
