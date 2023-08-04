@@ -46,41 +46,15 @@ jobs:
           # ISSUE_JSON: '${{ steps.parse_issue.outputs.parsed-issue }}'
         run: |
           python ./build/parse_submission.py
-
-      # Test created Blueprint
-      - name: Run pytest
-        run: |
-          pytest --junitxml=pytest.xml
-
-      - name: Get Pytest Output
-        id: pytestResults
-        uses: MishaKav/pytest-coverage-comment@main
-        with:
-          junitxml-path: ./pytest.xml
-          hide-comment: true
-
-      - name: Surface failing tests
-        if: always()
-        uses: pmeier/pytest-results-action@main
-        with:
-          path: ./pytest.xml
-          summary: true
-          display-options: fEX
-          fail-on-empty: true
-
-      # - name: Create test summary
-      #   if: always()
-      #   uses: test-summary/action@dist
-      #   with:
-      #     paths: results/**/*.xml
       
-      - name: Run tests
+      - name: Run Pytest, write summary to workflow
         if: always()
         uses: dariocurr/pytest-summary@main
         with:
           paths: tests
           options: --quiet 
-          show: all
+          show: fail
+          output: test-summary.md
 
       # Comment on Issue with results if all passed
       - name: Comment Successful Pytest Results
@@ -90,13 +64,14 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             # Blueprint Validation Results
-            | Tests | Failures | Errors | Skipped | Time |
-            | :---: | :---: | :---: | :---: | :---: |
-            | ${{ steps.pytestResults.outputs.tests }} | ${{ steps.pytestResults.outputs.failures }} | ${{ steps.pytestResults.outputs.errors }} | ${{ steps.pytestResults.outputs.skipped }} | ${{ steps.pytestResults.outputs.time }} |
-
-            > Note: Validated Blueprints can be merged with `/create-blueprint`.
+            All tests passed succesfully. Blueprints can be created with the `/create-blueprint` command.
 
       # Comment on Issue if failed
+      - name: Parse Summary Markdown for Comment
+        id: summary-md
+        if: failure()
+        run: echo "TEST_SUMMARY=$(cat sample.out)" >> $GITHUB_OUTPUT
+
       - name: Comment Failing Pytest Results
         if: failure()
         uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
@@ -104,7 +79,8 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             # Blueprint Validation Results
-            Blueprint validation has __failed__. See the workflow summary for details.
+            Validation has __failed__. See the [workflow summary](https://github.com/CollinHeist/TitleCardMaker-Blueprints/actions/runs/${{GITHUB_RUN_ID}}) for details.
+            ${{ steps.summary-md.outputs.TEST_SUMMARY }}"
 
       # Add labels for pass/failure
       - name: Add Passing Label
