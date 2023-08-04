@@ -63,7 +63,7 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             # Blueprint Validation Results
-            All tests passed succesfully. Blueprints can be created with the `/create-blueprint` command.
+            All tests passed succesfully. Blueprint can be created with the `/create-blueprint` command.
 
       - name: Comment Failing Pytest Results
         if: failure()
@@ -73,6 +73,8 @@ jobs:
           body: |
             # Blueprint Validation Results
             Validation has __failed__. See the [workflow summary](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details.
+
+            After correcting the Blueprint, re-test with `/test-blueprint`.
 
       # Add labels for pass/failure
       - name: Add Passing Label
