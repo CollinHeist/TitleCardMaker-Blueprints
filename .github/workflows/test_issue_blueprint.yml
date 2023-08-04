@@ -75,6 +75,7 @@ jobs:
       #     paths: results/**/*.xml
       
       - name: Run tests
+        if: always()
         uses: dariocurr/pytest-summary@main
         with:
           paths: tests
