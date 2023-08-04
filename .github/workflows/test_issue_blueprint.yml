@@ -54,7 +54,6 @@ jobs:
           paths: tests
           options: --quiet 
           show: fail
-          output: test-summary.md
 
       # Comment on Issue with results if all passed
       - name: Comment Successful Pytest Results
@@ -66,12 +65,7 @@ jobs:
             # Blueprint Validation Results
             All tests passed succesfully. Blueprints can be created with the `/create-blueprint` command.
 
-      # Comment on Issue if failed
-      - name: Parse Summary Markdown for Comment
-        id: summary-md
-        if: failure()
-        run: echo "TEST_SUMMARY=$(cat test-summary.md)" >> $GITHUB_OUTPUT
-
+      - run: env
       - name: Comment Failing Pytest Results
         if: failure()
         uses: peter-evans/create-or-update-comment@5f728c3dae25f329afbe34ee4d08eef25569d79f
@@ -80,7 +74,6 @@ jobs:
           body: |
             # Blueprint Validation Results
             Validation has __failed__. See the [workflow summary](${{env.GITHUB_SERVER_URL}}/${{env.GITHUB_REPOSITORY}}/actions/runs/${{env.GITHUB_RUN_ID}}) for details.
-            ${{ steps.summary-md.outputs.TEST_SUMMARY }}"
 
       # Add labels for pass/failure
       - name: Add Passing Label
