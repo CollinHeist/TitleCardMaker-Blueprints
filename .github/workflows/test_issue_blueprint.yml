@@ -70,7 +70,7 @@ jobs:
       - name: Parse Summary Markdown for Comment
         id: summary-md
         if: failure()
-        run: echo "TEST_SUMMARY=$(cat sample.out)" >> $GITHUB_OUTPUT
+        run: echo "TEST_SUMMARY=$(cat test-summary.md)" >> $GITHUB_OUTPUT
 
       - name: Comment Failing Pytest Results
         if: failure()
@@ -79,7 +79,7 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             # Blueprint Validation Results
-            Validation has __failed__. See the [workflow summary]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID) for details.
+            Validation has __failed__. See the [workflow summary](${{GITHUB_SERVER_URL}}/${{GITHUB_REPOSITORY}}/actions/runs/${{GITHUB_RUN_ID}}) for details.
             ${{ steps.summary-md.outputs.TEST_SUMMARY }}"
 
       # Add labels for pass/failure
