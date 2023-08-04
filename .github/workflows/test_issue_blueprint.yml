@@ -79,7 +79,7 @@ jobs:
           issue-number: ${{ github.event.issue.number }}
           body: |
             # Blueprint Validation Results
-            Validation has __failed__. See the [workflow summary](https://github.com/CollinHeist/TitleCardMaker-Blueprints/actions/runs/${{GITHUB_RUN_ID}}) for details.
+            Validation has __failed__. See the [workflow summary]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID) for details.
             ${{ steps.summary-md.outputs.TEST_SUMMARY }}"
 
       # Add labels for pass/failure
