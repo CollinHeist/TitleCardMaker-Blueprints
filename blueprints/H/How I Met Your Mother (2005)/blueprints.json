@@ -1,0 +1,24 @@
+[
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "How I met your mother",
+        "delete_missing": true,
+        "file": "Dax Regular.otf",
+        "title_case": "title"
+      }
+    ],
+    "preview": "preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Simple Font based using Olivier cards."
+    ]
+  }
+]

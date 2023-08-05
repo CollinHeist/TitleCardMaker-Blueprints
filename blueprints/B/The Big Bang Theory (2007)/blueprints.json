@@ -1,0 +1,25 @@
+[
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "frame",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Big Bang Theory",
+        "color": "#F6D65F",
+        "delete_missing": true,
+        "file": "Muro.otf",
+        "title_case": "upper"
+      }
+    ],
+    "preview": "preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Simple Big Bang Theory theme with font"
+    ]
+  }
+]
