@@ -1,0 +1,21 @@
+{
+  "series": {
+    "font_id": 0,
+    "card_type": "tinted frame",
+    "template_ids": []
+  },
+  "episodes": {},
+  "templates": [],
+  "fonts": [
+    {
+      "name": "Star Trek",
+      "delete_missing": true,
+      "file": "Star Trek TNG-Title Regular.ttf"
+    }
+  ],
+  "preview": "preview.jpg",
+  "creator": "Departed",
+  "description": [
+    "A variation of the Tinted Frame card with a custom Star Trek font"
+  ]
+}
