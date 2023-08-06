@@ -6,6 +6,7 @@ environment variable. It parses this content and creates the necessary
 Blueprint, and all the associated files.
 """
 
+from datetime import datetime
 from json import dump as json_dump, loads, JSONDecodeError
 from os import environ
 from pathlib import Path
@@ -61,11 +62,6 @@ if __name__ == '__main__':
         print(f'Unable to parse Context as JSON')
         print(exc)
         sys_exit(1)
-
-    # try:
-    #     print(loads(environ.get('ISSUE_JSON')))
-    # except Exception as exc:
-    #     print(exc)
 
     # Get the issue's author and the body (the issue text itself)
     creator = environ.get('ISSUE_CREATOR', 'CollinHeist')
@@ -173,6 +169,9 @@ if __name__ == '__main__':
 
             copy_file(file, blueprint_subfolder / file.name)
             print(f'Copied [zip]/{file.name} into blueprints/{letter}/{folder_name}/{id_}/{file.name}')
+
+    # Add creation time to Blueprint
+    finalized_blueprint['created'] = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 
     # Write Blueprint as JSON
     blueprint_file = blueprint_subfolder / 'blueprint.json'

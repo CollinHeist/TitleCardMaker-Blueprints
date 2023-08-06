@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import Literal, Optional
 
 from pydantic import (
@@ -18,13 +19,6 @@ class Translation(BaseModel):
 
 class BlueprintBase(BaseModel):
     ...
-    # @root_validator(skip_on_failure=True)
-    # def delete_null_args(cls, values):
-    #     delete_keys = [key for key, value in values.items() if value is None]
-    #     for key in delete_keys:
-    #         del values[key]
-
-    #     return values
 
 class SeriesBase(BlueprintBase):
     font_id: Optional[int] = None
@@ -101,7 +95,8 @@ class Blueprint(BaseModel):
     fonts: list[BlueprintFont] =[]
     creator: str = Field(..., min_length=1, max_length=40)
     preview: str = Field(..., min_length=3)
-    description: conlist(constr(min_length=1, max_length=150), min_items=1, max_items=5) = Field(...)
+    description: conlist(constr(min_length=1, max_length=150), min_items=1, max_items=5)
+    created: datetime
 
     @root_validator(skip_on_failure=True)
     def validate_template_specifications(cls, values):
