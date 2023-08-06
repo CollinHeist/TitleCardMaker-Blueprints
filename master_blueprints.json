@@ -193,6 +193,31 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "anime",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Bear",
+        "color": "#FFF7C8",
+        "delete_missing": true,
+        "file": "HelveticaNeue Bold.ttf",
+        "title_case": "title"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/The Bear (2022)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Simple theme with font."
+    ],
+    "series_full_name": "The Bear (2022)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "star wars",
       "template_ids": []
     },
@@ -925,6 +950,31 @@
     "creator": "rtgurley",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Schmigadoon! (2021)/0/preview.jpg",
     "series_full_name": "Schmigadoon! (2021)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "frame",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Scrubs",
+        "color": "#85F4F4",
+        "delete_missing": true,
+        "file": "tsslogo.ttf",
+        "title_case": "title"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Scrubs (2001)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Simple and colored Scrubs font based"
+    ],
+    "series_full_name": "Scrubs (2001)",
     "id": 0
   },
   {
