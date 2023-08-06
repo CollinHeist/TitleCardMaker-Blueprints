@@ -1,9 +1,10 @@
 name: Resize Preview Images
 
 on:
+  workflow_dispatch:
+  workflow_call:
   pull_request:
     types: [ 'opened', 'edited', 'reopened', 'synchronize' ]
-  workflow_call:
 
 jobs:
   resize_preview_images:

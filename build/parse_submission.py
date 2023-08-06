@@ -6,6 +6,7 @@ environment variable. It parses this content and creates the necessary
 Blueprint, and all the associated files.
 """
 
+from datetime import datetime
 from json import dump as json_dump, loads, JSONDecodeError
 from os import environ
 from pathlib import Path
@@ -62,11 +63,6 @@ if __name__ == '__main__':
         print(exc)
         sys_exit(1)
 
-    # try:
-    #     print(loads(environ.get('ISSUE_JSON')))
-    # except Exception as exc:
-    #     print(exc)
-
     # Get the issue's author and the body (the issue text itself)
     creator = environ.get('ISSUE_CREATOR', 'CollinHeist')
 
@@ -78,7 +74,7 @@ if __name__ == '__main__':
         r'### Blueprint Description\s+(?P<description>[\s\S]*)\s+'
         r'### Blueprint\s+```json\s+(?P<blueprint>[\s\S]*?)```\s+'
         r'### Preview Title Card\s+.*?\[.*\]\((?P<preview_url>.+)\)\s+'
-        r'### Zip of Font Files\s+(_No Response_|\[.+?\]\((?P<font_zip>http[^\s\)]+)\))\s*$'
+        r'### Zip of Font Files\s+(_No response_|\[.+?\]\((?P<font_zip>http[^\s\)]+)\))\s*$'
     )
 
     # If data cannot be extracted, exit
@@ -173,6 +169,9 @@ if __name__ == '__main__':
 
             copy_file(file, blueprint_subfolder / file.name)
             print(f'Copied [zip]/{file.name} into blueprints/{letter}/{folder_name}/{id_}/{file.name}')
+
+    # Add creation time to Blueprint
+    finalized_blueprint['created'] = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 
     # Write Blueprint as JSON
     blueprint_file = blueprint_subfolder / 'blueprint.json'

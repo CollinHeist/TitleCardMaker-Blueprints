@@ -1,10 +1,9 @@
-name: Auto Merge Staging to Master
+name: Merge Staging to Master
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: "0 */6 * * *"
-  # issue_comment:
-  #   types: [ created ]
 
 jobs:
   auto_merge:
