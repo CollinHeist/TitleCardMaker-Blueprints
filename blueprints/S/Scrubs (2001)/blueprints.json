@@ -1,0 +1,25 @@
+[
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "frame",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Scrubs",
+        "color": "#85F4F4",
+        "delete_missing": true,
+        "file": "tsslogo.ttf",
+        "title_case": "title"
+      }
+    ],
+    "preview": "preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Simple and colored Scrubs font based"
+    ]
+  }
+]
