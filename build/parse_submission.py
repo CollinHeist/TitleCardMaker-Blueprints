@@ -92,7 +92,10 @@ if __name__ == '__main__':
     description = data['description']
     blueprint = data['blueprint']
     preview_url = data['preview_url']
-    font_zip_url = None if '_No response_' in data['font_zip'] else data['font_zip']
+    if data.get('font_zip') is None or '_No response_' in data['font_zip']:
+        font_zip_url = None
+    else:
+        font_zip_url = data['font_zip']
     print(f'Raw parsed data: {series_name=}\n[{series_year=}\n{creator=}\n{description=}\n{blueprint=}\n{preview_url=}\n{font_zip_url=}')
 
     # Parse blueprint as JSON
