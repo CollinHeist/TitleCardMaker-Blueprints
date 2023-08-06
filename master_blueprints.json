@@ -78,6 +78,30 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "azuravian/TitleColorMatch",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Game of Thrones",
+        "delete_missing": true,
+        "file": "Game of Thrones.ttf",
+        "size": 0.85
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/G/Game of Thrones (2011)/0/preview.jpg",
+    "creator": "Departed",
+    "description": [
+      "Uses Logo Color Match with a Game of Thrones font"
+    ],
+    "series_full_name": "Game of Thrones (2011)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "standard",
       "template_ids": []
     },
@@ -934,6 +958,29 @@
     "creator": "CollinHeist",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/South Park (1997)/0/preview.jpg",
     "series_full_name": "South Park (1997)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted frame",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Star Trek",
+        "delete_missing": true,
+        "file": "Star Trek TNG-Title Regular.ttf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Star Trek - The Next Generation (1987)/0/preview.jpg",
+    "creator": "Departed",
+    "description": [
+      "A variation of the Tinted Frame card with a custom Star Trek font"
+    ],
+    "series_full_name": "Star Trek - The Next Generation (1987)",
     "id": 0
   },
   {
