@@ -2,7 +2,7 @@ name: Test Blueprint Submission
 
 on:
   issues:
-    types: [ reopened, opened ]
+    types: [ opened, reopened, edited ]
   issue_comment:
     types: [ created ]
 
