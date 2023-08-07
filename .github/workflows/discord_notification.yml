@@ -35,6 +35,7 @@ jobs:
           ISSUE_BODY: ${{ toJson(github.event.issue.body) }}
           ISSUE_CREATOR: '${{ github.event.issue.user.login }}'
           ISSUE_CREATOR_ICON_URL: '${{ github.event.issue.user.avatar_url }}'
+          FOR_DISCORD: 'true'
         run: |
           echo "DISCORD_EMBEDS<<EOF" >> $GITHUB_ENV
           echo $(python ./build/parse_submission.py --discord) >> $GITHUB_ENV
