@@ -6,9 +6,8 @@ environment variable. It parses this content and creates the necessary
 Blueprint, and all the associated files.
 """
 
-from argparse import SUPPRESS, ArgumentParser
 from datetime import datetime
-from json import dump as json_dump, dumps, loads, JSONDecodeError
+from json import dump as json_dump, loads, JSONDecodeError
 from os import environ
 from pathlib import Path
 from re import compile as re_compile, sub as re_sub, IGNORECASE
@@ -16,6 +15,7 @@ from shutil import copy as copy_file, unpack_archive, ReadError
 from sys import exit as sys_exit
 
 from requests import get
+
 
 ROOT = Path(__file__).parent.parent
 BLUEPRINT_FOLDER = ROOT / 'blueprints'
@@ -33,7 +33,7 @@ PATH_SAFE_TRANSLATION = str.maketrans({
     '/': '+',
     '\\': '+',
 })
-DEFAULT_AVATAR_URL = 'https://raw.githubusercontent.com/CollinHeist/TitleCardMaker/master/.github/logo.png'
+
 
 def get_blueprint_folders(series_name: str) -> tuple[str, str]:
     """
@@ -55,30 +55,10 @@ def get_blueprint_folders(series_name: str) -> tuple[str, str]:
 
 # File is entrypoint
 if __name__ == '__main__':
-    ap = ArgumentParser()
-    ap.add_argument('--discord', action='store_true')
-    args = ap.parse_args()
-
-    # If this is for a Discord message, export embeds as JSON
-    if environ.get('FOR_DISCORD', 'false') == 'true':
-        embeds = [{
-            'title': f'New Blueprint Submission for Test (123)',
-            # 'description': 'Standard card type with all the titles formatted like the logo - e.g. [title], using the Series font.',
-            # 'author': {
-            #     'name': '{creator}',
-            #     'icon_url': environ.get('ISSUE_CREATOR_ICON_URL', DEFAULT_AVATAR_URL),
-            # }, 'image': {
-            #     'url': 'https://github.com/CollinHeist/TitleCardMaker-Blueprints/assets/17693271/b2d17252-cf5d-4d1c-83f1-752105d5c057',
-            # }, 'timestamp': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
-        }]
-        print(dumps(embeds))
-        sys_exit(0)
-
     # Parse issue from environment variable
     try:
         content = loads(environ.get('ISSUE_BODY'))
-        if not args.discord:
-            print(f'Parsed issue JSON as:\n{content}')
+        print(f'Parsed issue JSON as:\n{content}')
     except JSONDecodeError as exc:
         print(f'Unable to parse Context as JSON')
         print(exc)
@@ -106,8 +86,7 @@ if __name__ == '__main__':
 
     # Get each variable from the issue
     data = {'font_zip': '_No response_'} | data_match.groupdict()
-    if not args.discord:
-        print(f'{data=}')
+    print(f'{data=}')
     series_name = data['series_name'].strip()
     series_year = data['series_year']
     creator = (creator if '_No response_' in data['creator'] else data['creator']).strip()
@@ -118,23 +97,8 @@ if __name__ == '__main__':
         font_zip_url = None
     else:
         font_zip_url = data['font_zip']
-    if not args.discord:
-        print(f'Raw parsed data: {series_name=}\n[{series_year=}\n{creator=}\n{description=}\n{blueprint=}\n{preview_url=}\n{font_zip_url=}')
+    print(f'Raw parsed data: {series_name=}\n[{series_year=}\n{creator=}\n{description=}\n{blueprint=}\n{preview_url=}\n{font_zip_url=}')
 
-    # If this is for a Discord message, export embeds as JSON
-    if args.discord:
-        embeds = [{
-            'title': f'New Blueprint Submission for {series_name} ({series_year})',
-            'description': data['description'],
-            'author': {
-                'name': creator,
-                'icon_url': environ.get('ISSUE_CREATOR_ICON_URL', DEFAULT_AVATAR_URL),
-            }, 'image': {
-                'url': preview_url,
-            }, 'timestamp': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
-        }]
-        print(dumps(embeds))
-        sys_exit(0)
 
     # Parse blueprint as JSON
     try:

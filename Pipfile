@@ -9,6 +9,7 @@ regex = "*"
 imagesize = "*"
 pillow = "*"
 pydantic = "==1.*"
+discord-webhook = "*"
 
 [dev-packages]
 
