@@ -8,7 +8,7 @@ There are currently `47` Blueprints available for `42` Series, submitted by `4` 
 
 Series with the most Blueprints:
 | Series | Blueprints |
-| :---: | :---: |
+| :--- | :--- |
 | Mr. Robot (2015) | 3 |
 | Better Call Saul (2015) | 2 |
 | Only Murders in the Building (2021) | 2 |
@@ -17,6 +17,7 @@ Series with the most Blueprints:
 
 Creators with the most Blueprint Submissions:
 | Username | Blueprints |
+| :---: | :--- |
 | CollinHeist | 30 |
 | flowcool | 10 |
 | rtgurley | 5 |
