@@ -41,6 +41,9 @@ for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/blueprints.json'):
         count=len(blueprints),
     )
     for blueprint_id, blueprint in enumerate(blueprints):
+        if blueprint is None:
+            continue
+
         readme += '\n' + README_TABLE_ROW.format(
             blueprint_id=blueprint_id,
             preview_file=blueprint['preview'],
