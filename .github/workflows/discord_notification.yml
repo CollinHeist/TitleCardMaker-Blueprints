@@ -47,10 +47,6 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: MakerBot
           DISCORD_AVATAR: https://raw.githubusercontent.com/CollinHeist/TitleCardMaker/master/.github/logo.png
-          DISCORD_EMBEDS: ${{env.DISCORD_EMBEDS }}
+          DISCORD_EMBEDS: ${{ toJson(env.DISCORD_EMBEDS) }}
         uses: Ilshidur/action-discord@0.3.2
-        # with:
-        #   color: "#0066ff"
-        #   username: "MakerBot"
-        #   message: "A new commit has been pushed with custom color."
           
