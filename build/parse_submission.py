@@ -8,7 +8,7 @@ Blueprint, and all the associated files.
 
 from argparse import SUPPRESS, ArgumentParser
 from datetime import datetime
-from json import dump as json_dump, loads, JSONDecodeError
+from json import dump as json_dump, dumps, loads, JSONDecodeError
 from os import environ
 from pathlib import Path
 from re import compile as re_compile, sub as re_sub, IGNORECASE
@@ -118,7 +118,7 @@ if __name__ == '__main__':
                 'url': preview_url,
             }, 'timestamp': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
         }]
-        print(f'DISCORD_EMBEDS={embeds}')
+        print(f'DISCORD_EMBEDS={dumps(embeds)}')
         sys_exit(0)
 
     # Parse blueprint as JSON
