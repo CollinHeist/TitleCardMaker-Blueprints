@@ -6,6 +6,7 @@ environment variable. It parses this content and creates the necessary
 Blueprint, and all the associated files.
 """
 
+from argparse import SUPPRESS, ArgumentParser
 from datetime import datetime
 from json import dump as json_dump, loads, JSONDecodeError
 from os import environ
@@ -32,7 +33,7 @@ PATH_SAFE_TRANSLATION = str.maketrans({
     '/': '+',
     '\\': '+',
 })
-
+DEFAULT_AVATAR_URL = 'https://raw.githubusercontent.com/CollinHeist/TitleCardMaker/master/.github/logo.png'
 
 def get_blueprint_folders(series_name: str) -> tuple[str, str]:
     """
@@ -54,10 +55,15 @@ def get_blueprint_folders(series_name: str) -> tuple[str, str]:
 
 # File is entrypoint
 if __name__ == '__main__':
+    ap = ArgumentParser()
+    ap.add_argument('--discord', action='store_true')
+    args = ap.parse_args()
+
     # Parse issue from environment variable
     try:
         content = loads(environ.get('ISSUE_BODY'))
-        print(f'Parsed issue JSON as:\n{content}')
+        if not args.discord:
+            print(f'Parsed issue JSON as:\n{content}')
     except JSONDecodeError as exc:
         print(f'Unable to parse Context as JSON')
         print(exc)
@@ -85,7 +91,8 @@ if __name__ == '__main__':
 
     # Get each variable from the issue
     data = {'font_zip': '_No response_'} | data_match.groupdict()
-    print(f'{data=}')
+    if not args.discord:
+        print(f'{data=}')
     series_name = data['series_name'].strip()
     series_year = data['series_year']
     creator = (creator if '_No response_' in data['creator'] else data['creator']).strip()
@@ -96,7 +103,23 @@ if __name__ == '__main__':
         font_zip_url = None
     else:
         font_zip_url = data['font_zip']
-    print(f'Raw parsed data: {series_name=}\n[{series_year=}\n{creator=}\n{description=}\n{blueprint=}\n{preview_url=}\n{font_zip_url=}')
+    if not args.discord:
+        print(f'Raw parsed data: {series_name=}\n[{series_year=}\n{creator=}\n{description=}\n{blueprint=}\n{preview_url=}\n{font_zip_url=}')
+
+    # If this is for a Discord message, export embeds as JSON
+    if args.discord:
+        embeds = [{
+            'title': f'New Blueprint Submission for {series_name} ({series_year})',
+            'description': data['description'],
+            'author': {
+                'name': creator,
+                'icon_url': environ.get('ISSUE_CREATOR_ICON_URL', DEFAULT_AVATAR_URL),
+            }, 'image': {
+                'url': preview_url,
+            }, 'timestamp': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
+        }]
+        print(f'DISCORD_EMBEDS={embeds}')
+        sys_exit(0)
 
     # Parse blueprint as JSON
     try:
