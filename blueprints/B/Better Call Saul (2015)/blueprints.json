@@ -23,7 +23,8 @@
       "Olivier card type using the Series font from the 'Better Call' part of the series logo."
     ],
     "creator": "CollinHeist",
-    "preview": "preview.jpg"
+    "preview": "preview.jpg",
+    "created": "2023-08-06T00:00:00"
   },
   {
     "series": {
@@ -49,6 +50,7 @@
       "Standard card type using the Series font from the 'Better Call' part of the series logo."
     ],
     "creator": "CollinHeist",
-    "preview": "preview.jpg"
+    "preview": "preview.jpg",
+    "created": "2023-08-06T00:00:00"
   }
 ]

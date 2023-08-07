@@ -22,6 +22,7 @@
     "description": [
       "Tinted Frame card with the Series font in a thematic green color."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "What We Do in the Shadows (2019)",
     "id": 0
   },
@@ -45,6 +46,7 @@
     "episodes": {},
     "templates": [],
     "fonts": [],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "White Collar (2009)",
     "id": 0
   },
@@ -72,6 +74,7 @@
     "description": [
       "Standard card type with the font originally used in the logo for Peter Jackson's trilogy, and the golden/yellow color from this series logo."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "The Lord of the Rings - The Rings of Power (2022)",
     "id": 0
   },
@@ -96,6 +99,7 @@
     "description": [
       "Uses Logo Color Match with a Game of Thrones font"
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Game of Thrones (2011)",
     "id": 0
   },
@@ -121,6 +125,7 @@
     ],
     "creator": "rtgurley",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/G/The Goldbergs (2013)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "The Goldbergs (2013)",
     "id": 0
   },
@@ -162,6 +167,7 @@
         "title_case": "source"
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "The Expanse (2015)",
     "id": 0
   },
@@ -187,6 +193,7 @@
     "description": [
       "Simple Big Bang Theory theme with font"
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "The Big Bang Theory (2007)",
     "id": 0
   },
@@ -212,6 +219,7 @@
     "description": [
       "Simple theme with font."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "The Bear (2022)",
     "id": 0
   },
@@ -237,6 +245,7 @@
     "description": [
       "StarWars cards with The Boys font."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "The Boys (2019)",
     "id": 0
   },
@@ -265,6 +274,7 @@
     ],
     "creator": "CollinHeist",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Better Call Saul (2015)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Better Call Saul (2015)",
     "id": 0
   },
@@ -293,6 +303,7 @@
     ],
     "creator": "CollinHeist",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Better Call Saul (2015)/1/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Better Call Saul (2015)",
     "id": 1
   },
@@ -324,6 +335,7 @@
       "Anime card type with Japanese translations, and absolute episode numbering.",
       "The \"Eris the Goblin Slayer\" and \"Guardian Fitz\" OVAs/Specials are numbered where they take place chronologically."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Mushoku Tensei - Jobless Reincarnation (2021)",
     "id": 0
   },
@@ -365,6 +377,7 @@
         "delete_missing": true
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Mr. Robot (2015)",
     "id": 0
   },
@@ -388,6 +401,7 @@
     "episodes": {},
     "templates": [],
     "fonts": [],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Mr. Robot (2015)",
     "id": 1
   },
@@ -422,6 +436,7 @@
         "delete_missing": true
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Mr. Robot (2015)",
     "id": 2
   },
@@ -448,6 +463,7 @@
     "description": [
       "Font based card"
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Young Sheldon (2017)",
     "id": 0
   },
@@ -483,6 +499,7 @@
         "delete_missing": true
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Only Murders in the Building (2021)",
     "id": 0
   },
@@ -516,6 +533,7 @@
         "vertical_shift": 10
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Only Murders in the Building (2021)",
     "id": 1
   },
@@ -817,6 +835,7 @@
     },
     "templates": [],
     "fonts": [],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "One Piece (1999)",
     "id": 0
   },
@@ -846,6 +865,7 @@
         "delete_missing": true
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Over the Garden Wall (2014)",
     "id": 0
   },
@@ -871,6 +891,7 @@
     "description": [
       "Nice font used."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "House (2004)",
     "id": 0
   },
@@ -895,6 +916,7 @@
     "description": [
       "Simple Font based using Olivier cards."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "How I Met Your Mother (2005)",
     "id": 0
   },
@@ -926,6 +948,7 @@
     "description": [
       "Standard card type with the Series font."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Superstore (2015)",
     "id": 0
   },
@@ -949,6 +972,7 @@
     ],
     "creator": "rtgurley",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Schmigadoon! (2021)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Schmigadoon! (2021)",
     "id": 0
   },
@@ -974,6 +998,7 @@
     "description": [
       "Simple and colored Scrubs font based"
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Scrubs (2001)",
     "id": 0
   },
@@ -1007,6 +1032,7 @@
     ],
     "creator": "CollinHeist",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/South Park (1997)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "South Park (1997)",
     "id": 0
   },
@@ -1030,6 +1056,7 @@
     "description": [
       "A variation of the Tinted Frame card with a custom Star Trek font"
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Star Trek - The Next Generation (1987)",
     "id": 0
   },
@@ -1055,6 +1082,7 @@
     "description": [
       "Font based card with proper color."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Shameless (US) (2011)",
     "id": 0
   },
@@ -1078,6 +1106,7 @@
     ],
     "creator": "rtgurley",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/R/The Righteous Gemstones (2019)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "The Righteous Gemstones (2019)",
     "id": 0
   },
@@ -1112,6 +1141,7 @@
     "episodes": {},
     "templates": [],
     "fonts": [],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Demon Slayer - Kimetsu no Yaiba (2019)",
     "id": 0
   },
@@ -1138,6 +1168,7 @@
     ],
     "creator": "CollinHeist",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/D/Dr. Stone (2019)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Dr. Stone (2019)",
     "id": 0
   },
@@ -1269,6 +1300,7 @@
         "delete_missing": true
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Pok\u00e9mon (1997)",
     "id": 0
   },
@@ -1400,6 +1432,7 @@
         "delete_missing": true
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Pok\u00e9mon (1997)",
     "id": 1
   },
@@ -1426,6 +1459,7 @@
     "description": [
       "Font based card"
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Fargo (2014)",
     "id": 0
   },
@@ -1452,6 +1486,7 @@
     ],
     "creator": "flowcool",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Friends (1994)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Friends (1994)",
     "id": 0
   },
@@ -1488,6 +1523,7 @@
       "Comic Book card with randomized banner angles for the title and index text.",
       "The text uses the Series font, the banners are colored red, and the box edges are golden."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "The Flash (2014)",
     "id": 0
   },
@@ -1510,6 +1546,7 @@
         "file": "family-guy.TTF"
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Family Guy (1999)",
     "id": 0
   },
@@ -1535,6 +1572,7 @@
         "delete_missing": true
       }
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Foundation (2021)",
     "id": 0
   },
@@ -1559,6 +1597,7 @@
     "description": [
       "Standard format card using the Boul Mich Regular font"
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "1923 (2022)",
     "id": 0
   },
@@ -1598,7 +1637,39 @@
     ],
     "creator": "CollinHeist",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Archer (2009)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Archer (2009)",
+    "id": 0
+  },
+  {
+    "series": {
+      "card_type": "tinted frame",
+      "season_title_ranges": [
+        "1",
+        "2"
+      ],
+      "season_title_values": [
+        "The Dicks",
+        "The Brownout"
+      ],
+      "extra_keys": [
+        "frame_color"
+      ],
+      "extra_values": [
+        "rgb(219,55,47)"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/American Vandal (2017)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Tinted Frame card type with the investigation titles for each season, and the \"crime scene red\" used as the frame color."
+    ],
+    "created": "2023-08-06T23:37:15",
+    "series_full_name": "American Vandal (2017)",
     "id": 0
   },
   {
@@ -1625,6 +1696,7 @@
     ],
     "creator": "CollinHeist",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Avatar - The Last Airbender (2005)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Avatar - The Last Airbender (2005)",
     "id": 0
   },
@@ -1937,6 +2009,7 @@
     ],
     "creator": "CollinHeist",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Attack on Titan (2013)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Attack on Titan (2013)",
     "id": 0
   },
@@ -1965,6 +2038,7 @@
     "description": [
       "Standard card type using the Series font in the title-red color. The red can be hard to read on smaller screens, but white works well."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "American Dad! (2005)",
     "id": 0
   },
@@ -1989,6 +2063,7 @@
     ],
     "creator": "rtgurley",
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Arrested Development (2003)/0/preview.jpg",
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "Arrested Development (2003)",
     "id": 0
   },
@@ -2015,6 +2090,7 @@
     "episodes": {},
     "templates": [],
     "fonts": [],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "iZombie (2015)",
     "id": 0
   },
@@ -2041,6 +2117,7 @@
     "description": [
       "Standard card type using the font found in the opening title cards, using the yellow color from the IASIP logo."
     ],
+    "created": "2023-08-06T00:00:00",
     "series_full_name": "It's Always Sunny in Philadelphia (2005)",
     "id": 0
   }
