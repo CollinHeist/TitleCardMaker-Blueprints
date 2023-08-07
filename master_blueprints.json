@@ -1643,6 +1643,37 @@
   },
   {
     "series": {
+      "card_type": "tinted frame",
+      "season_title_ranges": [
+        "1",
+        "2"
+      ],
+      "season_title_values": [
+        "The Dicks",
+        "The Brownout"
+      ],
+      "extra_keys": [
+        "frame_color"
+      ],
+      "extra_values": [
+        "rgb(219,55,47)"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/American Vandal (2017)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Tinted Frame card type with the investigation titles for each season, and the \"crime scene red\" used as the frame color."
+    ],
+    "created": "2023-08-06T23:37:15",
+    "series_full_name": "American Vandal (2017)",
+    "id": 0
+  },
+  {
+    "series": {
       "card_type": "standard",
       "episode_text_format": "Chapter {episode_number}",
       "template_ids": [],
