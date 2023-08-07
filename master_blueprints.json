@@ -52,6 +52,81 @@
   },
   {
     "series": {
+      "card_type": "divider",
+      "hide_season_text": true,
+      "template_ids": []
+    },
+    "episodes": {
+      "s1e1": {
+        "extra_keys": [
+          "title_text_position",
+          "text_position"
+        ],
+        "extra_values": [
+          "right",
+          "left"
+        ]
+      },
+      "s1e3": {
+        "extra_keys": [
+          "title_text_position",
+          "text_position"
+        ],
+        "extra_values": [
+          "right",
+          "left"
+        ]
+      },
+      "s1e4": {
+        "extra_keys": [
+          "text_position",
+          "title_text_position"
+        ],
+        "extra_values": [
+          "lower left",
+          "right"
+        ]
+      },
+      "s1e5": {
+        "extra_keys": [
+          "text_position"
+        ],
+        "extra_values": [
+          "right"
+        ]
+      },
+      "s1e6": {
+        "extra_keys": [
+          "text_position",
+          "title_text_position"
+        ],
+        "extra_values": [
+          "left",
+          "right"
+        ]
+      },
+      "s1e8": {
+        "extra_keys": [
+          "text_position"
+        ],
+        "extra_values": [
+          "right"
+        ]
+      }
+    },
+    "templates": [],
+    "fonts": [],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/L/The Last of Us (2023)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Divider card type with season text hidden, and each Episode's text optimally positioned."
+    ],
+    "created": "2023-08-07T02:38:49",
+    "series_full_name": "The Last of Us (2023)",
+    "id": 0
+  },
+  {
+    "series": {
       "font_id": 0,
       "card_type": "standard",
       "hide_season_text": true,
@@ -305,6 +380,39 @@
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Better Call Saul (2015)/1/preview.jpg",
     "created": "2023-08-06T00:00:00",
     "series_full_name": "Better Call Saul (2015)",
+    "id": 1
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted frame",
+      "translations": [],
+      "season_title_ranges": [],
+      "season_title_values": [],
+      "extra_keys": [],
+      "extra_values": [],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Brooklyn Nine-Nine",
+        "color": "rgb(255, 249, 98)",
+        "delete_missing": true,
+        "file": "impact.ttf",
+        "interline_spacing": -20,
+        "size": 1.2,
+        "vertical_shift": -10
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Brooklyn Nine-Nine (2013)/1/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Tinted Frame card type using Impact in the Series' yellow as the title text."
+    ],
+    "created": "2023-08-07T03:25:44",
+    "series_full_name": "Brooklyn Nine-Nine (2013)",
     "id": 1
   },
   {
@@ -923,6 +1031,122 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "anime",
+      "episode_text_format": "Episode {absolute_number}",
+      "season_title_ranges": [
+        "1-19",
+        "20-67",
+        "68-80",
+        "81-100",
+        "101-106",
+        "107-135",
+        "136-141",
+        "142-147",
+        "148-151",
+        "152-158",
+        "159-161",
+        "162-168",
+        "169-174",
+        "175-177",
+        "178-186",
+        "187-194",
+        "195-196",
+        "197-202",
+        "203-208",
+        "209-212",
+        "213-215",
+        "216-220"
+      ],
+      "season_title_values": [
+        "Land of Waves",
+        "Ch\u016bnin Exams",
+        "Konoha Crash",
+        "Search For Tsunade",
+        "Land of Tea Escort Mission",
+        "Sasuke Recovery Mission",
+        "Land of Rice Fields Investigation Mission",
+        "Mizuki Tracking Mission",
+        "Bikochu Search Mission",
+        "Kurosuki Family Removal Mission",
+        "Gosunkugi Capture Mission",
+        "Cursed Warrior Extermination Mission",
+        "Kaima Capture Mission",
+        "Buried Gold Excavation Mission",
+        "Star Guard Mission",
+        "Peddlers Escort Mission",
+        "Third Great Beast",
+        "Konoha Plans Recapture Mission",
+        "Yakumo Kurama Rescue Mission",
+        "Gantetsu Escort Mission",
+        "Menma Memory Search Mission",
+        "Sunagakure Support Mission"
+      ],
+      "extra_keys": [
+        "stroke_color"
+      ],
+      "extra_values": [
+        "rgb(22,55,138)"
+      ],
+      "translations": [
+        {
+          "language_code": "ja",
+          "data_key": "kanji"
+        }
+      ],
+      "template_ids": []
+    },
+    "episodes": {
+      "s0e4": {
+        "hide_season_text": true,
+        "episode_text": "Movie 1"
+      },
+      "s0e5": {
+        "hide_season_text": true,
+        "episode_text": "Movie 2"
+      },
+      "s0e7": {
+        "hide_season_text": true,
+        "episode_text": "Movie 3"
+      }
+    },
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Naruto (Anime)",
+        "color": "rgb(235,142,52)",
+        "delete_missing": true,
+        "file": "naruto.ttf",
+        "interline_spacing": 30,
+        "replacements_in": [
+          "\u016b",
+          "\u016a",
+          "\u2026",
+          "\u014d",
+          "\u014c"
+        ],
+        "replacements_out": [
+          "u",
+          "U",
+          "...",
+          "o",
+          "O"
+        ],
+        "stroke_width": 5.0
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/N/Naruto (2002)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Anime card type using the arc season titles, absolute episode numbering, and movie titles for the three films.",
+      "The Naruto font is also used for the title and kanji text."
+    ],
+    "created": "2023-08-07T02:52:29",
+    "series_full_name": "Naruto (2002)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "standard",
       "translations": [],
       "season_title_ranges": [],
@@ -1170,6 +1394,41 @@
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/D/Dr. Stone (2019)/0/preview.jpg",
     "created": "2023-08-06T00:00:00",
     "series_full_name": "Dr. Stone (2019)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "extra_keys": [
+        "stroke_color"
+      ],
+      "extra_values": [
+        "white"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Parks and Recreation",
+        "color": "rgb(40,96,23)",
+        "delete_missing": true,
+        "file": "Champion HTF-Heavyweight Regular.otf",
+        "interline_spacing": -30,
+        "stroke_width": 0.4,
+        "title_case": "source",
+        "vertical_shift": -20
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/P/Parks and Recreation (2009)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with the Series' font used for the title text."
+    ],
+    "created": "2023-08-07T03:07:34",
+    "series_full_name": "Parks and Recreation (2009)",
     "id": 0
   },
   {
