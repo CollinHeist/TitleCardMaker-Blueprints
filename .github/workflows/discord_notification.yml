@@ -30,16 +30,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests "pydantic==1.*" pytest regex
 
-      - name: Parse Issue into Discord Embed
-        env:
-          ISSUE_BODY: ${{ toJson(github.event.issue.body) }}
-          ISSUE_CREATOR: '${{ github.event.issue.user.login }}'
-          ISSUE_CREATOR_ICON_URL: '${{ github.event.issue.user.avatar_url }}'
-          FOR_DISCORD: 'true'
-        run: |
-          echo "DISCORD_EMBEDS<<EOF" >> $GITHUB_ENV
-          echo $(python ./build/parse_submission.py --discord) >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
+      # - name: Parse Issue into Discord Embed
+      #   env:
+      #     ISSUE_BODY: ${{ toJson(github.event.issue.body) }}
+      #     ISSUE_CREATOR: '${{ github.event.issue.user.login }}'
+      #     ISSUE_CREATOR_ICON_URL: '${{ github.event.issue.user.avatar_url }}'
+      #     FOR_DISCORD: 'true'
+      #   run: |
+      #     echo "DISCORD_EMBEDS<<EOF" >> $GITHUB_ENV
+      #     echo $(python ./build/parse_submission.py --discord) >> $GITHUB_ENV
+      #     echo "EOF" >> $GITHUB_ENV
 
       - run: echo $GITHUB_ENV
       - name: Notify Discord
@@ -47,6 +47,6 @@ jobs:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: MakerBot
           DISCORD_AVATAR: https://raw.githubusercontent.com/CollinHeist/TitleCardMaker/master/.github/logo.png
-          DISCORD_EMBEDS: ${{ toJson(env.DISCORD_EMBEDS) }}
+          DISCORD_EMBEDS: '[{"title": "hello", "description": "hi :grinning:"}]' # ${{ toJson(env.DISCORD_EMBEDS) }}
         uses: Ilshidur/action-discord@0.3.2
           
