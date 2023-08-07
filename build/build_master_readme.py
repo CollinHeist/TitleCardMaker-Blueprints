@@ -18,7 +18,7 @@ There are currently `{blueprint_count}` Blueprints available for `{series_count}
 
 Series with the most Blueprints:
 | Series | Blueprints |
-| :---: | :---: |
+| :--- | :--- |
 | {series_name0} | {series_bp_count0} |
 | {series_name1} | {series_bp_count1} |
 | {series_name2} | {series_bp_count2} |
@@ -27,6 +27,7 @@ Series with the most Blueprints:
 
 Creators with the most Blueprint Submissions:
 | Username | Blueprints |
+| :---: | :--- |
 | {username0} | {username_bp_count0} |
 | {username1} | {username_bp_count1} |
 | {username2} | {username_bp_count2} |
