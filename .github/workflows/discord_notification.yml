@@ -1,4 +1,4 @@
-name: Parse Blueprint Submission
+name: Discord Notification
 
 on:
   workflow_dispatch:
