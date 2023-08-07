@@ -61,16 +61,16 @@ if __name__ == '__main__':
 
     # If this is for a Discord message, export embeds as JSON
     if environ.get('FOR_DISCORD', 'false') == 'true':
-        embeds = [{
-            'title': f'New Blueprint Submission for Test (123)',
-            'description': 'Standard card type with all the titles formatted like the logo - e.g. [title], using the Series font.',
-            'author': {
+        embeds = [
+            {'title': f'New Blueprint Submission for Test (123)'},
+            {'description': 'Standard card type with all the titles formatted like the logo - e.g. [title], using the Series font.'},
+            {'author': {
                 'name': '{creator}',
                 'icon_url': environ.get('ISSUE_CREATOR_ICON_URL', DEFAULT_AVATAR_URL),
-            }, 'image': {
+            }}, {'image': {
                 'url': 'https://github.com/CollinHeist/TitleCardMaker-Blueprints/assets/17693271/b2d17252-cf5d-4d1c-83f1-752105d5c057',
-            }, 'timestamp': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%fZ'),
-        }]
+            }}, {'timestamp': datetime.now().strftime('%Y-%m-%dT%H:%M:%S.%fZ')},
+        ]
         print(dumps(embeds))
         sys_exit(0)
 
