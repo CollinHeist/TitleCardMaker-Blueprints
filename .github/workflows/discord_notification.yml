@@ -2,12 +2,9 @@ name: Discord Notification
 
 on:
   workflow_call:
-  issue_comment:
-    types: [ created ]
 
 jobs:
   notify_discord:
-    if: ${{ github.event_name != 'issue_comment' || (startsWith(github.event.issue.title, '[Blueprint]') && contains(github.event.comment.body, '/notify-blueprint') && (github.event.comment.user.login == 'CollinHeist')) }}
     runs-on: ubuntu-latest
 
     steps:
