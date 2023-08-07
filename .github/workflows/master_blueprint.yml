@@ -38,6 +38,10 @@ jobs:
         run: |
           python ./build/build_series_readme.py
 
+      - name: (Python) Build Master README Files
+        run: |
+          python ./build/build_master_readme.py
+
       - name: Commit Updated Blueprints
         run: |
           git config pull.rebase false
