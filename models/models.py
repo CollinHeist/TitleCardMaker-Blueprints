@@ -95,7 +95,7 @@ class Blueprint(BaseModel):
     fonts: list[BlueprintFont] =[]
     creator: str = Field(..., min_length=1, max_length=40)
     preview: str = Field(..., min_length=3)
-    description: conlist(constr(min_length=1, max_length=150), min_items=1, max_items=5)
+    description: conlist(constr(min_length=1, max_length=200), min_items=1, max_items=5)
     created: datetime
 
     @root_validator(skip_on_failure=True)
