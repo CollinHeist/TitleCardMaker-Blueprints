@@ -60,7 +60,7 @@ if __name__ == '__main__':
     args = ap.parse_args()
 
     # If this is for a Discord message, export embeds as JSON
-    if args.discord:
+    if environ.get('FOR_DISCORD', 'false') == 'true':
         embeds = [{
             'title': f'New Blueprint Submission for Test (123)',
             'description': 'Standard card type with all the titles formatted like the logo - e.g. [title], using the Series font.',
