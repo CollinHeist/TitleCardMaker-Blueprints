@@ -41,12 +41,13 @@ jobs:
           echo $(python ./build/parse_submission.py --discord) >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
 
+      - run: echo $GITHUB_ENV
       - name: Notify Discord
         env:
           DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
           DISCORD_USERNAME: MakerBot
           DISCORD_AVATAR: https://raw.githubusercontent.com/CollinHeist/TitleCardMaker/master/.github/logo.png
-          DISCORD_EMBEDS: ${{ env.DISCORD_EMBEDS }}
+          DISCORD_EMBEDS: ${{ toJson(env.DISCORD_EMBEDS) }}
         uses: Ilshidur/action-discord@0.3.2
         # with:
         #   color: "#0066ff"
