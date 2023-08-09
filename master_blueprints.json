@@ -417,6 +417,34 @@
   },
   {
     "series": {
+      "font_id": 0,
+      "card_type": "anime",
+      "hide_season_text": true,
+      "hide_episode_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Barry TV Show",
+        "color": "#DC1B22",
+        "delete_missing": true,
+        "file": "Barry TV Show - ChaparralPro-Bold.otf",
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Barry (2018)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Simple Anime card with the proper font."
+    ],
+    "created": "2023-08-08T19:51:29",
+    "series_full_name": "Barry (2018)",
+    "id": 0
+  },
+  {
+    "series": {
       "card_type": "comic book",
       "extra_keys": [
         "banner_fill_color",
@@ -441,6 +469,34 @@
     ],
     "created": "2023-08-08T03:01:24",
     "series_full_name": "Marvel's Daredevil (2015)",
+    "id": 0
+  },
+  {
+    "series": {
+      "card_type": "comic book",
+      "extra_keys": [
+        "banner_fill_color",
+        "title_text_rotation_angle",
+        "index_text_rotation_angle"
+      ],
+      "extra_values": [
+        "rgba(248,224,108,0.6)",
+        "random[-4, 4]",
+        "random[-4, -3]"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/M/Marvel's Luke Cage (2016)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Comic Book card with randomized banner angles for the title and index text.",
+      "The banners are colored to match the Luke Cage yellow, as well as the other DC / Marvel Series in this style."
+    ],
+    "created": "2023-08-08T19:53:55",
+    "series_full_name": "Marvel's Luke Cage (2016)",
     "id": 0
   },
   {
@@ -751,6 +807,46 @@
     ],
     "created": "2023-08-07T15:16:29",
     "series_full_name": "Chilling Adventures of Sabrina (2018)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "frame",
+      "template_ids": [],
+      "font_size": 1.25
+    },
+    "episodes": {
+      "s3e2": {
+        "title": "Freight Trains & Monsters"
+      },
+      "s4e8": {
+        "font_size": 1.1
+      },
+      "s5e1": {
+        "font_size": 1.1
+      },
+      "s5e6": {
+        "font_size": 1.1
+      }
+    },
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Yellowstone",
+        "color": "#ea9a27",
+        "delete_missing": true,
+        "file": "ZillaSlab-Medium.ttf",
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/Y/Yellowstone (2018)/0/preview.jpg",
+    "creator": "azuravian",
+    "description": [
+      "Frame title card using the Zilla Slab font (similar to the proprietary Yellowstone font) in the color of the series logo."
+    ],
+    "created": "2023-08-08T19:50:47",
+    "series_full_name": "Yellowstone (2018)",
     "id": 0
   },
   {
@@ -1180,6 +1276,32 @@
     ],
     "created": "2023-08-06T00:00:00",
     "series_full_name": "Over the Garden Wall (2014)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Our Flag Means Death",
+        "color": "#FF0C95",
+        "delete_missing": true,
+        "file": "Seagram tfb.ttf",
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Or Flag Means Death (2022)/0/preview.jpg",
+    "creator": "rtgurley",
+    "description": [
+      "Standard Card type using (almost) series font"
+    ],
+    "created": "2023-08-09T00:18:05",
+    "series_full_name": "Or Flag Means Death (2022)",
     "id": 0
   },
   {
