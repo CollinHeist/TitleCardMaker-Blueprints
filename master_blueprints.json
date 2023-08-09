@@ -27,6 +27,33 @@
     "id": 0
   },
   {
+    "series": {
+      "card_type": "comic book",
+      "extra_keys": [
+        "title_text_rotation_angle",
+        "index_text_rotation_angle",
+        "banner_fill_color"
+      ],
+      "extra_values": [
+        "random[-4, 4]",
+        "random[-4, -3]",
+        "rgba(251,223,0,0.6)"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/Watchmen (2019)/0/preview.jpg",
+    "creator": "azuravian, CollinHeist",
+    "description": [
+      "Utilizes CollinHeist's \"Arrow\" blueprint, replacing \"Arrow\" green with \"Watchmen\" yellow."
+    ],
+    "created": "2023-08-09T05:09:21",
+    "series_full_name": "Watchmen (2019)",
+    "id": 0
+  },
+  {
     "description": [
       "Tinted Glass card with the series blue used as the episode text color"
     ],
@@ -877,6 +904,56 @@
     "id": 0
   },
   {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "YOU",
+        "delete_missing": true,
+        "file": "YOU.ttf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/Y/You (2018)/0/preview.jpg",
+    "creator": "rtgurley",
+    "description": [
+      "Standard Card layout with a replica of the YOU font"
+    ],
+    "created": "2023-08-09T03:03:35",
+    "series_full_name": "You (2018)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Our Flag Means Death",
+        "color": "#FF0C95",
+        "delete_missing": true,
+        "file": "Seagram tfb.ttf",
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Our Flag Means Death (2022)/0/preview.jpg",
+    "creator": "rtgurley",
+    "description": [
+      "Standard Card type using (almost) series font"
+    ],
+    "created": "2023-08-09T00:18:05",
+    "series_full_name": "Our Flag Means Death (2022)",
+    "id": 0
+  },
+  {
     "description": [
       "Frame card type with the series font and coloring for the title and episode text."
     ],
@@ -1281,32 +1358,6 @@
   {
     "series": {
       "font_id": 0,
-      "card_type": "standard",
-      "template_ids": []
-    },
-    "episodes": {},
-    "templates": [],
-    "fonts": [
-      {
-        "name": "Our Flag Means Death",
-        "color": "#FF0C95",
-        "delete_missing": true,
-        "file": "Seagram tfb.ttf",
-        "title_case": "source"
-      }
-    ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Or Flag Means Death (2022)/0/preview.jpg",
-    "creator": "rtgurley",
-    "description": [
-      "Standard Card type using (almost) series font"
-    ],
-    "created": "2023-08-09T00:18:05",
-    "series_full_name": "Or Flag Means Death (2022)",
-    "id": 0
-  },
-  {
-    "series": {
-      "font_id": 0,
       "card_type": "frame",
       "template_ids": []
     },
@@ -1686,6 +1737,93 @@
     ],
     "created": "2023-08-07T02:52:29",
     "series_full_name": "Naruto (2002)",
+    "id": 0
+  },
+  {
+    "series": {
+      "card_type": "Yozora/RetroTitleCard",
+      "template_ids": []
+    },
+    "episodes": {
+      "s1e4": {
+        "title": "Conduit [X-40253]"
+      },
+      "s1e12": {
+        "title": "Fire [11214893]"
+      },
+      "s1e13": {
+        "title": "Beyond the Sea [X-167512]"
+      },
+      "s1e19": {
+        "title": "Shapes [X-649176]"
+      },
+      "s1e21": {
+        "title": "Tooms [X-129202]"
+      },
+      "s1e22": {
+        "title": "Born Again [X-40271]"
+      },
+      "s2e7": {
+        "title": "3 [73317 & X256933VW]"
+      },
+      "s2e8": {
+        "title": "One Breath [73317]"
+      },
+      "s2e10": {
+        "title": "Red Museum [XWC060361]"
+      },
+      "s3e16": {
+        "title": "Apocrypha (2) [621517]"
+      },
+      "s5e14": {
+        "title": "The Red and the Black (2) [X-152830]"
+      },
+      "s5e15": {
+        "title": "Travelers [X-525652]"
+      },
+      "s5e20": {
+        "title": "The End [X-491679]"
+      },
+      "s6e1": {
+        "title": "The Beginning [111470]"
+      },
+      "s6e5": {
+        "title": "Dreamland II (2) [X-60794 & X-71009]"
+      },
+      "s6e11": {
+        "title": "Two Fathers (1) [X-75560]"
+      },
+      "s6e21": {
+        "title": "Field Trip [X-751483]"
+      },
+      "s7e4": {
+        "title": "Millennium [X-120898]"
+      },
+      "s8e15": {
+        "title": "Deadalive (2) [X-964394]"
+      },
+      "s9e9": {
+        "title": "Provenance (1) [X-97554]"
+      },
+      "s9e10": {
+        "title": "Providence (2) [X-280911]"
+      },
+      "s1e2": {
+        "title": "Deep Throat [DF101364]"
+      },
+      "s3e12": {
+        "title": "War of the Coprophages [X-667386]"
+      }
+    },
+    "templates": [],
+    "fonts": [],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/X/The X-Files (1993)/0/preview.jpg",
+    "creator": "azuravian",
+    "description": [
+      "Uses the Retro card with multiple episode titles edited to include the associated X-Files case number in square brackets after the episode title."
+    ],
+    "created": "2023-08-09T05:07:26",
+    "series_full_name": "The X-Files (1993)",
     "id": 0
   },
   {
