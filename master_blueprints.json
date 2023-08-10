@@ -208,6 +208,32 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Good Doctor 2017",
+        "color": "#6BD5FC",
+        "delete_missing": true,
+        "file": "DIN Bold.ttf",
+        "title_case": "title"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/G/The Good Doctor (2017)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Olivier Card and FF Din font in bold, colored"
+    ],
+    "created": "2023-08-10T17:46:32",
+    "series_full_name": "The Good Doctor (2017)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "standard",
       "template_ids": []
     },
@@ -690,6 +716,34 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "star wars",
+      "hide_season_text": true,
+      "hide_episode_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Mandalorian",
+        "color": "white",
+        "delete_missing": true,
+        "file": "mandalore.ttf",
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/M/The Mandalorian (2019)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Starwars Card and its white Iconian Font."
+    ],
+    "created": "2023-08-10T17:46:07",
+    "series_full_name": "The Mandalorian (2019)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "standard",
       "episode_text_format": "Chapter {absolute_number}",
       "season_title_ranges": [
@@ -834,6 +888,32 @@
     ],
     "created": "2023-08-07T15:16:29",
     "series_full_name": "Chilling Adventures of Sabrina (2018)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Captain Caveman and the Teen Angels (1977)",
+        "color": "#F7DE66",
+        "delete_missing": true,
+        "file": "Informal011BT-Roman.otf",
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/C/Captain Caveman and the Teen Angels (1977)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Olivier Card with the nice Captain Caveman font."
+    ],
+    "created": "2023-08-10T17:45:03",
+    "series_full_name": "Captain Caveman and the Teen Angels (1977)",
     "id": 0
   },
   {
@@ -1952,6 +2032,33 @@
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Schmigadoon! (2021)/0/preview.jpg",
     "created": "2023-08-06T00:00:00",
     "series_full_name": "Schmigadoon! (2021)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "divider",
+      "hide_season_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Sense8",
+        "color": "#E3F601",
+        "delete_missing": true,
+        "file": "rough_typewriter.otf",
+        "title_case": "title"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Sense8 (2015)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Divider Card and \"Rough Typewriter\" font in yellow."
+    ],
+    "created": "2023-08-10T17:47:08",
+    "series_full_name": "Sense8 (2015)",
     "id": 0
   },
   {
@@ -3229,6 +3336,32 @@
     ],
     "created": "2023-08-06T00:00:00",
     "series_full_name": "It's Always Sunny in Philadelphia (2005)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "anime",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Queen\u2019s Gambit (2020)",
+        "color": "white",
+        "delete_missing": true,
+        "file": "PlantinMTProSmBd.TTF",
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/Q/The Queen\u2019s Gambit (2020)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Anime Card & Platin Font in white color"
+    ],
+    "created": "2023-08-10T17:45:29",
+    "series_full_name": "The Queen\u2019s Gambit (2020)",
     "id": 0
   }
 ]
