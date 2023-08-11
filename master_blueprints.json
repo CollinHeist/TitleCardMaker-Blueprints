@@ -302,6 +302,35 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "tinted glass",
+      "hide_season_text": true,
+      "hide_episode_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Euphoria (US) 2019",
+        "color": "white",
+        "delete_missing": true,
+        "file": "Work Sans Extra Light.ttf",
+        "title_case": "lower",
+        "vertical_shift": -160
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/E/Euphoria (US) (2019)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Tinted Card used with the font \"Work Sans Extra Light\" in lower case (free to use)."
+    ],
+    "created": "2023-08-11T01:34:33",
+    "series_full_name": "Euphoria (US) (2019)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "frame",
       "template_ids": []
     },
@@ -1006,6 +1035,42 @@
     "created": "2023-08-09T03:03:35",
     "series_full_name": "You (2018)",
     "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "season_title_ranges": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "season_title_values": [
+        "Beck",
+        "Love",
+        "Marienne",
+        "Rhys"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "You",
+        "delete_missing": true,
+        "file": "YOU.ttf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/Y/You (2018)/1/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Modification of rtgurley's You Blueprint but featuring \"Beck\", \"Love\", \"Marienne\", and \"Rhys\" as custom season titles."
+    ],
+    "created": "2023-08-11T02:30:03",
+    "series_full_name": "You (2018)",
+    "id": 1
   },
   {
     "series": {
@@ -3226,6 +3291,39 @@
     "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Arrested Development (2003)/0/preview.jpg",
     "created": "2023-08-06T00:00:00",
     "series_full_name": "Arrested Development (2003)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "roman numeral",
+      "extra_keys": [
+        "roman_numeral_color",
+        "season_text_color"
+      ],
+      "extra_values": [
+        "rgb(112,19,11)",
+        "rgb(244,234,205)"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Afro Samurai",
+        "color": "rgb(244,234,205)",
+        "delete_missing": true,
+        "file": "Space_Bd_BT_Bold.ttf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/Afro Samurai (2007)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Roman Numeral card with the Series font, and the Series logo colors used for the colors of the roman numerals and the title text."
+    ],
+    "created": "2023-08-11T05:03:56",
+    "series_full_name": "Afro Samurai (2007)",
     "id": 0
   },
   {
