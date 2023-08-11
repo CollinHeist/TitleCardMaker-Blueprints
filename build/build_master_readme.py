@@ -55,10 +55,12 @@ top_series = sorted(series_data.items(), key=lambda item: item[1], reverse=True)
 # Get top usernames
 user_data: dict[str, int] = {}
 for blueprint in blueprints:
-    if blueprint['creator'] in user_data:
-        user_data[blueprint['creator']] += 1
-    else:
-        user_data[blueprint['creator']] = 1
+    creators = map(str.strip, blueprint['creator'].split(','))
+    for creator in creators:
+        if creator in user_data:
+            user_data[creator] += 1
+        else:
+            user_data[creator] = 1
 top_users = sorted(user_data.items(), key=lambda item: item[1], reverse=True)
 
 def get_nth_user(n: int) -> tuple[str, str]:
