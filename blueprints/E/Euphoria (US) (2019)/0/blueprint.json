@@ -14,7 +14,8 @@
       "color": "white",
       "delete_missing": true,
       "file": "Work Sans Extra Light.ttf",
-      "title_case": "lower"
+      "title_case": "lower",
+      "vertical_shift": -160
     }
   ],
   "preview": "preview.jpg",
