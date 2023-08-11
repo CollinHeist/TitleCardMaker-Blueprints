@@ -28,6 +28,31 @@
   },
   {
     "series": {
+      "font_id": 0,
+      "card_type": "anime",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Wild Kratts",
+        "color": "#F34506",
+        "delete_missing": true,
+        "file": "BADABB__.TTF"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/Wild Kratts (2010)/0/preview.jpg",
+    "creator": "rtgurley",
+    "description": [
+      "Anime card type with custom font"
+    ],
+    "created": "2023-08-11T16:41:39",
+    "series_full_name": "Wild Kratts (2010)",
+    "id": 0
+  },
+  {
+    "series": {
       "card_type": "comic book",
       "extra_keys": [
         "title_text_rotation_angle",
@@ -54,6 +79,58 @@
     "id": 0
   },
   {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The White Lotus 2021",
+        "color": "white",
+        "delete_missing": true,
+        "file": "Trajan Pro Bold.ttf",
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/The White Lotus (2021)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Standard card with Trajan Pro Bold font in white."
+    ],
+    "created": "2023-08-11T13:18:05",
+    "series_full_name": "The White Lotus (2021)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "fade",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Wednesday 2022",
+        "delete_missing": true,
+        "file": "Wednesday.ttf",
+        "size": 1.5,
+        "vertical_shift": 9
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/W/Wednesday (2022)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Fade card & Wednesday font."
+    ],
+    "created": "2023-08-11T16:41:11",
+    "series_full_name": "Wednesday (2022)",
+    "id": 0
+  },
+  {
     "description": [
       "Tinted Glass card with the series blue used as the episode text color"
     ],
@@ -75,6 +152,31 @@
     "fonts": [],
     "created": "2023-08-06T00:00:00",
     "series_full_name": "White Collar (2009)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "anime",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Lego Ninja go",
+        "delete_missing": true,
+        "file": "Ninjago.otf",
+        "title_case": "title"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/L/LEGO Ninjago (2012)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Anime Card with the nice font Ninjago Font."
+    ],
+    "created": "2023-08-11T13:14:35",
+    "series_full_name": "LEGO Ninjago (2012)",
     "id": 0
   },
   {
@@ -156,6 +258,30 @@
     "series": {
       "font_id": 0,
       "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Law and Order",
+        "delete_missing": true,
+        "file": "Friz_Quadrata_Std_Medium.otf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/L/Law & Order (1990)/0/preview.jpg",
+    "creator": "rtgurley",
+    "description": [
+      "Standard card type with custom font"
+    ],
+    "created": "2023-08-11T16:46:47",
+    "series_full_name": "Law & Order (1990)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
       "hide_season_text": true,
       "template_ids": []
     },
@@ -229,6 +355,34 @@
     ],
     "created": "2023-08-10T17:46:32",
     "series_full_name": "The Good Doctor (2017)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "fade",
+      "hide_season_text": false,
+      "hide_episode_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Gangs of London (2020)",
+        "color": "#EEF4F2",
+        "delete_missing": true,
+        "file": "Johnston ITC Std Bold.otf",
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/G/Gangs of London (2020)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Fade card with ITC Johnston Bold font."
+    ],
+    "created": "2023-08-11T13:18:29",
+    "series_full_name": "Gangs of London (2020)",
     "id": 0
   },
   {
@@ -740,6 +894,30 @@
     ],
     "created": "2023-08-08T03:00:38",
     "series_full_name": "Marvel's Jessica Jones (2015)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "white border",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Master of None (2015)",
+        "delete_missing": true,
+        "file": "ITC Avant Garde Gothic Pro-Bold Oblique.otf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/M/Master of None (2015)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "White border card and ITC Avant Garde Gothic Pro-Bold Oblique font."
+    ],
+    "created": "2023-08-11T13:31:31",
+    "series_full_name": "Master of None (2015)",
     "id": 0
   },
   {
@@ -1503,6 +1681,60 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "star wars",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Orville 2017",
+        "color": "#EFFFFF",
+        "delete_missing": true,
+        "file": "space age.ttf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/The Orville (2017)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Starwars card associated with Space Age Font in nearly white to blue color."
+    ],
+    "created": "2023-08-11T13:19:29",
+    "series_full_name": "The Orville (2017)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Hawkeye 2021",
+        "color": "#FDE83F",
+        "delete_missing": true,
+        "file": "howbai-font.ttf",
+        "interline_spacing": 40,
+        "size": 1.6,
+        "title_case": "lower",
+        "vertical_shift": 50
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/H/Hawkeye (2021)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Olivier Card using howbai font in yellow as per TV show."
+    ],
+    "created": "2023-08-11T13:17:22",
+    "series_full_name": "Hawkeye (2021)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "frame",
       "template_ids": []
     },
@@ -1524,6 +1756,35 @@
     ],
     "created": "2023-08-06T00:00:00",
     "series_full_name": "House (2004)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Homeland 2011",
+        "color": "#EB7308",
+        "delete_missing": true,
+        "file": "Coalition_v2.ttf",
+        "size": 1.3,
+        "stroke_width": 0.5,
+        "title_case": "upper",
+        "vertical_shift": 30
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/H/Homeland (2011)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Olivier card associated with Coalition Font in orange."
+    ],
+    "created": "2023-08-11T16:42:39",
+    "series_full_name": "Homeland (2011)",
     "id": 0
   },
   {
@@ -1766,6 +2027,32 @@
     ],
     "created": "2023-08-07T20:25:34",
     "series_full_name": "Kaguya-sama - Love Is War (2019)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "divider",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Ted Lasso (2020)",
+        "color": "white",
+        "delete_missing": true,
+        "file": "Futura Bold Italic font.ttf",
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/T/Ted Lasso (2020)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Divider card with Futura Bold Italic font as the official one (Graphicus DT ExtraBold  designed by DTP Types) is not free to use."
+    ],
+    "created": "2023-08-11T13:18:49",
+    "series_full_name": "Ted Lasso (2020)",
     "id": 0
   },
   {
@@ -2302,6 +2589,59 @@
     "id": 0
   },
   {
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted frame",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Resident 2018",
+        "delete_missing": true,
+        "file": "News Gothic Condensed Bold.otf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/R/The Resident (2018)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Tinted Frame card with News Gothic Condensed Bold font in white."
+    ],
+    "created": "2023-08-11T13:19:08",
+    "series_full_name": "The Resident (2018)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Dexter",
+        "color": "#b11016",
+        "delete_missing": true,
+        "file": "Soda Script Bold Extras Regular.ttf",
+        "interline_spacing": -100,
+        "size": 1.6,
+        "stroke_width": 0.6,
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/D/Dexter - New Blood (2021)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Olivier Card with Soda script bold font in official red color."
+    ],
+    "created": "2023-08-11T16:40:54",
+    "series_full_name": "Dexter - New Blood (2021)",
+    "id": 0
+  },
+  {
     "description": [
       "Anime card type with arc season titles and Japanese Kanji."
     ],
@@ -2661,6 +3001,31 @@
     "created": "2023-08-06T00:00:00",
     "series_full_name": "Pok\u00e9mon (1997)",
     "id": 1
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "star wars",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Peacemaker",
+        "color": "#FBD609",
+        "delete_missing": true,
+        "file": "PeacemakerForce-rgeKB.otf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/P/Peacemaker (2022)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Starwars card with PeacemakerForce-rgeKB font in yellow."
+    ],
+    "created": "2023-08-11T13:15:06",
+    "series_full_name": "Peacemaker (2022)",
+    "id": 0
   },
   {
     "series": {
