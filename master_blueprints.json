@@ -1126,6 +1126,41 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Cobra Kai",
+        "color": "#FF0000",
+        "delete_missing": true,
+        "file": "Dead_Stock_Demo.ttf",
+        "replacements_in": [
+          "\u00e1",
+          "(",
+          ")"
+        ],
+        "replacements_out": [
+          "a",
+          "Part ",
+          ""
+        ]
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/C/Cobra Kai (2018)/0/preview.jpg",
+    "creator": "rtgurley, CollinHeist",
+    "description": [
+      "Standard Layout with custom font.  Credit to Dragonsys for the font"
+    ],
+    "created": "2023-08-11T22:10:09",
+    "series_full_name": "Cobra Kai (2018)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "frame",
       "template_ids": [],
       "font_size": 1.25
@@ -1249,6 +1284,31 @@
     "created": "2023-08-11T02:30:03",
     "series_full_name": "You (2018)",
     "id": 1
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Ozark",
+        "color": "#FFFFFF",
+        "delete_missing": true,
+        "file": "ozark.otf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Ozark (2017)/0/preview.jpg",
+    "creator": "rtgurley",
+    "description": [
+      "Standard card format with custom font"
+    ],
+    "created": "2023-08-11T20:50:58",
+    "series_full_name": "Ozark (2017)",
+    "id": 0
   },
   {
     "series": {
@@ -2574,6 +2634,33 @@
     "templates": [],
     "fonts": [
       {
+        "name": "The Rehersal",
+        "color": "rgb(64, 83, 67)",
+        "delete_missing": true,
+        "file": "ITC_Panache_W01_Black.ttf",
+        "kerning": 10.0,
+        "size": 1.15
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/R/The Rehearsal (2022)/0/preview.jpg",
+    "creator": "rtgurley",
+    "description": [
+      "Standard Card format with green custom font.  Based on CollinHeist config file."
+    ],
+    "created": "2023-08-11T23:57:52",
+    "series_full_name": "The Rehearsal (2022)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
         "name": "Gemstones",
         "delete_missing": true,
         "file": "FestivalBudayaXXXI.otf"
@@ -3165,6 +3252,30 @@
     ],
     "created": "2023-08-06T00:00:00",
     "series_full_name": "Foundation (2021)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Flight Attendant",
+        "delete_missing": true,
+        "file": "flight-attendant.otf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/The Flight Attendant (2020)/0/preview.jpg",
+    "creator": "rtgurley",
+    "description": [
+      "Standard format with custom font"
+    ],
+    "created": "2023-08-11T20:51:47",
+    "series_full_name": "The Flight Attendant (2020)",
     "id": 0
   },
   {
@@ -3811,20 +3922,20 @@
     "templates": [],
     "fonts": [
       {
-        "name": "The Queen\u2019s Gambit (2020)",
+        "name": "The Queen's Gambit (2020)",
         "color": "white",
         "delete_missing": true,
         "file": "PlantinMTProSmBd.TTF",
         "title_case": "upper"
       }
     ],
-    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/Q/The Queen\u2019s Gambit (2020)/0/preview.jpg",
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/Q/The Queen's Gambit (2020)/0/preview.jpg",
     "creator": "flowcool",
     "description": [
       "Anime Card & Platin Font in white color"
     ],
     "created": "2023-08-10T17:45:29",
-    "series_full_name": "The Queen\u2019s Gambit (2020)",
+    "series_full_name": "The Queen's Gambit (2020)",
     "id": 0
   }
 ]

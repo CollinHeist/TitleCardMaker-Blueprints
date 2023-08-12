@@ -1,4 +1,4 @@
-# The Queen's Gambit (2020)
+# Ozark (2017)
 
 There are `1` Blueprint(s) available for this Series.
 

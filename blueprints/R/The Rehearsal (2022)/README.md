@@ -1,4 +1,4 @@
-# The Queen's Gambit (2020)
+# The Rehearsal (2022)
 
 There are `1` Blueprint(s) available for this Series.
 

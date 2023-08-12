@@ -1,4 +1,4 @@
-# The Queen's Gambit (2020)
+# The Flight Attendant (2020)
 
 There are `1` Blueprint(s) available for this Series.
 
