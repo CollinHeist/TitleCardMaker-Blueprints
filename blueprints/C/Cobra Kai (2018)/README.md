@@ -1,4 +1,4 @@
-# The Queen’s Gambit (2020)
+# Cobra Kai (2018)
 
 There are `1` Blueprint(s) available for this Series.
 
