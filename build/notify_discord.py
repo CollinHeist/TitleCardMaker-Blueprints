@@ -87,7 +87,7 @@ if __name__ == '__main__':
     embed.set_image(url=data['preview_url'])
     now = datetime.now()
     next_ = get_next_merge_time(now)
-    embed.set_footer(f'This blueprint will be available in {format_timedelta(next_-now)}')
+    embed.set_footer(f'This Blueprint will be available in {format_timedelta(next_-now)}')
 
     # Add embed object to webhook, execute webhook
     webhook = DiscordWebhook(
