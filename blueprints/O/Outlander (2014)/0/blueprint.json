@@ -19,7 +19,8 @@
     {
       "name": "Charlemagne Regular",
       "delete_missing": true,
-      "file": "charlemagne-regular.otf"
+      "file": "charlemagne-regular.otf",
+      "size": 1.2
     }
   ],
   "preview": "preview.jpg",
