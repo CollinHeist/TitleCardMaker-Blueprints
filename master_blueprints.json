@@ -1361,6 +1361,31 @@
     "id": 0
   },
   {
+    "series": {
+      "font_id": 0,
+      "card_type": "azuravian/TitleColorMatch",
+      "template_ids": [],
+      "font_color": "white"
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Futura Book",
+        "delete_missing": true,
+        "file": "Futura Book.otf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Orphan Black (2013)/0/preview.jpg",
+    "creator": "Departed",
+    "description": [
+      "Variation of TitleColorMatch with Futura Book font to match the Orphan Black logo."
+    ],
+    "created": "2023-08-13T20:00:20",
+    "series_full_name": "Orphan Black (2013)",
+    "id": 0
+  },
+  {
     "description": [
       "Frame card type with the series font and coloring for the title and episode text."
     ],
@@ -1730,6 +1755,40 @@
     "fonts": [],
     "created": "2023-08-06T00:00:00",
     "series_full_name": "One Piece (1999)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted frame",
+      "extra_keys": [
+        "top_element",
+        "bottom_element"
+      ],
+      "extra_values": [
+        "logo",
+        "title"
+      ],
+      "template_ids": [],
+      "font_color": "rgb(221, 161, 98)"
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Charlemagne Regular",
+        "delete_missing": true,
+        "file": "charlemagne-regular.otf",
+        "size": 1.2
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/O/Outlander (2014)/0/preview.jpg",
+    "creator": "Departed",
+    "description": [
+      "Tinted Frame card type with logo on top and episode title on bottom. Uses a font to match the series logo."
+    ],
+    "created": "2023-08-13T16:14:02",
+    "series_full_name": "Outlander (2014)",
     "id": 0
   },
   {
