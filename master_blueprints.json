@@ -951,6 +951,30 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "fade",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Columbo",
+        "delete_missing": true,
+        "file": "Columbo.ttf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/C/Columbo (1968)/0/preview.jpg",
+    "creator": "Departed",
+    "description": [
+      "Uses the Fade card type with a typewriter font"
+    ],
+    "created": "2023-08-12T20:26:34",
+    "series_full_name": "Columbo (1968)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "standard",
       "episode_text_format": "Chapter {absolute_number}",
       "season_title_ranges": [
