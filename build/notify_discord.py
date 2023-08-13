@@ -6,7 +6,7 @@ environment variable. It parses this content and then posts a message
 on the Discord Webhook describing the created Blueprint.
 """
 
-from datetime import datetime
+from datetime import datetime, timedelta
 from json import loads, JSONDecodeError
 from os import environ
 from re import compile as re_compile
@@ -14,7 +14,32 @@ from sys import exit as sys_exit
 
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
-DEFAULT_AVATAR_URL = 'https://raw.githubusercontent.com/CollinHeist/TitleCardMaker/master/.github/logo.png'
+DEFAULT_AVATAR_URL = (
+    'https://raw.githubusercontent.com/CollinHeist/TitleCardMaker/master/'
+    '.github/logo.png'
+)
+
+
+def get_next_merge_time(time: datetime) -> datetime:
+    nearest_4hr = time.replace(
+        hour=time.hour // 4 * 4,
+        minute=0, second=0, microsecond=0,
+    )
+
+    return nearest_4hr + timedelta(hours=4)
+
+
+def format_timedelta(delta: timedelta) -> str:
+    hours, seconds = divmod(delta.total_seconds(), 3600)
+    minutes = int(seconds // 60)
+
+    if int(hours) > 1:
+        return f'{int(hours)} hours, and {minutes} minute{"s" if minutes > 1 else ""}'
+    if int(hours) == 1:
+        return f'{int(hours)} hour, and {minutes} minute{"s" if minutes > 1 else ""}'
+
+    return f'{minutes} minute{"s" if minutes > 1 else ""}'
+
 
 # File is entrypoint
 if __name__ == '__main__':
@@ -60,7 +85,9 @@ if __name__ == '__main__':
         icon_url=environ.get('ISSUE_CREATOR_ICON_URL', DEFAULT_AVATAR_URL),
     )
     embed.set_image(url=data['preview_url'])
-    embed.set_timestamp(datetime.now())
+    now = datetime.now()
+    next_ = get_next_merge_time(now)
+    embed.set_footer(f'This blueprint will be available in {format_timedelta(next_-now)}')
 
     # Add embed object to webhook, execute webhook
     webhook = DiscordWebhook(
