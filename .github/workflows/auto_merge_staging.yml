@@ -33,30 +33,39 @@ jobs:
           script: |
             const { repo, owner } = context.repo;
             const issuesList = JSON.parse(${{ toJSON(steps.get_issues.outputs.data) }}).map(issue => `- Closes #${issue.number}`).join("\n");
-            const result = await github.rest.pulls.create({
-              title: `[Auto] Merge Staging to Master [${(new Date()).toLocaleDateString()}]`,
-              owner,
-              repo,
-              head: 'staging',
-              base: 'master',
-              body: `This is an automated pull request.\n\nList of issues to be closed:\n${issuesList}`,
-            });
+            try {
+              const result = await github.rest.pulls.create({
+                title: `[Auto] Merge Staging to Master [${(new Date()).toLocaleDateString()}]`,
+                owner,
+                repo,
+                head: 'staging',
+                base: 'master',
+                body: `This is an automated pull request.\n\nList of issues to be closed:\n${issuesList}`,
+              });
 
-            // Store the pull request number in the 'pr_number' output variable
-            console.log(`::set-output name=pr_number::${result.data.number}`);
+              // Store the pull request number in the 'pr_number' output variable
+              console.log(`::set-output name=pr_number::${result.data.number}`);
+            } catch (error) {
+              if (error.message.includes('No commits between')) {
+                console.log(`::set-output name=pr_number::NA`);
+              }
+            }
 
   call-resize-images-workflow:
     needs: auto_merge
+    if: '${{ needs.auto_merge.outputs.pr_number != "NA" }}'
     uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/resize_images.yml@master
     secrets: inherit
 
   call-master-blueprint-workflow:
     needs: [auto_merge, call-resize-images-workflow]
+    if: '${{ needs.auto_merge.outputs.pr_number != "NA" }}'
     uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/master_blueprint.yml@master
     secrets: inherit
 
   merge-pull-request:
     needs: [auto_merge, call-resize-images-workflow, call-master-blueprint-workflow]
+    if: '${{ needs.auto_merge.outputs.pr_number != "NA" }}'
     runs-on: ubuntu-latest
     steps:
       - name: Merge Pull Request
