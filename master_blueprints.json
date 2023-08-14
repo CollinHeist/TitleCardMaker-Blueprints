@@ -157,6 +157,60 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "olivier",
+      "hide_season_text": true,
+      "hide_episode_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Lupin 2021",
+        "color": "#FE6B1E",
+        "delete_missing": true,
+        "file": "SansThirteenBlack.ttf",
+        "size": 1.2,
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/L/Lupin (2021)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Oliver card with SansThirteenBlack font (Offical one is Titling Gothic FB Std Compressed Black font not free of charge) with the right orange color."
+    ],
+    "created": "2023-08-14T16:57:57",
+    "series_full_name": "Lupin (2021)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Lincoln Lawyer (2022)",
+        "delete_missing": true,
+        "file": "Impact MT Regular.ttf",
+        "stroke_width": 0.59
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/L/The Lincoln Lawyer (2022)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Olivier card with Impact MT Regular font."
+    ],
+    "created": "2023-08-14T16:57:26",
+    "series_full_name": "The Lincoln Lawyer (2022)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "anime",
       "template_ids": []
     },
@@ -2639,6 +2693,34 @@
     ],
     "created": "2023-08-10T17:47:08",
     "series_full_name": "Sense8 (2015)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "tinted glass",
+      "hide_season_text": true,
+      "hide_episode_text": true,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Stranger Things 2016",
+        "color": "#EC1E24",
+        "delete_missing": true,
+        "file": "Benguiat Bold.ttf",
+        "size": 0.8
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Stranger Things (2016)/0/preview.jpg",
+    "creator": "flowcool",
+    "description": [
+      "Olivier card & Benguiat Bold font in red."
+    ],
+    "created": "2023-08-14T16:59:04",
+    "series_full_name": "Stranger Things (2016)",
     "id": 0
   },
   {
