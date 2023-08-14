@@ -47,7 +47,7 @@ jobs:
               console.log(`::set-output name=pr_number::${result.data.number}`);
             } catch (error) {
               if (error.message.includes('No commits between')) {
-                echo "pr_number=NA" >> "$GITHUB_OUTPUT"
+                console.log(`::set-output name=pr_number::NA`);
               }
             }
 
