@@ -53,7 +53,7 @@ jobs:
 
   call-resize-images-workflow:
     needs: auto_merge
-    if: ${{ needs.auto_merge.outputs.pr_number != "NA" }}
+    if: ${{ needs.auto_merge.outputs.pr_number != NA }}
     uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/resize_images.yml@master
     secrets: inherit
 
