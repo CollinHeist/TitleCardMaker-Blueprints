@@ -59,13 +59,13 @@ jobs:
 
   call-master-blueprint-workflow:
     needs: [auto_merge, call-resize-images-workflow]
-    if: ${{ needs.auto_merge.outputs.pr_number != "NA" }}
+    if: ${{ needs.auto_merge.outputs.pr_number != NA }}
     uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/master_blueprint.yml@master
     secrets: inherit
 
   merge-pull-request:
     needs: [auto_merge, call-resize-images-workflow, call-master-blueprint-workflow]
-    if: ${{ needs.auto_merge.outputs.pr_number != "NA" }}
+    if: ${{ needs.auto_merge.outputs.pr_number != NA }}
     runs-on: ubuntu-latest
     steps:
       - name: Merge Pull Request
