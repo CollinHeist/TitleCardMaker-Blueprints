@@ -33,12 +33,16 @@ def format_timedelta(delta: timedelta) -> str:
     hours, seconds = divmod(delta.total_seconds(), 3600)
     minutes = int(seconds // 60)
 
-    if int(hours) > 1:
-        return f'{int(hours)} hours, and {minutes} minute{"s" if minutes > 1 else ""}'
-    if int(hours) == 1:
-        return f'{int(hours)} hour, and {minutes} minute{"s" if minutes > 1 else ""}'
+    output = ''
+    if (hours := int(hours)) > 0:
+        output += f'{hours} hour{"s" if hours > 1 else ""}'
 
-    return f'{minutes} minute{"s" if minutes > 1 else ""}'
+    if minutes > 0:
+        if output:
+            output += ', and '
+        output += f'{minutes} minute{"s" if minutes > 1 else ""}'
+
+    return output
 
 
 # File is entrypoint
