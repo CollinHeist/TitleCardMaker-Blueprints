@@ -1,7 +1,7 @@
 {
   "series": {
     "font_id": 0,
-    "card_type": "tinted frame",
+    "card_type": "landscape",
     "extra_keys": [
       "add_bounding_box",
       "darken",
