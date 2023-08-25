@@ -9,7 +9,7 @@
     "extra_values": [
       "rgba(127, 223, 119, 0.6)",
       "random[-4, 4]",
-      "random[-4, 3]"
+      "random[-4, -3]"
     ],
     "template_ids": []
   },
