@@ -30,6 +30,38 @@
   },
   {
     "series": {
+      "card_type": "tinted glass",
+      "episode_text_format": "{season_text} | {episode_number_cardinal}",
+      "season_title_ranges": [
+        "1",
+        "2"
+      ],
+      "season_title_values": [
+        "Xavier",
+        "Edgar"
+      ],
+      "extra_keys": [
+        "episode_text_color"
+      ],
+      "extra_values": [
+        "rgb(247,203,77)"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/A/The Afterparty (2022)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Tinted Glass card with \"Xavier\" and \"Edgar\" (the season victim) used as the season titles, and the episode number written as one, two, etc."
+    ],
+    "created": "2023-09-04T02:31:08",
+    "series_full_name": "The Afterparty (2022)",
+    "id": 0
+  },
+  {
+    "series": {
       "card_type": "standard",
       "episode_text_format": "Chapter {episode_number}",
       "template_ids": [],
@@ -2570,6 +2602,30 @@
   },
   {
     "series": {
+      "card_type": "olivier",
+      "hide_season_text": true,
+      "extra_keys": [
+        "episode_text_color"
+      ],
+      "extra_values": [
+        "rgb(109,189,107)"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Secret Invasion (2023)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Olivier card with green episode text."
+    ],
+    "created": "2023-09-04T02:45:02",
+    "series_full_name": "Secret Invasion (2023)",
+    "id": 0
+  },
+  {
+    "series": {
       "font_id": 0,
       "card_type": "divider",
       "hide_season_text": true,
@@ -4644,6 +4700,47 @@
     ],
     "created": "2023-08-11T16:40:54",
     "series_full_name": "Dexter - New Blood (2021)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "season_title_ranges": [
+        "3"
+      ],
+      "season_title_values": [
+        "The Final Season"
+      ],
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Disenchantment",
+        "color": "#F5D54C",
+        "delete_missing": true,
+        "file": "Tuers Cardboard.ttf",
+        "replacements_in": [
+          "\u00f8",
+          ".",
+          "!"
+        ],
+        "replacements_out": [
+          "o",
+          ",",
+          ""
+        ]
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/D/Disenchantment (2018)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card using the Series font, and \"The Final Season\" used as the third season title."
+    ],
+    "created": "2023-09-04T02:14:01",
+    "series_full_name": "Disenchantment (2018)",
     "id": 0
   },
   {
