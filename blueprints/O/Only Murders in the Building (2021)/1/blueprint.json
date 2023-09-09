@@ -7,13 +7,7 @@
   "series": {
     "font_id": 0,
     "card_type": "olivier",
-    "template_ids": [],
-    "extra_keys": [
-      "interword_spacing"
-    ],
-    "extra_values": [
-      "60"
-    ]
+    "template_ids": []
   },
   "episodes": {},
   "templates": [],
@@ -22,6 +16,7 @@
       "name": "Only Murders in the Building",
       "file": "Cygnet Regular.ttf",
       "color": "rgb(76, 149, 119)",
+      "interword_spacing": 30,
       "title_case": "source",
       "kerning": 12.0,
       "delete_missing": true,

@@ -92,12 +92,13 @@ if __name__ == '__main__':
     now = datetime.now()
     next_ = get_next_merge_time(now)
     embed.set_footer(f'This Blueprint will be available in {format_timedelta(next_-now)}')
+    embed.set_timestamp()
 
     # Add embed object to webhook, execute webhook
     webhook = DiscordWebhook(
         url=environ.get('DISCORD_WEBHOOK'),
         username=environ.get('DISCORD_USERNAME', 'MakerBot'),
-        avatar_url=environ.get('DISCORD_AVATAR')
+        avatar_url=environ.get('DISCORD_AVATAR', DEFAULT_AVATAR_URL)
     )
     webhook.add_embed(embed)
     response = webhook.execute()
