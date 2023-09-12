@@ -118,10 +118,10 @@ class Blueprint(BaseModel):
         # Get all unique Font IDs
         font_ids = set() if values['series'].font_id is None else set([values['series'].font_id])
         for episode in values['episodes'].values():
-            if hasattr(episode, 'font_id') and episode.font_id:
+            if hasattr(episode, 'font_id') and episode.font_id is not None:
                 font_ids.add(episode.font_id)
         for template in values['templates']:
-            if hasattr(template, 'font_id') and template.font_id:
+            if hasattr(template, 'font_id') and template.font_id is not None:
                 font_ids.add(template.font_id)
 
         # Verify Font specification
