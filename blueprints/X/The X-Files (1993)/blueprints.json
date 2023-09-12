@@ -83,5 +83,39 @@
       "Uses the Retro card with multiple episode titles edited to include the associated X-Files case number in square brackets after the episode title."
     ],
     "created": "2023-08-09T05:07:26"
+  },
+  {
+    "series": {
+      "card_type": "tinted frame",
+      "template_ids": [],
+      "font_id": 0,
+      "extra_keys": [
+        "top_element",
+        "bottom_element",
+        "frame_width",
+        "logo_size"
+      ],
+      "extra_values": [
+        "logo",
+        "title",
+        "8",
+        "1.2"
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "XFiles",
+        "delete_missing": true,
+        "file": "The X-Files.ttf"
+      }
+    ],
+    "preview": "preview.jpg",
+    "creator": "Ziggy73701",
+    "description": [
+      "Tinted Frame, using wider border.. logo moved to top and title at bottom using rounded typewriter font."
+    ],
+    "created": "2023-09-12T16:19:00"
   }
 ]
