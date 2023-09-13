@@ -1,4 +1,4 @@
-# Doctor Who (2005) (2005)
+# Doctor Who (2005)
 
 There are `1` Blueprint(s) available for this Series.
 
