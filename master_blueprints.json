@@ -3076,6 +3076,40 @@
   },
   {
     "series": {
+      "template_ids": [
+        0
+      ]
+    },
+    "episodes": {},
+    "templates": [
+      {
+        "name": "Scooby-Doo",
+        "font_id": 0,
+        "card_type": "standard",
+        "episode_text_format": "Mystery {episode_number}"
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Scooby-Doo",
+        "color": "rgb(240,181,94)",
+        "delete_missing": true,
+        "file": "Scooby-Doo.ttf",
+        "size": 1.1,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Be Cool, Scooby-Doo! (2015)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with an orange Scooby-Doo font and \"Mystery\" as the episode text."
+    ],
+    "created": "2023-09-16T19:07:43",
+    "series_full_name": "Be Cool, Scooby-Doo! (2015)",
+    "id": 0
+  },
+  {
+    "series": {
       "font_id": 0,
       "card_type": "anime",
       "template_ids": []
@@ -5476,6 +5510,40 @@
   },
   {
     "series": {
+      "template_ids": [
+        0
+      ]
+    },
+    "episodes": {},
+    "templates": [
+      {
+        "name": "Scooby-Doo",
+        "font_id": 0,
+        "card_type": "standard",
+        "episode_text_format": "Mystery {episode_number}"
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Scooby-Doo",
+        "color": "rgb(240,181,94)",
+        "delete_missing": true,
+        "file": "Scooby-Doo.ttf",
+        "size": 1.1,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Scooby-Doo and Guess Who! (2019)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with an orange Scooby-Doo font and \"Mystery\" as the episode text."
+    ],
+    "created": "2023-09-16T19:10:28",
+    "series_full_name": "Scooby-Doo and Guess Who! (2019)",
+    "id": 0
+  },
+  {
+    "series": {
       "card_type": "tinted frame",
       "hide_episode_text": true,
       "season_title_ranges": [
@@ -5621,6 +5689,50 @@
     ],
     "created": "2023-08-14T16:59:04",
     "series_full_name": "Stranger Things (2016)",
+    "id": 0
+  },
+  {
+    "series": {
+      "template_ids": [
+        0
+      ],
+      "season_title_ranges": [
+        "1",
+        "2",
+        "3"
+      ],
+      "season_title_values": [
+        "The Scooby-Doo/Dynomutt Hour",
+        "Scooby's All Star Laff-a-Lympics",
+        "Scooby's All-Stars"
+      ]
+    },
+    "episodes": {},
+    "templates": [
+      {
+        "name": "Scooby-Doo",
+        "font_id": 0,
+        "card_type": "standard",
+        "episode_text_format": "Mystery {episode_number}"
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Scooby-Doo",
+        "color": "rgb(240,181,94)",
+        "delete_missing": true,
+        "file": "Scooby-Doo.ttf",
+        "size": 1.1,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/The Scooby-Doo Show (1976)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with an orange Scooby-Doo font and \"Mystery\" as the episode text. Custom season titles are used to represent the originally aired Episode segments."
+    ],
+    "created": "2023-09-16T19:19:55",
+    "series_full_name": "The Scooby-Doo Show (1976)",
     "id": 0
   },
   {
@@ -5778,6 +5890,40 @@
   },
   {
     "series": {
+      "template_ids": [
+        0
+      ]
+    },
+    "episodes": {},
+    "templates": [
+      {
+        "name": "Scooby-Doo",
+        "font_id": 0,
+        "card_type": "standard",
+        "episode_text_format": "Mystery {episode_number}"
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Scooby-Doo",
+        "color": "rgb(240,181,94)",
+        "delete_missing": true,
+        "file": "Scooby-Doo.ttf",
+        "size": 1.1,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Scooby's All-Star Laff-A-Lympics (1977)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with an orange Scooby-Doo font and \"Mystery\" as the episode text."
+    ],
+    "created": "2023-09-16T19:09:00",
+    "series_full_name": "Scooby's All-Star Laff-A-Lympics (1977)",
+    "id": 0
+  },
+  {
+    "series": {
       "font_id": 0,
       "card_type": "standard",
       "template_ids": []
@@ -5832,6 +5978,40 @@
     ],
     "created": "2023-09-04T02:45:02",
     "series_full_name": "Secret Invasion (2023)",
+    "id": 0
+  },
+  {
+    "series": {
+      "template_ids": [
+        0
+      ]
+    },
+    "episodes": {},
+    "templates": [
+      {
+        "name": "Scooby-Doo",
+        "font_id": 0,
+        "card_type": "standard",
+        "episode_text_format": "Mystery {episode_number}"
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Scooby-Doo",
+        "color": "rgb(240,181,94)",
+        "delete_missing": true,
+        "file": "Scooby-Doo.ttf",
+        "size": 1.1,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Scooby-Doo and Scrappy-Doo (1979)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with an orange Scooby-Doo font and \"Mystery\" as the episode text."
+    ],
+    "created": "2023-09-16T19:12:00",
+    "series_full_name": "Scooby-Doo and Scrappy-Doo (1979)",
     "id": 0
   },
   {
