@@ -3290,6 +3290,33 @@
     "templates": [],
     "fonts": [
       {
+        "name": "Bluey",
+        "color": "rgb(148,197,245)",
+        "delete_missing": true,
+        "file": "Hello Headline Regular.ttf",
+        "size": 1.15,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/Bluey (2018)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card with the Series font."
+    ],
+    "created": "2023-09-18T15:27:57",
+    "series_full_name": "Bluey (2018)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "standard",
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
         "name": "Arrested Development",
         "color": "#FA5601",
         "delete_missing": true,
