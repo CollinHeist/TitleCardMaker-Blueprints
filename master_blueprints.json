@@ -5641,6 +5641,40 @@
   },
   {
     "series": {
+      "template_ids": [
+        0
+      ]
+    },
+    "episodes": {},
+    "templates": [
+      {
+        "name": "Scooby-Doo",
+        "font_id": 0,
+        "card_type": "standard",
+        "episode_text_format": "Mystery {episode_number}"
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Scooby-Doo",
+        "color": "rgb(240,181,94)",
+        "delete_missing": true,
+        "file": "Scooby-Doo.ttf",
+        "size": 1.1,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Shaggy & Scooby-Doo Get a Clue! (2006)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with an orange Scooby-Doo font and \"Mystery\" as the episode text."
+    ],
+    "created": "2023-09-17T22:13:26",
+    "series_full_name": "Shaggy & Scooby-Doo Get a Clue! (2006)",
+    "id": 0
+  },
+  {
+    "series": {
       "font_id": 0,
       "card_type": "tinted frame",
       "template_ids": []
@@ -5661,6 +5695,40 @@
     ],
     "created": "2023-08-06T00:00:00",
     "series_full_name": "Star Trek - The Next Generation (1987)",
+    "id": 0
+  },
+  {
+    "series": {
+      "template_ids": [
+        0
+      ]
+    },
+    "episodes": {},
+    "templates": [
+      {
+        "name": "Scooby-Doo",
+        "font_id": 0,
+        "card_type": "standard",
+        "episode_text_format": "Mystery {episode_number}"
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Scooby-Doo",
+        "color": "rgb(240,181,94)",
+        "delete_missing": true,
+        "file": "Scooby-Doo.ttf",
+        "size": 1.1,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Scooby-Doo! Mystery Incorporated (2010)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with an orange Scooby-Doo font and \"Mystery\" as the episode text."
+    ],
+    "created": "2023-09-17T22:11:28",
+    "series_full_name": "Scooby-Doo! Mystery Incorporated (2010)",
     "id": 0
   },
   {
@@ -5809,6 +5877,40 @@
     ],
     "created": "2023-08-26T18:54:58",
     "series_full_name": "Super Dragon Ball Heroes (2018)",
+    "id": 0
+  },
+  {
+    "series": {
+      "template_ids": [
+        0
+      ]
+    },
+    "episodes": {},
+    "templates": [
+      {
+        "name": "Scooby-Doo",
+        "font_id": 0,
+        "card_type": "standard",
+        "episode_text_format": "Mystery {episode_number}"
+      }
+    ],
+    "fonts": [
+      {
+        "name": "Scooby-Doo",
+        "color": "rgb(240,181,94)",
+        "delete_missing": true,
+        "file": "Scooby-Doo.ttf",
+        "size": 1.1,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/S/Scooby-Doo, Where Are You! (1969)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Standard card type with an orange Scooby-Doo font and \"Mystery\" as the episode text."
+    ],
+    "created": "2023-09-17T22:12:28",
+    "series_full_name": "Scooby-Doo, Where Are You! (1969)",
     "id": 0
   },
   {
