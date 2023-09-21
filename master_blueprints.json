@@ -1447,6 +1447,30 @@
   },
   {
     "series": {
+      "card_type": "standard",
+      "font_id": 0,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Foundation",
+        "delete_missing": true,
+        "file": "FoundationTitlesHand-SemiBold-v0.85.ttf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/F/Foundation (2021)/1/preview.jpg",
+    "creator": "GrazedNutsack",
+    "description": [
+      "Simple \"Standard\" card type with a white \"Foundation\" font as the episode text."
+    ],
+    "created": "2023-09-21T14:49:33",
+    "series_full_name": "Foundation (2021)",
+    "id": 1
+  },
+  {
+    "series": {
       "font_id": 0,
       "card_type": "comic book",
       "extra_keys": [
