@@ -36,6 +36,7 @@ for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/*/blueprint.json'):
         width, height = get_image_size(preview)
         if (width not in range(IMAGE_SIZE[0]-5, IMAGE_SIZE[0]+5)
             or height not in range(IMAGE_SIZE[1]-5, IMAGE_SIZE[1]+5)):
-            image = Image.open(preview).resize(IMAGE_SIZE)
+            # Open image; resize, convert to RGB (in case it was RGBA)
+            image = Image.open(preview).resize(IMAGE_SIZE).convert('RGB')
             image.save(preview)
             print(f'Resized "{preview}" to 1920x1080')
