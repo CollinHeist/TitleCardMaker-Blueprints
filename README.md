@@ -4,7 +4,7 @@ Blueprints for importing premade Series configurations into TitleCardMaker.
 
 ---
 
-There are currently `144` Blueprints available for `132` Series, submitted by `10` Creators.
+There are currently `145` Blueprints available for `133` Series, submitted by `10` Creators.
 
 Series with the most Blueprints:
 | Series | Blueprints |
