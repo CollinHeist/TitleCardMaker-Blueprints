@@ -37,6 +37,57 @@
   {
     "series": {
       "font_id": 0,
+      "card_type": "anime",
+      "season_title_ranges": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "season_title_values": [
+        "Finding My Life's Purpose",
+        "Mugen Train",
+        "Entertainment District",
+        "Swordsmith Village"
+      ],
+      "extra_keys": [
+        "kanji_vertical_shift"
+      ],
+      "extra_values": [
+        "-40"
+      ],
+      "template_ids": [],
+      "translations": [
+        {
+          "language_code": "ja",
+          "data_key": "kanji"
+        }
+      ]
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Demon Slayer",
+        "delete_missing": true,
+        "file": "Blood Crow Condensed.ttf",
+        "interline_spacing": -20,
+        "size": 1.2,
+        "title_case": "source"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/D/Demon Slayer - Kimetsu no Yaiba (2019)/1/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Anime card with arc season titles, Japanese Kanji, and the custom Series Font."
+    ],
+    "created": "2023-09-24T03:55:21",
+    "series_full_name": "Demon Slayer - Kimetsu no Yaiba (2019)",
+    "id": 1
+  },
+  {
+    "series": {
+      "font_id": 0,
       "card_type": "standard",
       "season_title_ranges": [
         "3"
@@ -2595,6 +2646,86 @@
     ],
     "created": "2023-08-06T00:00:00",
     "series_full_name": "It's Always Sunny in Philadelphia (2005)",
+    "id": 0
+  },
+  {
+    "series": {
+      "font_id": 0,
+      "card_type": "olivier",
+      "extra_keys": [
+        "episode_text_color"
+      ],
+      "extra_values": [
+        "rgb(115, 207, 62)"
+      ],
+      "template_ids": []
+    },
+    "episodes": {
+      "s1e1": {
+        "title": "Groot's\\n  First Steps",
+        "match_title": false,
+        "auto_split_title": false
+      },
+      "s1e2": {
+        "match_title": false,
+        "auto_split_title": false
+      },
+      "s1e3": {
+        "title": "Groot's\\n  Pursuit",
+        "match_title": false,
+        "auto_split_title": false
+      },
+      "s1e4": {
+        "title": "Groot Takes\\n  a Bath",
+        "match_title": false,
+        "auto_split_title": false
+      },
+      "s1e5": {
+        "match_title": false,
+        "auto_split_title": false
+      },
+      "s2e1": {
+        "title": "Are You\\n  My Groot?",
+        "match_title": false,
+        "auto_split_title": false
+      },
+      "s2e2": {
+        "title": "Groot Noses\\n  Around",
+        "match_title": false,
+        "auto_split_title": false
+      },
+      "s2e3": {
+        "title": "Groot's\\n  Snow Day",
+        "match_title": false,
+        "auto_split_title": false
+      },
+      "s2e4": {
+        "title": "Groot's\\n  Sweet Treat",
+        "match_title": false,
+        "auto_split_title": false
+      },
+      "s2e5": {
+        "title": "Groot and\\n  the Great\\n    Prophecy",
+        "match_title": false,
+        "auto_split_title": false
+      }
+    },
+    "templates": [],
+    "fonts": [
+      {
+        "name": "I Am Groot",
+        "color": "rgb(115, 207, 62)",
+        "delete_missing": true,
+        "file": "P22 Koch W00 Nueland.ttf"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/I/I Am Groot (2022)/0/preview.jpg",
+    "creator": "CollinHeist",
+    "description": [
+      "Olivier card with the official Font in green, and custom Title splits to match the official Title Cards."
+    ],
+    "created": "2023-09-24T03:24:41",
+    "series_full_name": "I Am Groot (2022)",
     "id": 0
   },
   {
