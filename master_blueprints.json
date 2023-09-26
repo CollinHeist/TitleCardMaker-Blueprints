@@ -3231,6 +3231,32 @@
   },
   {
     "series": {
+      "card_type": "standard",
+      "font_id": 0,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "The Bear",
+        "delete_missing": true,
+        "file": "HelveticaNeue_Bold.ttf",
+        "size": 1.25,
+        "title_case": "upper"
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/B/The Bear (2022)/1/preview.jpg",
+    "creator": "GrazedNutsack",
+    "description": [
+      "Simple \"Standard\" card type with a white \"HelveticaNeue Bold\" Font as the title text."
+    ],
+    "created": "2023-09-26T03:27:17",
+    "series_full_name": "The Bear (2022)",
+    "id": 1
+  },
+  {
+    "series": {
       "template_ids": [
         0
       ]
