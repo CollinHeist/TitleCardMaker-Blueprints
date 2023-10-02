@@ -31,6 +31,7 @@ class SeriesBase(BlueprintBase):
     season_title_values: list[str] = []
     extra_keys: list[str] = []
     extra_values: list[str] = []
+    skip_localized_images: Optional[bool] = None
 
     @root_validator(skip_on_failure=True)
     def validate_paired_lists(cls, values):
