@@ -8,6 +8,7 @@
     "extra_values": [
       "rgb(115, 207, 62)"
     ],
+    "skip_localized_images": true,
     "template_ids": []
   },
   "episodes": {
