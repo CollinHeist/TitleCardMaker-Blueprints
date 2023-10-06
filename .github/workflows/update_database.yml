@@ -1,4 +1,4 @@
-name: Build Blueprint and README Files
+name: Update the Database and README Files
 
 on:
   workflow_dispatch:
@@ -22,25 +22,9 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: (Python) Lint Blueprint Files
+      - name: (Python) Lint Blueprints, Update Database, Build Readmes
         run: |
-          python ./src/build/lint_blueprints.py
-
-      - name: (Python) Build Series Blueprint Files
-        run: |
-          python ./src/build/build_series_blueprints.py
-
-      # - name: (Python) Build Master Blueprint File
-      #   run: |
-      #     python ./src/build/build_master_blueprint.py
-
-      - name: (Python) Build Series README Files
-        run: |
-          python ./src/build/build_series_readme.py
-
-      - name: (Python) Build Master README Files
-        run: |
-          python ./src/build/build_master_readme.py
+          python entrypoint.py --lint-blueprints --update-database --build-readme
 
       - name: Commit Updated Blueprints
         run: |

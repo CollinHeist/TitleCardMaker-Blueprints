@@ -21,39 +21,44 @@ README_TABLE_ROW = '| `{blueprint_id}` | <img src="./{blueprint_id}/{preview_fil
 def format_count(count: int) -> str:
     return f'`{count}`' if count else '-'
 
-# Parse all Blueprints for all Series
-BLUEPRINT_FOLDER = Path(__file__).parent.parent.parent / 'blueprints'
-series_blueprints = {}
-for series_subfolder in BLUEPRINT_FOLDER.glob('*/*'):
-    # Read all Blueprints for this Series
-    blueprints: list[tuple[int, dict]] = []
-    for blueprint_file in series_blueprints.glob('*/blueprint.json'):
-        blueprint_number = int(blueprint_file.parent.name)
-        with blueprint_file.open('r') as file_handle:
-            # Parse JSON, skip if unable to parse
-            try:
-                blueprints.append((blueprint_number, json_load(file_handle)))
-            except JSONDecodeError:
+def build_series_readme():
+    # Parse all Blueprints for all Series
+    BLUEPRINT_FOLDER = Path(__file__).parent.parent.parent / 'blueprints'
+    series_blueprints = {}
+    for series_subfolder in BLUEPRINT_FOLDER.glob('*/*'):
+        # Read all Blueprints for this Series
+        blueprints: list[tuple[int, dict]] = []
+        for blueprint_file in series_blueprints.glob('*/blueprint.json'):
+            blueprint_number = int(blueprint_file.parent.name)
+            with blueprint_file.open('r') as file_handle:
+                # Parse JSON, skip if unable to parse
+                try:
+                    blueprints.append((blueprint_number, json_load(file_handle)))
+                except JSONDecodeError:
+                    continue
+
+        # Generate README for this Series
+        readme = README_TEMPLATE.format(
+            series_full_name=series_subfolder.name,
+            count=len(blueprints),
+        )
+        for blueprint_id, blueprint in blueprints:
+            if blueprint is None:
                 continue
 
-    # Generate README for this Series
-    readme = README_TEMPLATE.format(
-        series_full_name=series_subfolder.name,
-        count=len(blueprints),
-    )
-    for blueprint_id, blueprint in blueprints:
-        if blueprint is None:
-            continue
+            readme += '\n' + README_TABLE_ROW.format(
+                blueprint_id=blueprint_id,
+                preview_file=blueprint['previews'][0],
+                template_count=format_count(len(blueprint.get('templates', []))),
+                font_count=format_count(len(blueprint.get('fonts', []))),
+                episode_count=format_count(len(blueprint.get('episodes', []))),
+            )
+        # readme += README_FOOTER
 
-        readme += '\n' + README_TABLE_ROW.format(
-            blueprint_id=blueprint_id,
-            preview_file=blueprint['previews'][0],
-            template_count=format_count(len(blueprint.get('templates', []))),
-            font_count=format_count(len(blueprint.get('fonts', []))),
-            episode_count=format_count(len(blueprint.get('episodes', []))),
-        )
-    # readme += README_FOOTER
+        # Write README file for this Series
+        readme_file = series_subfolder / 'README.md'
+        readme_file.write_text(readme)
 
-    # Write README file for this Series
-    readme_file = series_subfolder / 'README.md'
-    readme_file.write_text(readme)
+
+if __name__ == '__main__':
+    build_series_readme()

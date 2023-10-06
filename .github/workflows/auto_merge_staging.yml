@@ -57,14 +57,14 @@ jobs:
     uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/resize_images.yml@master
     secrets: inherit
 
-  call-master-blueprint-workflow:
+  call-update-database-workflow:
     needs: [auto_merge, call-resize-images-workflow]
     if: ${{ needs.auto_merge.outputs.pr_number != 'NA' }}
-    uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/master_blueprint.yml@master
+    uses: CollinHeist/TitleCardMaker-Blueprints/.github/workflows/update_database.yml@master
     secrets: inherit
 
   merge-pull-request:
-    needs: [auto_merge, call-resize-images-workflow, call-master-blueprint-workflow]
+    needs: [auto_merge, call-resize-images-workflow, call-update-database-workflow]
     if: ${{ needs.auto_merge.outputs.pr_number != 'NA' }}
     runs-on: ubuntu-latest
     steps:

@@ -14,7 +14,7 @@ from database.db import db, Blueprint, Series
 BLUEPRINT_FOLDER = Path(__file__).parent.parent.parent / 'blueprints'
 
 
-def build_database() -> None:
+def update_database() -> None:
     for blueprint_file in BLUEPRINT_FOLDER.glob('*/*/*/blueprint.json'):
         blueprint_number = int(blueprint_file.parent.name)
         series_path_name = blueprint_file.parent.parent.name
@@ -58,4 +58,4 @@ def build_database() -> None:
 
 
 if __name__ == '__main__':
-    build_database()
+    update_database()
