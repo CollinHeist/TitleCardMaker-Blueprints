@@ -24,23 +24,23 @@ jobs:
 
       - name: (Python) Lint Blueprint Files
         run: |
-          python ./build/lint_blueprints.py
+          python ./src/build/lint_blueprints.py
 
       - name: (Python) Build Series Blueprint Files
         run: |
-          python ./build/build_series_blueprints.py
+          python ./src/build/build_series_blueprints.py
 
-      - name: (Python) Build Master Blueprint File
-        run: |
-          python ./build/build_master_blueprint.py
+      # - name: (Python) Build Master Blueprint File
+      #   run: |
+      #     python ./src/build/build_master_blueprint.py
 
       - name: (Python) Build Series README Files
         run: |
-          python ./build/build_series_readme.py
+          python ./src/build/build_series_readme.py
 
       - name: (Python) Build Master README Files
         run: |
-          python ./build/build_master_readme.py
+          python ./src/build/build_master_readme.py
 
       - name: Commit Updated Blueprints
         run: |

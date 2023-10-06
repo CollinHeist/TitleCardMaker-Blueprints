@@ -6,7 +6,8 @@ from typing import Iterator
 
 from models.models import Blueprint
 
-BLUEPRINT_FOLDER = Path(__file__).parent.parent / 'blueprints'
+
+BLUEPRINT_FOLDER = Path(__file__).parent.parent.parent / 'blueprints'
 
 # Non-tests
 

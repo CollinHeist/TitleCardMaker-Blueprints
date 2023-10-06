@@ -29,7 +29,7 @@ jobs:
 
       - name: (Python) Resize Images
         run: |
-          python ./build/resize_images.py
+          python ./src/build/resize_images.py
 
       - name: Commit Resized Images
         run: |
