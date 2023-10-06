@@ -167,7 +167,6 @@ def parse_submission(data: Optional[dict] = None) -> dict:
         'series_year': series_year,
         'database_ids': parse_database_ids(database_ids),
         'creator': creator,
-        'description': '\n'.join(description),
         'preview_url': preview_url,
         'font_zip_url': font_zip_url,
         'blueprint': blueprint | {
@@ -258,7 +257,7 @@ def parse_and_create_blueprint():
     series, blueprint = create_new_blueprint(
         submission['series_name'], submission['series_year'],
         fallback_path_name, submission['database_ids'], submission['creator'],
-        submission['description'], submission['blueprint'],
+        submission['blueprint'],
     )
 
     # Get the associated folder for this Series

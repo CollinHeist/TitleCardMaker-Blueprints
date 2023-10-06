@@ -48,7 +48,7 @@ class Blueprint(Base):
     blueprint_number = Column(Integer, nullable=False)
 
     creator = Column(String, nullable=False)
-    description = Column(String, nullable=False)
+    # description = Column(String, nullable=False)
     created = Column(DateTime, nullable=False, default=func.now())
     json = Column(String, nullable=False)
 
@@ -65,7 +65,6 @@ def create_new_blueprint(
         fallback_path_name: str,
         database_ids: dict,
         creator: str,
-        description: str,
         blueprint_json: str
     ) -> tuple[Series, Blueprint]:
     """
@@ -106,8 +105,7 @@ def create_new_blueprint(
 
     blueprint = Blueprint(
         series_id=series.id, blueprint_number=len(series.blueprints),
-        creator=creator, description=description,
-        created=created, json=dumps(blueprint_json),
+        creator=creator,  created=created, json=dumps(blueprint_json),
     )
     db.add(blueprint)
     db.commit()
