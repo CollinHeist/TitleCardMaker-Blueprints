@@ -14,6 +14,7 @@ from sys import exit as sys_exit
 
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
+
 DEFAULT_AVATAR_URL = (
     'https://raw.githubusercontent.com/CollinHeist/TitleCardMaker/master/'
     '.github/logo.png'

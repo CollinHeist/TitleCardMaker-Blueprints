@@ -41,21 +41,21 @@ def get_blueprint_folders(series_name: str) -> tuple[str, str]:
         series_name: Name of the Series.
 
     Returns:
-        Path-safe name with prefix a/an/the and any illegal characters
-        (e.g. '?', '|', '/', etc.) removed.
+        Tuple of the parent letter subfolder and the Path-safe name with
+        prefix a/an/the and any illegal characters removed.
     """
 
-    clean_name = str(series_name).translate(PATH_SAFE_TRANSLATION)
+    clean_name = str(series_name).translate(PATH_SAFE_TRANSLATION).lower()
     sort_name = re_sub(r'^(a|an|the)(\s)', '', clean_name, flags=IGNORECASE)
 
-    return sort_name[0].upper(), clean_name
+    return sort_name[0], clean_name
 
 # Tests
 
 class TestFolderOrganization:
     def test_subfolder_names(self):
         for folder in BLUEPRINT_FOLDER.glob('*'):
-            assert folder.name.upper() == folder.name, 'Folder Names Must Be Uppercase'
+            assert folder.name.lower() == folder.name, 'Folder Names Must Be Lowercase'
 
     def test_series_in_correct_subfolder(self):
         for series_folder in BLUEPRINT_FOLDER.glob('*/*'):

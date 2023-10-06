@@ -10,6 +10,7 @@ imagesize = "*"
 pillow = "*"
 pydantic = "==1.*"
 discord-webhook = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 

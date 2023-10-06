@@ -3,6 +3,7 @@ Python script to be called by a GitHub action.
 
 This script resizes all preview images to a size of 1920x1080.
 """
+
 from json import load as json_load, JSONDecodeError
 from pathlib import Path
 
