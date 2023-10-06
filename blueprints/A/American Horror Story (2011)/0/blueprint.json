@@ -43,12 +43,14 @@
       "title_case": "title"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "azuravian",
   "description": [
     "Blueprint for American Horror Story based on the Overline card type:",
     "Uses AHS font.",
     "Season titles replaced."
   ],
-  "created": "2023-09-09T22:05:00"
+  "created": "2023-09-09T22:05:00",
+  "previews": [
+    "preview.jpg"
+  ]
 }

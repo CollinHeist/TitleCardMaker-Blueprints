@@ -223,10 +223,12 @@
       "vertical_shift": -10
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Standard card type in the Series font. Custom season and episode text is used for the multi-part Episodes (e.g. Stakes, Islands, Elements, etc.)."
   ],
-  "created": "2023-08-31T04:35:59"
+  "created": "2023-08-31T04:35:59",
+  "previews": [
+    "preview.jpg"
+  ]
 }

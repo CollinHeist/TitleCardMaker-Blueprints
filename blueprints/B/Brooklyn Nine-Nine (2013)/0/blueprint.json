@@ -22,10 +22,12 @@
       "vertical_shift": -10
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Tinted Frame card type using Impact in the Series' yellow as the title text."
   ],
-  "created": "2023-08-07T03:25:44"
+  "created": "2023-08-07T03:25:44",
+  "previews": [
+    "preview.jpg"
+  ]
 }

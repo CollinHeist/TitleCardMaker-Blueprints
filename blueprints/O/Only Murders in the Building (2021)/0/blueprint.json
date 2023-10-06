@@ -3,7 +3,6 @@
     "Frame card type with the series font and coloring for the title and episode text.",
     "Updated with a new version of Cygnet Regular which has some (previously) missing punctuation characters."
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "series": {
     "font_id": 0,
@@ -30,5 +29,8 @@
       "delete_missing": true
     }
   ],
-  "created": "2023-09-09T10:42:30"
+  "created": "2023-09-09T10:42:30",
+  "previews": [
+    "preview.jpg"
+  ]
 }

@@ -18,6 +18,8 @@
     "Standard card format using FF Blur font"
   ],
   "creator": "rtgurley",
-  "preview": "preview.jpg",
-  "created": "2023-08-06T00:00:00"
+  "created": "2023-08-06T00:00:00",
+  "previews": [
+    "preview.jpg"
+  ]
 }

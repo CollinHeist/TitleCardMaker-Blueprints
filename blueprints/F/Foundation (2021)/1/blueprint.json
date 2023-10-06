@@ -13,10 +13,12 @@
       "file": "FoundationTitlesHand-SemiBold-v0.85.ttf"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "GrazedNutsack",
   "description": [
     "Simple \"Standard\" card type with a white \"Foundation\" font as the episode text."
   ],
-  "created": "2023-09-21T14:49:33"
+  "created": "2023-09-21T14:49:33",
+  "previews": [
+    "preview.jpg"
+  ]
 }

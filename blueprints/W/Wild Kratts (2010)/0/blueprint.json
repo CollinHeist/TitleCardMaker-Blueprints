@@ -14,10 +14,12 @@
       "file": "BADABB__.TTF"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "rtgurley",
   "description": [
     "Anime card type with custom font"
   ],
-  "created": "2023-08-11T16:41:39"
+  "created": "2023-08-11T16:41:39",
+  "previews": [
+    "preview.jpg"
+  ]
 }

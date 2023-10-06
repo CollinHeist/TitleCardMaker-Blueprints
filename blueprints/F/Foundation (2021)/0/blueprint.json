@@ -2,7 +2,6 @@
   "description": [
     "Tinted Frame card using the Series font and no season titles."
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "series": {
     "font_id": 0,
@@ -20,5 +19,8 @@
       "delete_missing": true
     }
   ],
-  "created": "2023-08-06T00:00:00"
+  "created": "2023-08-06T00:00:00",
+  "previews": [
+    "preview.jpg"
+  ]
 }

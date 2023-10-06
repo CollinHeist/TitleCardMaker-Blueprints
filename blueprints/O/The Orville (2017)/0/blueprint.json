@@ -14,10 +14,12 @@
       "file": "space age.ttf"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Starwars card associated with Space Age Font in nearly white to blue color."
   ],
-  "created": "2023-08-11T13:19:29"
+  "created": "2023-08-11T13:19:29",
+  "previews": [
+    "preview.jpg"
+  ]
 }

@@ -205,11 +205,13 @@
   },
   "templates": [],
   "fonts": [],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Anime card type with custom season titles for season 2 and 3. A smaller font size to accommodate the very long Episode titles, and each title is manually split at each part.",
     "The episode text is colored red, and the Episodes for the movie are labeled as part 1-4."
   ],
-  "created": "2023-08-07T20:25:34"
+  "created": "2023-08-07T20:25:34",
+  "previews": [
+    "preview.jpg"
+  ]
 }

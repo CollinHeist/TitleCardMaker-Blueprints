@@ -29,10 +29,12 @@
       "title_case": "upper"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "azuravian",
   "description": [
     "Frame title card using the Zilla Slab font (similar to the proprietary Yellowstone font) in the color of the series logo."
   ],
-  "created": "2023-08-08T19:50:47"
+  "created": "2023-08-08T19:50:47",
+  "previews": [
+    "preview.jpg"
+  ]
 }

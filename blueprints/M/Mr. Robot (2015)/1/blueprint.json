@@ -2,7 +2,6 @@
   "description": [
     "Olivier card type with thematic episode text."
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "series": {
     "card_type": "olivier",
@@ -18,5 +17,8 @@
   "episodes": {},
   "templates": [],
   "fonts": [],
-  "created": "2023-08-06T00:00:00"
+  "created": "2023-08-06T00:00:00",
+  "previews": [
+    "preview.jpg"
+  ]
 }

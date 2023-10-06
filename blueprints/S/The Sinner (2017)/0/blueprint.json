@@ -19,10 +19,12 @@
   "episodes": {},
   "templates": [],
   "fonts": [],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Tinted Frame card type with the episode text hidden (as it's the same as the Episode titles), and \"Cora\", \"Julian\", \"Jamie\", and \"Percy\" used for the season titles."
   ],
-  "created": "2023-08-08T00:27:51"
+  "created": "2023-08-08T00:27:51",
+  "previews": [
+    "preview.jpg"
+  ]
 }

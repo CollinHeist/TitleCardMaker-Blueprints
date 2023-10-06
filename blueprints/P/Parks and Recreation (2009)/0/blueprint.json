@@ -24,10 +24,12 @@
       "vertical_shift": -20
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Standard card type with the Series' font used for the title text."
   ],
-  "created": "2023-08-07T03:07:34"
+  "created": "2023-08-07T03:07:34",
+  "previews": [
+    "preview.jpg"
+  ]
 }

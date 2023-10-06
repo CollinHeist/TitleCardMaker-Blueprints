@@ -33,10 +33,12 @@
       "title_case": "source"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Standard card type with an orange Scooby-Doo font and \"Mystery\" as the episode text. Custom season titles are used to represent the originally aired Episode segments."
   ],
-  "created": "2023-09-16T19:19:55"
+  "created": "2023-09-16T19:19:55",
+  "previews": [
+    "preview.jpg"
+  ]
 }

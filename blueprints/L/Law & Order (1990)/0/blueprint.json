@@ -13,10 +13,12 @@
       "file": "Friz_Quadrata_Std_Medium.otf"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "rtgurley",
   "description": [
     "Standard card type with custom font"
   ],
-  "created": "2023-08-11T16:46:47"
+  "created": "2023-08-11T16:46:47",
+  "previews": [
+    "preview.jpg"
+  ]
 }

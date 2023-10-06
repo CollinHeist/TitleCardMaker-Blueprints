@@ -15,10 +15,12 @@
       "vertical_shift": 9
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Fade card & Wednesday font."
   ],
-  "created": "2023-08-11T16:41:11"
+  "created": "2023-08-11T16:41:11",
+  "previews": [
+    "preview.jpg"
+  ]
 }

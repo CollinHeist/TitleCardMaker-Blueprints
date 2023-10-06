@@ -70,10 +70,12 @@
       "file": "P22 Koch W00 Nueland.ttf"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Olivier card with the official Font in green, and custom Title splits to match the official Title Cards."
   ],
-  "created": "2023-09-24T03:24:41"
+  "created": "2023-09-24T03:24:41",
+  "previews": [
+    "preview.jpg"
+  ]
 }

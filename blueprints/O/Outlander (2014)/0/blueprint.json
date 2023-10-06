@@ -23,10 +23,12 @@
       "size": 1.2
     }
   ],
-  "preview": "preview.jpg",
   "creator": "Departed",
   "description": [
     "Tinted Frame card type with logo on top and episode title on bottom. Uses a font to match the series logo."
   ],
-  "created": "2023-08-13T16:14:02"
+  "created": "2023-08-13T16:14:02",
+  "previews": [
+    "preview.jpg"
+  ]
 }

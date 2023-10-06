@@ -13,10 +13,12 @@
       "file": "News Gothic Condensed Bold.otf"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Tinted Frame card with News Gothic Condensed Bold font in white."
   ],
-  "created": "2023-08-11T13:19:08"
+  "created": "2023-08-11T13:19:08",
+  "previews": [
+    "preview.jpg"
+  ]
 }

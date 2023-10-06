@@ -25,10 +25,12 @@
       "kerning": 0.4
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Landscape card with custom text matching the Series logo / opening (Trajan Bold)."
   ],
-  "created": "2023-08-18T03:10:53"
+  "created": "2023-08-18T03:10:53",
+  "previews": [
+    "preview.jpg"
+  ]
 }

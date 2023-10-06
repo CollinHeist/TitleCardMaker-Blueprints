@@ -23,10 +23,12 @@
       "vertical_shift": -20
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Standard card type using the Series font color and stroke."
   ],
-  "created": "2023-08-13T20:33:03"
+  "created": "2023-08-13T20:33:03",
+  "previews": [
+    "preview.jpg"
+  ]
 }

@@ -16,10 +16,12 @@
       "title_case": "title"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Divider Card and \"Rough Typewriter\" font in yellow."
   ],
-  "created": "2023-08-10T17:47:08"
+  "created": "2023-08-10T17:47:08",
+  "previews": [
+    "preview.jpg"
+  ]
 }

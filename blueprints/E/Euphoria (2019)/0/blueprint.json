@@ -18,10 +18,12 @@
       "vertical_shift": -160
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Tinted Card used with the font \"Work Sans Extra Light\" in lower case (free to use)."
   ],
-  "created": "2023-08-11T01:34:33"
+  "created": "2023-08-11T01:34:33",
+  "previews": [
+    "preview.jpg"
+  ]
 }

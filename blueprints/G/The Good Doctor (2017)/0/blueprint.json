@@ -15,10 +15,12 @@
       "title_case": "title"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Olivier Card and FF Din font in bold, colored"
   ],
-  "created": "2023-08-10T17:46:32"
+  "created": "2023-08-10T17:46:32",
+  "previews": [
+    "preview.jpg"
+  ]
 }

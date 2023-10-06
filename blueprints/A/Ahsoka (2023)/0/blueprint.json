@@ -40,10 +40,12 @@
   },
   "templates": [],
   "fonts": [],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Star Wars card type with \"Part\" removed from the titles and placed into the episode text."
   ],
-  "created": "2023-10-04T22:48:09"
+  "created": "2023-10-04T22:48:09",
+  "previews": [
+    "preview.jpg"
+  ]
 }

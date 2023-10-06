@@ -14,10 +14,12 @@
       "stroke_width": 0.25
     }
   ],
-  "preview": "preview.jpg",
   "creator": "rtgurley",
   "description": [
     "Standard format card using the Boul Mich Regular font"
   ],
-  "created": "2023-08-06T00:00:00"
+  "created": "2023-08-06T00:00:00",
+  "previews": [
+    "preview.jpg"
+  ]
 }

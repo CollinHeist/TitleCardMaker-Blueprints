@@ -40,10 +40,12 @@
       "title_case": "source"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Anime card with arc season titles, Japanese Kanji, and the custom Series Font."
   ],
-  "created": "2023-09-24T03:55:21"
+  "created": "2023-09-24T03:55:21",
+  "previews": [
+    "preview.jpg"
+  ]
 }

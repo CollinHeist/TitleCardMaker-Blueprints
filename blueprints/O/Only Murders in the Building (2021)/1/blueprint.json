@@ -2,7 +2,6 @@
   "description": [
     "Olivier card type with the series font and coloring for the title text."
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "series": {
     "font_id": 0,
@@ -23,5 +22,8 @@
       "vertical_shift": 10
     }
   ],
-  "created": "2023-08-06T00:00:00"
+  "created": "2023-08-06T00:00:00",
+  "previews": [
+    "preview.jpg"
+  ]
 }

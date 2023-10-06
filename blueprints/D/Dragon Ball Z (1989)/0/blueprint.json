@@ -68,11 +68,13 @@
       "title_case": "source"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Anime card type with the arc season titles, absolute episode numbering, and the Saiyan Sans Font (I modified to include some special characters) colored yellow and red.",
     "Kanji is not added because of the spacing on the custom font."
   ],
-  "created": "2023-08-26T18:51:39"
+  "created": "2023-08-26T18:51:39",
+  "previews": [
+    "preview.jpg"
+  ]
 }

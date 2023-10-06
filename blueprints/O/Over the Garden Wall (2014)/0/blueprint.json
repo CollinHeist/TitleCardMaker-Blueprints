@@ -2,7 +2,6 @@
   "description": [
     "Tinted Frame card with the Series logo font and color, using 'Chapter' formatted episode text."
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "series": {
     "font_id": 0,
@@ -24,5 +23,8 @@
       "delete_missing": true
     }
   ],
-  "created": "2023-08-06T00:00:00"
+  "created": "2023-08-06T00:00:00",
+  "previews": [
+    "preview.jpg"
+  ]
 }

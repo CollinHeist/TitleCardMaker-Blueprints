@@ -35,6 +35,8 @@
   "description": [
     "Standard card type using the Series font."
   ],
-  "preview": "preview.jpg",
-  "created": "2023-08-07T23:57:22"
+  "created": "2023-08-07T23:57:22",
+  "previews": [
+    "preview.jpg"
+  ]
 }

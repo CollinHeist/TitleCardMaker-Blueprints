@@ -17,10 +17,12 @@
       "stroke_width": 0.7
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Standard card type with the Series font in blue. Season text is hidden."
   ],
-  "created": "2023-09-01T03:31:41"
+  "created": "2023-09-01T03:31:41",
+  "previews": [
+    "preview.jpg"
+  ]
 }

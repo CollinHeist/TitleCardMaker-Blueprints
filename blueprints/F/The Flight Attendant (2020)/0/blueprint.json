@@ -13,10 +13,12 @@
       "file": "flight-attendant.otf"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "rtgurley",
   "description": [
     "Standard format with custom font"
   ],
-  "created": "2023-08-11T20:51:47"
+  "created": "2023-08-11T20:51:47",
+  "previews": [
+    "preview.jpg"
+  ]
 }

@@ -26,10 +26,12 @@
       "file": "Mountain Brilliant.ttf"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "azuravian",
   "description": [
     "Landscape card with a darkened bounding box using a script font."
   ],
-  "created": "2023-08-24T04:38:17"
+  "created": "2023-08-24T04:38:17",
+  "previews": [
+    "preview.jpg"
+  ]
 }

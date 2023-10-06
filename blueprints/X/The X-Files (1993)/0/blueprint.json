@@ -76,10 +76,12 @@
   },
   "templates": [],
   "fonts": [],
-  "preview": "preview.jpg",
   "creator": "azuravian",
   "description": [
     "Uses the Retro card with multiple episode titles edited to include the associated X-Files case number in square brackets after the episode title."
   ],
-  "created": "2023-08-09T05:07:26"
+  "created": "2023-08-09T05:07:26",
+  "previews": [
+    "preview.jpg"
+  ]
 }

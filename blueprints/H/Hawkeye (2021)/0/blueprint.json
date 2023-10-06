@@ -18,10 +18,12 @@
       "vertical_shift": 50
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Olivier Card using howbai font in yellow as per TV show."
   ],
-  "created": "2023-08-11T13:17:22"
+  "created": "2023-08-11T13:17:22",
+  "previews": [
+    "preview.jpg"
+  ]
 }

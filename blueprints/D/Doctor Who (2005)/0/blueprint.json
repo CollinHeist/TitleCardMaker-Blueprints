@@ -206,7 +206,6 @@
       "vertical_shift": -4
     }
   ],
-  "preview": "preview.jpg",
   "creator": "Ziggy73701",
   "description": [
     "Tinted frame. Each \"Doctor\" having there own logo and frame colour to match, font as closely matched to episode name title card as possible. Specials have a generic DW logo and white frame.",
@@ -214,5 +213,8 @@
     "You will need to unpack the contents in to your source folder for this series. It wont overwrite any files unless you have previously set season logos.",
     "Will update for next season once its shown (logo is included but no font yet)."
   ],
-  "created": "2023-09-12T16:10:22"
+  "created": "2023-09-12T16:10:22",
+  "previews": [
+    "preview.jpg"
+  ]
 }

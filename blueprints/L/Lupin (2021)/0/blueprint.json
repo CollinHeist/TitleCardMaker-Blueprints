@@ -18,10 +18,12 @@
       "title_case": "upper"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Oliver card with SansThirteenBlack font (Offical one is Titling Gothic FB Std Compressed Black font not free of charge) with the right orange color."
   ],
-  "created": "2023-08-14T16:57:57"
+  "created": "2023-08-14T16:57:57",
+  "previews": [
+    "preview.jpg"
+  ]
 }

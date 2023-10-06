@@ -16,11 +16,13 @@
   "episodes": {},
   "templates": [],
   "fonts": [],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Comic Book card with randomized banner angles for the title and index text.",
     "The banners are colored to match the Luke Cage yellow, as well as the other DC / Marvel Series in this style."
   ],
-  "created": "2023-08-08T19:53:55"
+  "created": "2023-08-08T19:53:55",
+  "previews": [
+    "preview.jpg"
+  ]
 }

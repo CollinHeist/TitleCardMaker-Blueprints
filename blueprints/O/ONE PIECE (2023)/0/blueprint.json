@@ -1,7 +1,8 @@
 {
   "series": {
     "font_id": 0,
-    "card_type": "anime",
+    "card_type": "standard",
+    "hide_season_text": true,
     "template_ids": []
   },
   "episodes": {},
@@ -9,17 +10,19 @@
   "fonts": [
     {
       "name": "One Piece",
-      "color": "rgb(0, 87, 137)",
+      "color": "rgb(98,155,211)",
       "delete_missing": true,
       "file": "one piece font.ttf",
-      "size": 1.5,
-      "title_case": "upper"
+      "size": 1.15,
+      "stroke_width": 0.7
     }
   ],
-  "preview": "preview.jpg",
-  "creator": "azuravian",
+  "creator": "CollinHeist",
   "description": [
-    "Blueprint for the Live Action ONEPIECE series on Netflix.  Uses the font from the original manga in the blue from the ONEPIECE logo."
+    "Standard card type with the Series font in blue. Season text is hidden."
   ],
-  "created": "2023-09-09T22:04:25"
+  "created": "2023-09-01T03:31:41",
+  "previews": [
+    "preview.jpg"
+  ]
 }

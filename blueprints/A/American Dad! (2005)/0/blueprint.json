@@ -18,10 +18,12 @@
       "vertical_shift": -20
     }
   ],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Standard card type using the Series font in the title-red color. The red can be hard to read on smaller screens, but white works well."
   ],
-  "created": "2023-08-06T00:00:00"
+  "created": "2023-08-06T00:00:00",
+  "previews": [
+    "preview.jpg"
+  ]
 }

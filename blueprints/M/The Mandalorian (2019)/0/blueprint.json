@@ -17,10 +17,12 @@
       "title_case": "upper"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Starwars Card and its white Iconian Font."
   ],
-  "created": "2023-08-10T17:46:07"
+  "created": "2023-08-10T17:46:07",
+  "previews": [
+    "preview.jpg"
+  ]
 }

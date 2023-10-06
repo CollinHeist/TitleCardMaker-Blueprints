@@ -13,10 +13,12 @@
       "file": "YOU.ttf"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "rtgurley",
   "description": [
     "Standard Card layout with a replica of the YOU font"
   ],
-  "created": "2023-08-09T03:03:35"
+  "created": "2023-08-09T03:03:35",
+  "previews": [
+    "preview.jpg"
+  ]
 }

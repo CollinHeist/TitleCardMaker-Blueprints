@@ -20,11 +20,13 @@
   },
   "templates": [],
   "fonts": [],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Anime card type with Japanese translations, and absolute episode numbering.",
     "The \"Eris the Goblin Slayer\" and \"Guardian Fitz\" OVAs/Specials are numbered where they take place chronologically."
   ],
-  "created": "2023-08-06T00:00:00"
+  "created": "2023-08-06T00:00:00",
+  "previews": [
+    "preview.jpg"
+  ]
 }

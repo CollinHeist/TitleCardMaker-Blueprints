@@ -13,10 +13,12 @@
   "episodes": {},
   "templates": [],
   "fonts": [],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Olivier card with green episode text."
   ],
-  "created": "2023-09-04T02:45:02"
+  "created": "2023-09-04T02:45:02",
+  "previews": [
+    "preview.jpg"
+  ]
 }

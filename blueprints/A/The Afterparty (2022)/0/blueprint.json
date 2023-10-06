@@ -21,10 +21,12 @@
   "episodes": {},
   "templates": [],
   "fonts": [],
-  "preview": "preview.jpg",
   "creator": "CollinHeist",
   "description": [
     "Tinted Glass card with \"Xavier\" and \"Edgar\" (the season victim) used as the season titles, and the episode number written as one, two, etc."
   ],
-  "created": "2023-09-04T02:31:08"
+  "created": "2023-09-04T02:31:08",
+  "previews": [
+    "preview.jpg"
+  ]
 }

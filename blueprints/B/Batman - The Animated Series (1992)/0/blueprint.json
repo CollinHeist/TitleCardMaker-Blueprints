@@ -16,10 +16,12 @@
       "title_case": "lower"
     }
   ],
-  "preview": "preview.jpg",
   "creator": "Dante2202",
   "description": [
     "Batman: The Animated Series title cards, matches Batman font used."
   ],
-  "created": "2023-08-30T00:37:52"
+  "created": "2023-08-30T00:37:52",
+  "previews": [
+    "preview.jpg"
+  ]
 }

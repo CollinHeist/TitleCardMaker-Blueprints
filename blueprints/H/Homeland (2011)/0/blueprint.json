@@ -18,10 +18,12 @@
       "vertical_shift": 30
     }
   ],
-  "preview": "preview.jpg",
   "creator": "flowcool",
   "description": [
     "Olivier card associated with Coalition Font in orange."
   ],
-  "created": "2023-08-11T16:42:39"
+  "created": "2023-08-11T16:42:39",
+  "previews": [
+    "preview.jpg"
+  ]
 }
