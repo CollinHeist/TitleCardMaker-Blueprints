@@ -22,6 +22,7 @@ db = SessionLocal()
 # Create a base class for declarative table definitions
 Base = declarative_base()
 
+
 # SQL Tables
 class Series(Base):
     __tablename__ = 'series'
@@ -29,6 +30,7 @@ class Series(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     year = Column(Integer, nullable=False)
+    path_name = Column(String, nullable=False)
 
     # Database arguments
     imdb_id = Column(String, default=None)
@@ -43,6 +45,7 @@ class Blueprint(Base):
 
     id = Column(Integer, primary_key=True)
     series_id = Column(Integer, ForeignKey('series.id'))
+    blueprint_number = Column(Integer, nullable=False)
 
     creator = Column(String, nullable=False)
     description = Column(String, nullable=False)
@@ -59,6 +62,7 @@ Base.metadata.create_all(engine, checkfirst=True)
 def create_new_blueprint(
         series_name: str,
         series_year: int,
+        fallback_path_name: str,
         database_ids: dict,
         creator: str,
         description: str,
@@ -87,7 +91,10 @@ def create_new_blueprint(
     # If not found, create new Series
     if not series:
         ids = {f'{id_type}_id': id_ for id_type, id_ in database_ids.items()}
-        series = Series(name=series_name, year=series_year, **ids)
+        series = Series(
+            name=series_name, year=series_year, path_name=fallback_path_name,
+            **ids
+        )
         db.add(series)
         db.commit()
         print(f'Added {series_name} ({series_year}) to Database as Series[{series.id}]')
@@ -98,7 +105,8 @@ def create_new_blueprint(
         created = datetime.strptime(created, '%Y-%m-%dT%H:%M:%S')
 
     blueprint = Blueprint(
-        series_id=series.id, creator=creator, description=description,
+        series_id=series.id, blueprint_number=len(series.blueprints),
+        creator=creator, description=description,
         created=created, json=dumps(blueprint_json),
     )
     db.add(blueprint)

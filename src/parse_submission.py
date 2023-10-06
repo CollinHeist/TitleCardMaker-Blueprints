@@ -252,9 +252,12 @@ def parse_and_create_blueprint():
 
     # Parse submission, get associated Series and Blueprint SQL objects
     submission = parse_submission()
+    fallback_path_name = get_blueprint_folders(
+        f'{submission["series_name"]} ({submission["series_year"]})'
+    )[1]
     series, blueprint = create_new_blueprint(
         submission['series_name'], submission['series_year'],
-        submission['database_ids'], submission['creator'],
+        fallback_path_name, submission['database_ids'], submission['creator'],
         submission['description'], submission['blueprint'],
     )
 
@@ -266,15 +269,15 @@ def parse_and_create_blueprint():
     series_subfolder.mkdir(exist_ok=True, parents=True)
 
     # Create Blueprint ID folder
-    blueprint_subfolder = series_subfolder / str(blueprint.id)
+    blueprint_subfolder = series_subfolder / str(blueprint.blueprint_number)
     blueprint_subfolder.mkdir(exist_ok=True, parents=True)
-    print(f'Created blueprints/{letter}/{folder_name}/{blueprint.id}')
+    print(f'Created blueprints/{letter}/{folder_name}/{blueprint.blueprint_number}')
 
     # Download preview
     download_preview(submission['preview_url'], blueprint_subfolder)
 
     # Add preview image to blueprint
-    submission['blueprint']['preview'] = 'preview.jpg'
+    submission['blueprint']['preview'] = ['preview.jpg']
 
     # Download any font zip files if provided
     download_font_files(submission['font_zip_url'], blueprint_subfolder)
@@ -286,7 +289,7 @@ def parse_and_create_blueprint():
     blueprint_file = blueprint_subfolder / 'blueprint.json'
     with blueprint_file.open('w') as file_handle:
         json_dump(submission['blueprint'], file_handle, indent=2)
-    print(f'Wrote Blueprint at blueprints/{letter}/{folder_name}/{blueprint.id}/blueprint.json')
+    print(f'Wrote Blueprint at blueprints/{letter}/{folder_name}/{blueprint.blueprint_number}/blueprint.json')
 
 
 def _import_existing_blueprints():
