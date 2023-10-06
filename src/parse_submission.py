@@ -63,12 +63,20 @@ def get_blueprint_folders(series_name: str) -> tuple[str, str]:
 
 def parse_database_ids(ids: str) -> dict:
     """
-    
+    Parse the given database ID strings into a dictionary of database
+    IDs.
+
+    >>> parse_database_ids('imdb:tt1234')
+    {'imdb': 'tt1234'}
+    >>> parse_database_ids('imdb:tt9876,tmdb:1234')
+    {'imdb': 'tt9876', 'tmdb': 1234}
     """
 
-    if '_No response_' in ids:
+    # No IDs specified, return empty dictionary
+    if '_No response_' in ids or not ids:
         return {}
 
+    # Parse each comma-separated ID
     database_ids = {}
     for id_substr in ids.split(','):
         try:
@@ -77,6 +85,7 @@ def parse_database_ids(ids: str) -> dict:
             print(f'Invalid database IDs {exc}')
             continue
 
+        # Store as int if all digits, otherwise str
         database_ids[id_type] = int(id_) if id_.isdigit() else id_
 
     return database_ids
@@ -86,6 +95,13 @@ def parse_submission(data: Optional[dict] = None) -> dict:
     """
     Parse the submission from the `ISSUE_BODY` and `ISSUE_CREATOR`
     environment variables into a dictionary of submission data.
+
+    Args:
+        data: Data set to use instead of the environment variable. For
+            manual importing.
+
+    Returns:
+        Data (as a dictionary) of the given submission.
     """
 
     # Parse issue from environment variable
@@ -163,7 +179,13 @@ def parse_submission(data: Optional[dict] = None) -> dict:
 
 def download_preview(url: str, blueprint_subfolder: Path):
     """
-    
+    Download the preview image at the given URL and write it to the
+    Blueprint folder. This writes the image as `preview.jpg`.
+
+    Args:
+        url: URL to the preview file to download.
+        blueprint_subfolder: Subfolder of the Blueprint to download the
+            preview file into.
     """
 
     # Download preview
@@ -181,7 +203,13 @@ def download_preview(url: str, blueprint_subfolder: Path):
 
 def download_font_files(zip_url: str, blueprint_subfolder: Path) -> None:
     """
-    
+    Download any font files in the ZIP located at the given URL and
+    write them in the given Blueprint folder.
+
+    Args:
+        zip_url: URL to the Font zip file to download.
+        blueprint_subfolder: Subfolder of the Blueprint to download
+            these Font files into.
     """
 
     # Download any font zip files if provided
@@ -215,9 +243,11 @@ def download_font_files(zip_url: str, blueprint_subfolder: Path) -> None:
             # print(f'Copied [zip]/{file.name} into blueprints/{letter}/{folder_name}/{id_}/{file.name}')
 
 
-def parse_and_create_submission():
+def parse_and_create_blueprint():
     """
-    
+    Parse the Blueprint submission from the environment variables, add
+    the resulting Series and Blueprint to the Blueprints database, and
+    write the Blueprint files to the appropriate Blueprint subfolder(s).
     """
 
     # Parse submission, get associated Series and Blueprint SQL objects
@@ -259,9 +289,12 @@ def parse_and_create_submission():
     print(f'Wrote Blueprint at blueprints/{letter}/{folder_name}/{blueprint.id}/blueprint.json')
 
 
-# File is entrypoint
-if __name__ == '__main__':
-    # parse_and_create_submission()
+def _import_existing_blueprints():
+    """
+    Import any existing Blueprints and add them to the Database. This is
+    purely a transition function, not intended for workflow execution.    
+    """
+
     from json import load, dumps
     for series_folder in (Path(__file__).parent.parent / 'blueprints').glob('*/*'):
         for blueprint_folder in series_folder.glob('*'):
@@ -289,3 +322,8 @@ if __name__ == '__main__':
                 submission['database_ids'], submission['creator'],
                 submission['description'], submission['blueprint'],
             )
+
+
+# File is entrypoint
+if __name__ == '__main__':
+    parse_and_create_blueprint()
