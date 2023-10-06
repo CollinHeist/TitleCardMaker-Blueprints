@@ -38,13 +38,13 @@ jobs:
           ISSUE_CREATOR: '${{ github.event.issue.user.login }}'
           # ISSUE_JSON: '${{ steps.parse_issue.outputs.parsed-issue }}'
         run: |
-          python ./src/build/parse_submission.py
+          python ./src/parse_submission.py
       
       - name: Run Pytest, write summary to workflow
         if: always()
         uses: dariocurr/pytest-summary@main
         with:
-          paths: tests
+          paths: src/tests
           options: --quiet 
           show: fail
 
