@@ -17,7 +17,7 @@ from typing import Optional
 
 from requests import get
 
-from database.db import create_new_blueprint
+from src.database.db import create_new_blueprint
 
 
 ROOT = Path(__file__).parent.parent

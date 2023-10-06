@@ -48,7 +48,6 @@ class Blueprint(Base):
     blueprint_number = Column(Integer, nullable=False)
 
     creator = Column(String, nullable=False)
-    # description = Column(String, nullable=False)
     created = Column(DateTime, nullable=False, default=func.now())
     json = Column(String, nullable=False)
 
