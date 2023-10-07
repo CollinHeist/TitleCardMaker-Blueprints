@@ -64,7 +64,7 @@ def create_new_blueprint(
         fallback_path_name: str,
         database_ids: dict,
         creator: str,
-        blueprint_json: str
+        blueprint_json: str,
     ) -> tuple[Series, Blueprint]:
     """
     Create a Blueprint (and optionally a Series) for the given data.
@@ -104,7 +104,7 @@ def create_new_blueprint(
 
     blueprint = Blueprint(
         series_id=series.id, blueprint_number=len(series.blueprints),
-        creator=creator,  created=created, json=dumps(blueprint_json),
+        creator=creator, created=created, json=dumps(blueprint_json),
     )
     db.add(blueprint)
     db.commit()
