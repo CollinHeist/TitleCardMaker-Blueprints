@@ -3314,6 +3314,33 @@
   },
   {
     "series": {
+      "card_type": "standard",
+      "font_id": 0,
+      "template_ids": []
+    },
+    "episodes": {},
+    "templates": [],
+    "fonts": [
+      {
+        "name": "Game of Thrones",
+        "color": "#FFF190",
+        "delete_missing": true,
+        "file": "Trajan Pro Bold.ttf",
+        "kerning": 10.0,
+        "size": 0.9
+      }
+    ],
+    "preview": "https://github.com/CollinHeist/TitleCardMaker-Blueprints/raw/master/blueprints/G/Game of Thrones (2011)/1/preview.jpg",
+    "creator": "GrazedNutsack",
+    "description": [
+      "Simple \"Standard\" card type with a 'Yellow' (Flavescent - #FFF190) \"Trajan Pro Bold\" Font as the title text."
+    ],
+    "created": "2023-10-09T18:22:12",
+    "series_full_name": "Game of Thrones (2011)",
+    "id": 1
+  },
+  {
+    "series": {
       "card_type": "overline",
       "extra_keys": [
         "line_color"
