@@ -6430,7 +6430,6 @@
     "series": {
       "font_id": 0,
       "card_type": "anime",
-      "episode_text_format": "Episode {absolute_number}",
       "translations": [
         {
           "language_code": "ja",
@@ -6554,6 +6553,30 @@
       ]
     },
     "episodes": {
+      "s0e1": {
+        "episode_text": "Movie 4"
+      },
+      "s0e2": {
+        "episode_text": "Movie 5"
+      },
+      "s0e3": {
+        "episode_text": "Movie 6"
+      },
+      "s0e4": {
+        "episode_text": "Movie 7"
+      },
+      "s0e7": {
+        "episode_text": "Movie 8"
+      },
+      "s0e10": {
+        "episode_text": "Movie 9"
+      },
+      "s0e12": {
+        "episode_text": "Movie 10"
+      },
+      "s0e13": {
+        "episode_text": "Movie 11"
+      },
       "s20e1": {
         "title": "The Tale of Naruto the Hero - The Loser Ninja"
       },
