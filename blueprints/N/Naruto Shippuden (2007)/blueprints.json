@@ -3,7 +3,6 @@
     "series": {
       "font_id": 0,
       "card_type": "anime",
-      "episode_text_format": "Episode {absolute_number}",
       "translations": [
         {
           "language_code": "ja",
