@@ -2,7 +2,6 @@
   "series": {
     "font_id": 0,
     "card_type": "anime",
-    "episode_text_format": "Episode {absolute_number}",
     "translations": [
       {
         "language_code": "ja",
@@ -126,122 +125,29 @@
     ]
   },
   "episodes": {
-    "s20e1": {
-      "title": "The Tale of Naruto the Hero - The Loser Ninja"
+    "s0e1": {
+      "episode_text": "Movie 4"
     },
-    "s20e2": {
-      "title": "The Tale of Naruto the Hero - The Search Mission"
+    "s0e2": {
+      "episode_text": "Movie 5"
     },
-    "s20e3": {
-      "title": "The Tale of Naruto the Hero - Team Jiraiya"
+    "s0e3": {
+      "episode_text": "Movie 6"
     },
-    "s20e4": {
-      "title": "The Tale of Naruto the Hero - Order of Priority"
+    "s0e4": {
+      "episode_text": "Movie 7"
     },
-    "s20e5": {
-      "title": "The Tale of Naruto the Hero - The Masked Man"
+    "s0e7": {
+      "episode_text": "Movie 8"
     },
-    "s20e6": {
-      "title": "The Tale of Naruto the Hero - The Sealed Power"
+    "s0e10": {
+      "episode_text": "Movie 9"
     },
-    "s20e7": {
-      "title": "The Tale of Naruto the Hero - The Rules or a Comrade"
+    "s0e12": {
+      "episode_text": "Movie 10"
     },
-    "s20e8": {
-      "title": "The Tale of Naruto the Hero - The Child of Prophecy"
-    },
-    "s20e9": {
-      "title": "The Tale of Naruto the Hero - The Caged Bird"
-    },
-    "s20e10": {
-      "title": "The Tale of Naruto the Hero - Returning Home"
-    },
-    "s20e11": {
-      "title": "The Tale of Naruto the Hero - The Mutual Path"
-    },
-    "s20e12": {
-      "title": "The Tale of Naruto the Hero - The Difference in Power"
-    },
-    "s20e13": {
-      "title": "The Tale of Naruto the Hero - Leaving the Village"
-    },
-    "s20e14": {
-      "title": "The Tale of Naruto the Hero - Pursuers"
-    },
-    "s20e15": {
-      "title": "The Tale of Naruto the Hero - Collision"
-    },
-    "s20e16": {
-      "title": "The Tale of Naruto the Hero - Another Moon"
-    },
-    "s20e17": {
-      "title": "The Tale of Naruto the Hero - Comrade"
-    },
-    "s20e18": {
-      "title": "The Tale of Naruto the Hero - The Shinobi Unite"
-    },
-    "s20e19": {
-      "title": "The Tale of Naruto the Hero - Rivals"
-    },
-    "s21e1": {
-      "title": "Light and Darkness: Birth and Death"
-    },
-    "s21e2": {
-      "title": "Light and Darkness: The Genius"
-    },
-    "s21e3": {
-      "title": "Light and Darkness: The Pain of Living"
-    },
-    "s21e4": {
-      "title": "Light and Darkness: Shisui's Request"
-    },
-    "s21e5": {
-      "title": "Light and Darkness: Moonlit Night"
-    },
-    "s21e6": {
-      "title": "Light and Darkness: The Darkness of the Akatsuki"
-    },
-    "s21e7": {
-      "title": "Light and Darkness: Partner"
-    },
-    "s21e8": {
-      "title": "Light and Darkness: Truth"
-    },
-    "s22e31": {
-      "title": "Part 1: The State of Affairs"
-    },
-    "s22e32": {
-      "title": "Part 2: Dark Clouds"
-    },
-    "s22e33": {
-      "title": "Part 3: Recklessness"
-    },
-    "s22e34": {
-      "title": "Part 4: Cloud of Suspicion"
-    },
-    "s22e35": {
-      "title": "Part 5: Dawn"
-    },
-    "s22e36": {
-      "title": "Part 1: Naruto\u2019s Wedding"
-    },
-    "s22e37": {
-      "title": "Part 2: A Full-Powered Wedding Gift"
-    },
-    "s22e38": {
-      "title": "Part 3: Steam and Food Pills"
-    },
-    "s22e39": {
-      "title": "Part 4: The Kazekage\u2019s Wedding Gift"
-    },
-    "s22e40": {
-      "title": "Part 5: The Last Mission"
-    },
-    "s22e41": {
-      "title": "Part 6: The Outcome of the Secret Mission"
-    },
-    "s22e42": {
-      "title": "Part 7: The Message"
+    "s0e13": {
+      "episode_text": "Movie 11"
     }
   },
   "templates": [
@@ -282,10 +188,5 @@
       "stroke_width": 5.0
     }
   ],
-  "preview": "preview.jpg",
-  "creator": "AnonFawkes",
-  "description": [
-    "Copy of Collin's Naruto Blueprint for Naruto Shipp\u016bden with custom Font and arc season titles."
-  ],
-  "created": "2023-10-09T15:46:15"
+  "preview": "preview.jpg"
 }
