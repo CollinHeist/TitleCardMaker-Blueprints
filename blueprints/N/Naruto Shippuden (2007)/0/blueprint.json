@@ -126,27 +126,35 @@
   },
   "episodes": {
     "s0e1": {
+      "hide_season_text": true,
       "episode_text": "Movie 4"
     },
     "s0e2": {
+      "hide_season_text": true,
       "episode_text": "Movie 5"
     },
     "s0e3": {
+      "hide_season_text": true,
       "episode_text": "Movie 6"
     },
     "s0e4": {
+      "hide_season_text": true,
       "episode_text": "Movie 7"
     },
     "s0e7": {
+      "hide_season_text": true,
       "episode_text": "Movie 8"
     },
     "s0e10": {
+      "hide_season_text": true,
       "episode_text": "Movie 9"
     },
     "s0e12": {
+      "hide_season_text": true,
       "episode_text": "Movie 10"
     },
     "s0e13": {
+      "hide_season_text": true,
       "episode_text": "Movie 11"
     },
     "s20e1": {
