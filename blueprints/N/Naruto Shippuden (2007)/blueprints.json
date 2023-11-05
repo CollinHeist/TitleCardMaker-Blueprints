@@ -271,15 +271,8 @@
     "templates": [
       {
         "card_type": "anime",
-        "episode_text_format": "Episode {absolute_number}",
-        "name": "naruto",
-        "filters": [
-          {
-            "argument": "Absolute Number",
-            "operation": "is not null",
-            "reference": null
-          }
-        ]
+        "episode_text_format": "EPISODE {absolute_episode_number}",
+        "name": "naruto"
       }
     ],
     "fonts": [
